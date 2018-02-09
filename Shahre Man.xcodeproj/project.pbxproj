@@ -19,6 +19,8 @@
 		7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615685202E03BB00E60611 /* DashboardViewController.swift */; };
 		7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615688202E2A9700E60611 /* SearchTabViewController.swift */; };
 		7E61568B202E2F6B00E60611 /* HomeTabViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61568A202E2F6A00E60611 /* HomeTabViewController copy.swift */; };
+		7E61568D202E414B00E60611 /* DataResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61568C202E414B00E60611 /* DataResource.swift */; };
+		7E61568F202E43E200E60611 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61568E202E43E200E60611 /* Storage.swift */; };
 		7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E55202D99D000FA280D /* RequestCallback.swift */; };
 		7E7B4E58202D99D100FA280D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E56202D99D000FA280D /* Request.swift */; };
 		7E7B4E5A202D99FC00FA280D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E59202D99FC00FA280D /* Model.swift */; };
@@ -75,6 +77,8 @@
 		7E615685202E03BB00E60611 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7E615688202E2A9700E60611 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
 		7E61568A202E2F6A00E60611 /* HomeTabViewController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeTabViewController copy.swift"; sourceTree = "<group>"; };
+		7E61568C202E414B00E60611 /* DataResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResource.swift; sourceTree = "<group>"; };
+		7E61568E202E43E200E60611 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		7E7B4E55202D99D000FA280D /* RequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCallback.swift; sourceTree = "<group>"; };
 		7E7B4E56202D99D000FA280D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		7E7B4E59202D99FC00FA280D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				7E05F055202D983B00BDFBA5 /* Info.plist */,
 				7E7B4E63202DAA4500FA280D /* APIs.swift */,
 				7EBED836202DF872009A1FB3 /* Excention.swift */,
+				7E61568C202E414B00E60611 /* DataResource.swift */,
+				7E61568E202E43E200E60611 /* Storage.swift */,
 			);
 			path = "Shahre Man";
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */,
+				7E61568F202E43E200E60611 /* Storage.swift in Sources */,
 				7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */,
 				7E61568B202E2F6B00E60611 /* HomeTabViewController copy.swift in Sources */,
 				7E7B4E62202DAA0200FA280D /* Controller.swift in Sources */,
@@ -592,6 +599,7 @@
 				7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */,
 				7EBED837202DF872009A1FB3 /* Excention.swift in Sources */,
 				7E7B4E5E202D9E9800FA280D /* City.swift in Sources */,
+				7E61568D202E414B00E60611 /* DataResource.swift in Sources */,
 				7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */,
 				7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */,
 			);

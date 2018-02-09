@@ -21,6 +21,13 @@ class City: Model{
         self._alternativeName = json["latinName"].string!;
     }
     
+    init(ID:Int , name:String , alternative:String) {
+        super.init();
+        self._ID = ID;
+        self._name = name;
+        self._alternativeName = alternative;
+    }
+    
     public var ID:Int{
         get{return _ID}
     }

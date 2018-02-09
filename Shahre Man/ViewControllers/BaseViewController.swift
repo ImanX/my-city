@@ -11,6 +11,8 @@ import UIKit
 class BaseViewController: UIViewController {
     
     private var _isHiddenNavigationBar:Bool = false;
+    public var storage = Storage.me;
+    public var dataResource = DataResource.defualt;
     
 
     @IBInspectable var hiddenNavigationBar:Bool{
@@ -31,6 +33,7 @@ class BaseViewController: UIViewController {
 
     
 
+    
     
     
    public func viewDidLoad(navigationBar:UINavigationItem?) {}

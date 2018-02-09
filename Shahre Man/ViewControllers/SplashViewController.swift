@@ -18,6 +18,10 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
       
     
+        if dataResource.hasCity {
+            initializer(city: dataResource.city!);
+            return
+        }
         
         initController.getCities();
         initController.callback.didSuccessResolveCities = { (list) in
@@ -25,7 +29,7 @@ class SplashViewController: BaseViewController {
             modalViewController?.list = list;
             self.present(modalViewController!, animated: true, completion: nil)
             modalViewController?.callback = { item in
-                self.initializer(id: item.ID);
+                self.initializer(city: item);
             }
         }
         
@@ -39,11 +43,12 @@ class SplashViewController: BaseViewController {
     }
     
     
-    func initializer(id:Int) {
-        self.initController.initialize(cityID: id);
+    func initializer(city:City) {
+        self.initController.initialize(cityID: city.ID);
         self.initController.callback.didSuccessInitialize =  { slider, datas in
             let vc = self.storyboard?.instantiateViewController(viewController: DashboardViewController.self);
             self.navigationController?.pushViewController(vc!, animated: true);
+            self.dataResource.city = city;
         }
         
         self.initController.callback.didFailure = {(code ,status , error) in
