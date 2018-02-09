@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select City View Controller-->
+        <scene sceneID="VfD-L6-Zrj">
+            <objects>
+                <viewController storyboardIdentifier="SelectCityViewController" id="rgB-nN-rQ0" customClass="SelectCityViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="txG-Bb-Tv9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fib-Xo-Wmg">
+                                <rect key="frame" x="0.0" y="327" width="375" height="340"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="isB-bZ-ad4">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="296"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CityCell" id="XAV-4b-oEI" customClass="CityCell" customModule="Shahre_Man" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XAV-4b-oEI" id="sVb-ef-q2Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4er-uH-nMH">
+                                                            <rect key="frame" x="322" y="13" width="37.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="4er-uH-nMH" secondAttribute="trailing" constant="0.5" id="Dv9-TM-lz3"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="4er-uH-nMH" secondAttribute="bottom" constant="2" id="TV1-BE-2kG"/>
+                                                        <constraint firstItem="4er-uH-nMH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sVb-ef-q2Q" secondAttribute="leadingMargin" id="ctM-o0-8cX"/>
+                                                        <constraint firstItem="4er-uH-nMH" firstAttribute="top" secondItem="sVb-ef-q2Q" secondAttribute="topMargin" constant="2" id="kV8-KV-uHm"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="lblCityName" destination="4er-uH-nMH" id="yCq-p6-5Aw"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="rgB-nN-rQ0" id="XtD-kT-gR6"/>
+                                            <outlet property="delegate" destination="rgB-nN-rQ0" id="OUd-4g-gFD"/>
+                                        </connections>
+                                    </tableView>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dL3-0n-vPS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="barTintColor" red="1" green="0.54195007549999996" blue="0.19302083880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <items>
+                                            <navigationItem title="انتخاب شهر" id="yz9-Op-maW"/>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="isB-bZ-ad4" secondAttribute="trailing" id="3ha-ta-lca"/>
+                                    <constraint firstItem="isB-bZ-ad4" firstAttribute="top" secondItem="fib-Xo-Wmg" secondAttribute="top" constant="44" id="D6N-C9-FzZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="isB-bZ-ad4" secondAttribute="bottom" id="Met-L3-2DM"/>
+                                    <constraint firstItem="isB-bZ-ad4" firstAttribute="leading" secondItem="fib-Xo-Wmg" secondAttribute="leading" id="oZX-rg-FqV"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-4M-hlL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="aUB-4M-hlL" firstAttribute="top" secondItem="txG-Bb-Tv9" secondAttribute="top" id="DbF-Yw-Lvo"/>
+                            <constraint firstItem="aUB-4M-hlL" firstAttribute="leading" secondItem="QjF-7d-Nn1" secondAttribute="leading" id="FHv-DO-535"/>
+                            <constraint firstAttribute="trailing" secondItem="fib-Xo-Wmg" secondAttribute="trailing" id="G8m-af-fda"/>
+                            <constraint firstItem="fib-Xo-Wmg" firstAttribute="top" secondItem="aUB-4M-hlL" secondAttribute="bottom" id="HdZ-Ck-Qty"/>
+                            <constraint firstItem="fib-Xo-Wmg" firstAttribute="leading" secondItem="txG-Bb-Tv9" secondAttribute="leading" id="MUg-Po-CYd"/>
+                            <constraint firstItem="aUB-4M-hlL" firstAttribute="trailing" secondItem="QjF-7d-Nn1" secondAttribute="trailing" id="YYt-De-uaT"/>
+                            <constraint firstItem="fib-Xo-Wmg" firstAttribute="top" secondItem="QjF-7d-Nn1" secondAttribute="top" constant="307" id="cAO-Gg-sEq"/>
+                            <constraint firstItem="fib-Xo-Wmg" firstAttribute="bottom" secondItem="QjF-7d-Nn1" secondAttribute="bottom" id="kRI-tQ-02W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QjF-7d-Nn1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vz-1g-95Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1036" y="785.75712143928047"/>
+        </scene>
+    </scenes>
+</document>

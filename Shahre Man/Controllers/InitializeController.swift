@@ -46,7 +46,7 @@ class InitializeController : Controller<InitializeCallback>{
                 sliders.append(Slider(json: slider));
             }
             
-            for menu in json["meun"].array! {
+            for menu in json["menu"].array! {
                 menus.append(Data(json: menu));
             }
             

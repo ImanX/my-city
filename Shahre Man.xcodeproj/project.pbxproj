@@ -10,12 +10,15 @@
 		18EC320B7FEADEEF849615D6 /* Pods_Shahre_ManUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03C88B8047F85A5591E6564 /* Pods_Shahre_ManUITests.framework */; };
 		5ED8F23257D4556200D2098E /* Pods_Shahre_ManTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C63C60CB75090AC9A619481 /* Pods_Shahre_ManTests.framework */; };
 		7E05F04A202D983B00BDFBA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F049202D983B00BDFBA5 /* AppDelegate.swift */; };
-		7E05F04C202D983B00BDFBA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F04B202D983B00BDFBA5 /* ViewController.swift */; };
+		7E05F04C202D983B00BDFBA5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F04B202D983B00BDFBA5 /* SplashViewController.swift */; };
 		7E05F04F202D983B00BDFBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E05F04D202D983B00BDFBA5 /* Main.storyboard */; };
 		7E05F051202D983B00BDFBA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E05F050202D983B00BDFBA5 /* Assets.xcassets */; };
-		7E05F054202D983B00BDFBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E05F052202D983B00BDFBA5 /* LaunchScreen.storyboard */; };
 		7E05F05F202D983B00BDFBA5 /* Shahre_ManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F05E202D983B00BDFBA5 /* Shahre_ManTests.swift */; };
 		7E05F06A202D983B00BDFBA5 /* Shahre_ManUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F069202D983B00BDFBA5 /* Shahre_ManUITests.swift */; };
+		7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E615683202DFCCD00E60611 /* Modal.storyboard */; };
+		7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615685202E03BB00E60611 /* DashboardViewController.swift */; };
+		7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615688202E2A9700E60611 /* SearchTabViewController.swift */; };
+		7E61568B202E2F6B00E60611 /* HomeTabViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61568A202E2F6A00E60611 /* HomeTabViewController copy.swift */; };
 		7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E55202D99D000FA280D /* RequestCallback.swift */; };
 		7E7B4E58202D99D100FA280D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E56202D99D000FA280D /* Request.swift */; };
 		7E7B4E5A202D99FC00FA280D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E59202D99FC00FA280D /* Model.swift */; };
@@ -26,6 +29,12 @@
 		7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E63202DAA4500FA280D /* APIs.swift */; };
 		7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E65202DAB6500FA280D /* InitializeController.swift */; };
 		7E7B4E68202DAF2500FA280D /* InitializeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */; };
+		7EBED829202DCD9C009A1FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */; };
+		7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */; };
+		7EBED82F202DD7B2009A1FB3 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED82E202DD7B2009A1FB3 /* SelectCityViewController.swift */; };
+		7EBED833202DD8A1009A1FB3 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED832202DD8A1009A1FB3 /* CityCell.swift */; };
+		7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */; };
+		7EBED837202DF872009A1FB3 /* Excention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED836202DF872009A1FB3 /* Excention.swift */; };
 		AC55B43C0B276A7631522569 /* Pods_Shahre_Man.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C260FF779AA320ED7ED30D16 /* Pods_Shahre_Man.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +61,9 @@
 		6A002660A458FC41296C262D /* Pods-Shahre ManUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahre ManUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shahre ManUITests/Pods-Shahre ManUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E05F046202D983B00BDFBA5 /* Shahre Man.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shahre Man.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E05F049202D983B00BDFBA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E05F04B202D983B00BDFBA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E05F04B202D983B00BDFBA5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7E05F04E202D983B00BDFBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E05F050202D983B00BDFBA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E05F053202D983B00BDFBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E05F055202D983B00BDFBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E05F05A202D983B00BDFBA5 /* Shahre ManTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shahre ManTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E05F05E202D983B00BDFBA5 /* Shahre_ManTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shahre_ManTests.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 		7E05F065202D983B00BDFBA5 /* Shahre ManUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shahre ManUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E05F069202D983B00BDFBA5 /* Shahre_ManUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shahre_ManUITests.swift; sourceTree = "<group>"; };
 		7E05F06B202D983B00BDFBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E615683202DFCCD00E60611 /* Modal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Modal.storyboard; sourceTree = "<group>"; };
+		7E615685202E03BB00E60611 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		7E615688202E2A9700E60611 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
+		7E61568A202E2F6A00E60611 /* HomeTabViewController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeTabViewController copy.swift"; sourceTree = "<group>"; };
 		7E7B4E55202D99D000FA280D /* RequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCallback.swift; sourceTree = "<group>"; };
 		7E7B4E56202D99D000FA280D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		7E7B4E59202D99FC00FA280D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -73,6 +85,12 @@
 		7E7B4E63202DAA4500FA280D /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		7E7B4E65202DAB6500FA280D /* InitializeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeController.swift; sourceTree = "<group>"; };
 		7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeCallback.swift; sourceTree = "<group>"; };
+		7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7EBED82E202DD7B2009A1FB3 /* SelectCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityViewController.swift; sourceTree = "<group>"; };
+		7EBED832202DD8A1009A1FB3 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModalViewController.swift; sourceTree = "<group>"; };
+		7EBED836202DF872009A1FB3 /* Excention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excention.swift; sourceTree = "<group>"; };
 		809C13BF7167435FA1AC047D /* Pods-Shahre Man.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahre Man.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shahre Man/Pods-Shahre Man.debug.xcconfig"; sourceTree = "<group>"; };
 		A26382721E5FA125417C126D /* Pods-Shahre ManTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahre ManTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shahre ManTests/Pods-Shahre ManTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A69846A8B0DF9B5174B85A5D /* Pods-Shahre ManTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahre ManTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shahre ManTests/Pods-Shahre ManTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,16 +175,19 @@
 		7E05F048202D983B00BDFBA5 /* Shahre Man */ = {
 			isa = PBXGroup;
 			children = (
+				7EBED830202DD887009A1FB3 /* Views */,
 				7E7B4E69202DC77700FA280D /* ViewControllers */,
 				7E7B4E54202D99AF00FA280D /* Controllers */,
 				7E7B4E53202D99A700FA280D /* Models */,
 				7E7B4E52202D999D00FA280D /* Http */,
 				7E05F049202D983B00BDFBA5 /* AppDelegate.swift */,
 				7E05F04D202D983B00BDFBA5 /* Main.storyboard */,
+				7E615683202DFCCD00E60611 /* Modal.storyboard */,
+				7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */,
 				7E05F050202D983B00BDFBA5 /* Assets.xcassets */,
-				7E05F052202D983B00BDFBA5 /* LaunchScreen.storyboard */,
 				7E05F055202D983B00BDFBA5 /* Info.plist */,
 				7E7B4E63202DAA4500FA280D /* APIs.swift */,
+				7EBED836202DF872009A1FB3 /* Excention.swift */,
 			);
 			path = "Shahre Man";
 			sourceTree = "<group>";
@@ -187,6 +208,15 @@
 				7E05F06B202D983B00BDFBA5 /* Info.plist */,
 			);
 			path = "Shahre ManUITests";
+			sourceTree = "<group>";
+		};
+		7E615687202E2A7E00E60611 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				7E61568A202E2F6A00E60611 /* HomeTabViewController copy.swift */,
+				7E615688202E2A9700E60611 /* SearchTabViewController.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		7E7B4E52202D999D00FA280D /* Http */ = {
@@ -222,9 +252,30 @@
 		7E7B4E69202DC77700FA280D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7E05F04B202D983B00BDFBA5 /* ViewController.swift */,
+				7E615687202E2A7E00E60611 /* Tabs */,
+				7E05F04B202D983B00BDFBA5 /* SplashViewController.swift */,
+				7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */,
+				7EBED82E202DD7B2009A1FB3 /* SelectCityViewController.swift */,
+				7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */,
+				7E615685202E03BB00E60611 /* DashboardViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7EBED830202DD887009A1FB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EBED831202DD88D009A1FB3 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7EBED831202DD88D009A1FB3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7EBED832202DD8A1009A1FB3 /* CityCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +394,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E05F054202D983B00BDFBA5 /* LaunchScreen.storyboard in Resources */,
+				7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */,
+				7EBED829202DCD9C009A1FB3 /* LaunchScreen.storyboard in Resources */,
 				7E05F051202D983B00BDFBA5 /* Assets.xcassets in Resources */,
 				7E05F04F202D983B00BDFBA5 /* Main.storyboard in Resources */,
 			);
@@ -522,18 +574,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */,
+				7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */,
+				7E61568B202E2F6B00E60611 /* HomeTabViewController copy.swift in Sources */,
 				7E7B4E62202DAA0200FA280D /* Controller.swift in Sources */,
+				7EBED833202DD8A1009A1FB3 /* CityCell.swift in Sources */,
 				7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */,
 				7E7B4E5C202D9AA700FA280D /* Data.swift in Sources */,
 				7E7B4E5A202D99FC00FA280D /* Model.swift in Sources */,
+				7EBED82F202DD7B2009A1FB3 /* SelectCityViewController.swift in Sources */,
 				7E7B4E68202DAF2500FA280D /* InitializeCallback.swift in Sources */,
 				7E7B4E60202DA09800FA280D /* Slider.swift in Sources */,
 				7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */,
 				7E7B4E58202D99D100FA280D /* Request.swift in Sources */,
-				7E05F04C202D983B00BDFBA5 /* ViewController.swift in Sources */,
+				7E05F04C202D983B00BDFBA5 /* SplashViewController.swift in Sources */,
 				7E05F04A202D983B00BDFBA5 /* AppDelegate.swift in Sources */,
 				7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */,
+				7EBED837202DF872009A1FB3 /* Excention.swift in Sources */,
 				7E7B4E5E202D9E9800FA280D /* City.swift in Sources */,
+				7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */,
+				7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,14 +635,6 @@
 				7E05F04E202D983B00BDFBA5 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7E05F052202D983B00BDFBA5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E05F053202D983B00BDFBA5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -700,8 +752,11 @@
 			baseConfigurationReference = 809C13BF7167435FA1AC047D /* Pods-Shahre Man.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 449AS843ZC;
 				INFOPLIST_FILE = "Shahre Man/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "city.shahreman.app.Shahre-Man";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -715,8 +770,11 @@
 			baseConfigurationReference = 1CC7A67EF4F3BADA6AA99C46 /* Pods-Shahre Man.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 449AS843ZC;
 				INFOPLIST_FILE = "Shahre Man/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "city.shahreman.app.Shahre-Man";
 				PRODUCT_NAME = "$(TARGET_NAME)";
