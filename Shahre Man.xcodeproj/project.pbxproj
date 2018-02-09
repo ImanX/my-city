@@ -14,6 +14,8 @@
 		7E05F054202D983B00BDFBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E05F052202D983B00BDFBA5 /* LaunchScreen.storyboard */; };
 		7E05F05F202D983B00BDFBA5 /* Shahre_ManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F05E202D983B00BDFBA5 /* Shahre_ManTests.swift */; };
 		7E05F06A202D983B00BDFBA5 /* Shahre_ManUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F069202D983B00BDFBA5 /* Shahre_ManUITests.swift */; };
+		7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E55202D99D000FA280D /* RequestCallback.swift */; };
+		7E7B4E58202D99D100FA280D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E56202D99D000FA280D /* Request.swift */; };
 		AC55B43C0B276A7631522569 /* Pods_Shahre_Man.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C260FF779AA320ED7ED30D16 /* Pods_Shahre_Man.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		7E05F065202D983B00BDFBA5 /* Shahre ManUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shahre ManUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E05F069202D983B00BDFBA5 /* Shahre_ManUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shahre_ManUITests.swift; sourceTree = "<group>"; };
 		7E05F06B202D983B00BDFBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E7B4E55202D99D000FA280D /* RequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCallback.swift; sourceTree = "<group>"; };
+		7E7B4E56202D99D000FA280D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		809C13BF7167435FA1AC047D /* Pods-Shahre Man.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahre Man.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shahre Man/Pods-Shahre Man.debug.xcconfig"; sourceTree = "<group>"; };
 		C260FF779AA320ED7ED30D16 /* Pods_Shahre_Man.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shahre_Man.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03C88B8047F85A5591E6564 /* Pods_Shahre_ManUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shahre_ManUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,9 @@
 		7E05F048202D983B00BDFBA5 /* Shahre Man */ = {
 			isa = PBXGroup;
 			children = (
+				7E7B4E54202D99AF00FA280D /* Controllers */,
+				7E7B4E53202D99A700FA280D /* Models */,
+				7E7B4E52202D999D00FA280D /* Http */,
 				7E05F049202D983B00BDFBA5 /* AppDelegate.swift */,
 				7E05F04B202D983B00BDFBA5 /* ViewController.swift */,
 				7E05F04D202D983B00BDFBA5 /* Main.storyboard */,
@@ -151,6 +158,29 @@
 				7E05F06B202D983B00BDFBA5 /* Info.plist */,
 			);
 			path = "Shahre ManUITests";
+			sourceTree = "<group>";
+		};
+		7E7B4E52202D999D00FA280D /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				7E7B4E56202D99D000FA280D /* Request.swift */,
+				7E7B4E55202D99D000FA280D /* RequestCallback.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		7E7B4E53202D99A700FA280D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E7B4E54202D99AF00FA280D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */,
+				7E7B4E58202D99D100FA280D /* Request.swift in Sources */,
 				7E05F04C202D983B00BDFBA5 /* ViewController.swift in Sources */,
 				7E05F04A202D983B00BDFBA5 /* AppDelegate.swift in Sources */,
 			);
