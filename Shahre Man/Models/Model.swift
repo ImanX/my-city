@@ -9,14 +9,20 @@
 import Foundation
 import SwiftyJSON
 class Model{
+    
+   public init() {
+        
+    }
+    
+   public init(json:JSON) {
+        //when want parse json to Object.
+    }
+    
     //override
     func doSerialize() -> [String:Any]{
         fatalError("doSerialize should to override.");
     }
     
-    func doDeserialize() {
-        fatalError("doDeserialize should to override.");
-    }
 }
 
 

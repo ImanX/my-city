@@ -13,7 +13,7 @@ import SwiftyJSON
  This class contains all callbacks for network requesting
  */
 public class RequestCallback{
-    public var didSuccess:((_ respone:JSON,_ meta:JSON?)->Void)!;
-    public var didFailure:((_ code:Int,_ response:String)->Void)!;
+    public var didSuccess:((_ respone:JSON)->Void)!;
+    public var didFailure:((_ code:Int,_ status:Int,_ error:String)->Void)!;
     public var didConnectionFailure:(()->Void)!;
 }

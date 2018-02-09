@@ -80,15 +80,7 @@ class Request{
                 let statusCode  = response.response?.statusCode;
                 if statusCode == 200 {
                     let json = JSON(response.data!);
-                    
-                    if json["data"] != JSON.null {
-                        let data = json["data"];
-                        let meta = json["meta"];
-                        self._callback.didSuccess(data,meta);
-                    } else {
-                        self._callback.didSuccess(json,nil);
-                    }
-                    
+                    self._callback.didSuccess(json);
                     return;
                 }
                 
@@ -96,12 +88,14 @@ class Request{
                 if  statusCode == 400 {
                     let json = JSON(response.data!);
                     print(json);
-                    let errorType:String = json["meta"]["error_type"].string!;
-                    self._callback.didFailure(statusCode! , errorType);
+                    let errorType:String = json["data"]["name"].string!;
+                    let code:Int = json["data"]["code"].int!;
+                    let status:Int = json["data"]["status"].int!;
+                    self._callback.didFailure(code ,status, errorType);
                     return;
                 }
                 
-                self._callback.didFailure(statusCode! , String(describing: response.result.value));
+                self._callback.didFailure(statusCode! ,-1, String(describing: response.result.value));
         }
         
     }

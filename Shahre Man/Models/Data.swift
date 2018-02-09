@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 class Data : Model{
     
     private var _image:String!;
@@ -14,6 +15,22 @@ class Data : Model{
     private var _caption:String!;
     private var _ID:Int!;
     private var _type:String!;
+    
+
+    override init() {
+        super.init();
+    }
+    
+     override init(json: JSON) {
+        super.init();
+        self._image = json["icon"].string!;
+        self._title = json["title"].string!;
+        self._caption = json["description"].string!;
+        let linkJSON = json["link"];
+        self._ID = linkJSON["id"].int;
+        self._type = linkJSON["type"].string!;
+
+    }
     
     public var image:String!{
         set{_image = newValue}

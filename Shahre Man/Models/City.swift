@@ -7,27 +7,33 @@
 //
 
 import Foundation
+import SwiftyJSON
 class City: Model{
 
     private var _ID:Int!;
     private var _name:String!;
     private var _alternativeName:String!;
     
+     override init(json: JSON) {
+        super.init();
+        self._ID = json["id"].int!;
+        self._name = json["name"].string!;
+        self._alternativeName = json["latinName"].string!;
+    }
+    
     public var ID:Int{
-        set{_ID = newValue}
         get{return _ID}
     }
     
     
-    public var Name:String{
-        set{_name = newValue}
+    public var name:String{
         get{return _name}
     }
     
-    
-    public var AlternativeName:String{
-        set{_alternativeName = newValue}
+    public var alternativeName:String{
         get{return _alternativeName}
     }
+    
+   
 }
 
