@@ -1,0 +1,6 @@
+framework module Pods_Shahre_ManUITests {
+  umbrella header "Pods-Shahre ManUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

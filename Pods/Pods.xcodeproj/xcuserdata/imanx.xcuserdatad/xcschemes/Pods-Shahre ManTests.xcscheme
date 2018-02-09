@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2CF08036FE99DC8D98CC44FE4D566517"
-               BuildableName = "Pods_Shahre_Man.framework"
-               BlueprintName = "Pods-Shahre Man"
+               BlueprintIdentifier = "5892009B01522A8CC76B2C784498E1C5"
+               BuildableName = "Pods_Shahre_ManTests.framework"
+               BlueprintName = "Pods-Shahre ManTests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2CF08036FE99DC8D98CC44FE4D566517"
-            BuildableName = "Pods_Shahre_Man.framework"
-            BlueprintName = "Pods-Shahre Man"
+            BlueprintIdentifier = "5892009B01522A8CC76B2C784498E1C5"
+            BuildableName = "Pods_Shahre_ManTests.framework"
+            BlueprintName = "Pods-Shahre ManTests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

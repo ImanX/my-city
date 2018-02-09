@@ -8,7 +8,18 @@ target 'Shahre Man' do
 
   # Pods for Shahre Man
 
-pod 'Alamofire', '~> 4.4'
 
-  
+pod 'Alamofire', '~> 4.4'
+  pod 'SwiftyJSON'
+
+  target 'Shahre ManTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Shahre ManUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
 end
