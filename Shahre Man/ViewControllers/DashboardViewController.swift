@@ -17,14 +17,16 @@ class DashboardViewController: UITabBarController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 40));
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 25));
         let imageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
-        imageView.frame = CGRect(x: 0, y: 0, width: 60, height:35);
+        imageView.frame = CGRect(x: 0, y: 0, width: 50, height:25);
         titleView.addSubview(imageView)
         self.navigationItem.titleView = titleView
         
         
         
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "main"), style: .plain, target: self, action: nil);
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white;
+
     }
 }

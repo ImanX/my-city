@@ -34,7 +34,7 @@ class Data : Model{
     
     public var image:String!{
         set{_image = newValue}
-        get{return _image}
+        get{return  baseURL(_image)}
     }
     
     public var title:String!{

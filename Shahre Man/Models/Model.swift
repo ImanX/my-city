@@ -23,6 +23,10 @@ class Model{
         fatalError("doSerialize should to override.");
     }
     
+    var baseURL = { ( target:String)-> String  in
+        return String(format: "http://shahreman.city%@", arguments: [target]);
+    }
+    
 }
 
 

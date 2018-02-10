@@ -8,9 +8,56 @@
 
 import Foundation
 import UIKit
-class HomeTabViewController : BaseViewController {
+import FSPagerView
+class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableViewDataSource , FSPagerViewDataSource{
+  
+
+    @IBOutlet weak var pagerView: FSPagerView!{
+        didSet{
+            let nib = UINib(nibName: "PagerCell", bundle: nil);
+            self.pagerView.register(nib, forCellWithReuseIdentifier: "test_cell");
+            self.pagerView.dataSource = self;
+            self.pagerView.isInfinite = true;
+            self.pagerView.automaticSlidingInterval = 3.0;
+            
+        }
+    }
+    
+    
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return (dataResource.sliders?.count)!;
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell =  pagerView.dequeueReusableCell(withReuseIdentifier: "test_cell", at: index) as! PagerCell;
+        let item = dataResource.sliders![index];
+        cell.image.loadImage(URL: item.image);
+        cell.title.text = item.title;
+        cell.content.text = item.caption;
+        return cell;
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (dataResource.datas?.count)!;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell") as! DataCell;
+        let item = dataResource.datas![indexPath.row];
+        cell.title.text = item.title;
+        cell.content.text = item.caption;
+        cell.icon.loadImage(URL: item.image);
+        
+        return cell;
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1;
+    }
+    
     
     override func viewDidLoad(navigationBar: UINavigationItem?) {
-        // navigationBar?.title = "خانه"
+
     }
 }

@@ -49,6 +49,8 @@ class SplashViewController: BaseViewController {
             let vc = self.storyboard?.instantiateViewController(viewController: DashboardViewController.self);
             self.navigationController?.pushViewController(vc!, animated: true);
             self.dataResource.city = city;
+            self.dataResource.sliders = slider;
+            self.dataResource.datas = datas;
         }
         
         self.initController.callback.didFailure = {(code ,status , error) in

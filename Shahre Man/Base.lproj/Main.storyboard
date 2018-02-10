@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,17 +74,93 @@
                     <view key="view" contentMode="scaleToFill" id="Y76-Tj-BFo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ4-m8-UnD">
+                                <rect key="frame" x="0.0" y="173" width="375" height="445"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="-1" indentationWidth="0.0" reuseIdentifier="DataCell" id="Lwy-oV-eZK" customClass="DataCell" customModule="Shahre_Man" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lwy-oV-eZK" id="Iaf-nX-YGX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-v7-dRL" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
+                                                    <rect key="frame" x="300" y="10" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="9pa-v7-dRL" secondAttribute="height" multiplier="1:1" id="Ufe-cM-s5e"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUP-Yg-IE3">
+                                                    <rect key="frame" x="250" y="15" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usM-Au-jIR">
+                                                    <rect key="frame" x="265" y="37" width="27" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9pa-v7-dRL" firstAttribute="leading" secondItem="sUP-Yg-IE3" secondAttribute="trailing" constant="8" id="3EY-LX-g8i"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="usM-Au-jIR" secondAttribute="bottom" constant="20" id="3Ku-cy-3fn"/>
+                                                <constraint firstItem="9pa-v7-dRL" firstAttribute="trailing" secondItem="Iaf-nX-YGX" secondAttribute="trailingMargin" id="8vA-nv-JPB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9pa-v7-dRL" secondAttribute="bottom" constant="-1" id="PXt-Sh-y2X"/>
+                                                <constraint firstItem="usM-Au-jIR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iaf-nX-YGX" secondAttribute="leading" constant="20" symbolic="YES" id="URw-gj-hhV"/>
+                                                <constraint firstItem="sUP-Yg-IE3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iaf-nX-YGX" secondAttribute="leading" constant="20" symbolic="YES" id="UnW-fY-EQA"/>
+                                                <constraint firstItem="9pa-v7-dRL" firstAttribute="top" secondItem="Iaf-nX-YGX" secondAttribute="topMargin" constant="-1" id="aRg-ip-XBr"/>
+                                                <constraint firstItem="9pa-v7-dRL" firstAttribute="leading" secondItem="usM-Au-jIR" secondAttribute="trailing" constant="8" id="gif-1T-bbm"/>
+                                                <constraint firstItem="usM-Au-jIR" firstAttribute="top" secondItem="sUP-Yg-IE3" secondAttribute="bottom" constant="1" id="ooB-qx-pd7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="content" destination="usM-Au-jIR" id="vSP-Za-6CE"/>
+                                            <outlet property="icon" destination="9pa-v7-dRL" id="F26-mO-fDU"/>
+                                            <outlet property="title" destination="sUP-Yg-IE3" id="oAE-gg-gFX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CNd-eu-xmt" id="XOF-pq-Qwp"/>
+                                    <outlet property="delegate" destination="CNd-eu-xmt" id="khR-Ov-fxZ"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pff-Ej-GuF" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="jqR-wk-nIn"/>
+                                    <constraint firstAttribute="width" constant="375" id="vzT-kU-fak"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="leading" secondItem="qrI-Sy-Xej" secondAttribute="leading" id="1Pn-ps-6sI"/>
+                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="trailing" secondItem="qrI-Sy-Xej" secondAttribute="trailing" id="Qmv-3Z-YTH"/>
+                            <constraint firstItem="pff-Ej-GuF" firstAttribute="top" secondItem="Y76-Tj-BFo" secondAttribute="top" id="ayf-rJ-cko"/>
+                            <constraint firstItem="pff-Ej-GuF" firstAttribute="trailing" secondItem="qrI-Sy-Xej" secondAttribute="trailing" id="c6N-1a-7Qm"/>
+                            <constraint firstItem="pff-Ej-GuF" firstAttribute="leading" secondItem="qrI-Sy-Xej" secondAttribute="leading" id="hin-vZ-2A2"/>
+                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="top" secondItem="pff-Ej-GuF" secondAttribute="bottom" constant="8" id="nco-Lv-5Si"/>
+                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="bottom" secondItem="qrI-Sy-Xej" secondAttribute="bottom" id="utM-36-tBt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qrI-Sy-Xej"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" id="pDU-sF-2I2">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="pagerView" destination="pff-Ej-GuF" id="sG5-q3-kUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ys-d3-1lW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="257"/>
+            <point key="canvasLocation" x="2032.8" y="256.82158920539734"/>
         </scene>
         <!--Search Tab View Controller-->
         <scene sceneID="TW9-QV-KK1">
@@ -108,6 +186,7 @@
                 <tabBarController storyboardIdentifier="DashboardViewController" automaticallyAdjustsScrollViewInsets="NO" id="HsG-gW-1TU" customClass="DashboardViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F70-48-zoz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96136253240000002" green="0.44112355590000002" blue="0.1130696249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,7 +223,7 @@
     <resources>
         <image name="account" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
-        <image name="logo" width="186" height="100"/>
+        <image name="logo" width="93" height="50"/>
         <image name="search" width="30" height="30"/>
     </resources>
 </document>

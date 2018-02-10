@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import ImageLoader
+
 extension UIStoryboard{
     func instantiateViewController<V:UIViewController>(viewController:V.Type) -> V{
         return instantiateViewController(withIdentifier:viewController.name) as! V;
@@ -29,3 +31,8 @@ extension UIViewController{
     
 }
 
+extension UIImageView{
+    func loadImage(URL:String) {
+        self.load.request(with: URL);
+    }
+}

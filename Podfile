@@ -9,8 +9,11 @@ target 'Shahre Man' do
   # Pods for Shahre Man
 
 
-pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
+  pod 'ImageLoader'
+  pod 'FSPagerView'
+
 
   target 'Shahre ManTests' do
     inherit! :search_paths
