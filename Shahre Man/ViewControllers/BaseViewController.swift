@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import TTGSnackbar
 class BaseViewController: UIViewController {
     
     private var _isHiddenNavigationBar:Bool = false;
@@ -31,6 +32,19 @@ class BaseViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false;
     }
 
+    
+    func snackbar()->TTGSnackbar{
+        return TTGSnackbar();
+    }
+    
+    func getErrorSnackbar(message:String) -> TTGSnackbar {
+        let e = snackbar();
+        e.message = message;
+        e.messageTextAlign = .right
+        e.backgroundColor = UIColor.red;
+        e.icon = #imageLiteral(resourceName: "warning");
+        return e;
+    }
     
 
     

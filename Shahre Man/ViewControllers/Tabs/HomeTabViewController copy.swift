@@ -15,11 +15,11 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     @IBOutlet weak var pagerView: FSPagerView!{
         didSet{
             let nib = UINib(nibName: "PagerCell", bundle: nil);
-            self.pagerView.register(nib, forCellWithReuseIdentifier: "test_cell");
+            self.pagerView.register(nib, forCellWithReuseIdentifier: "cell");
             self.pagerView.dataSource = self;
             self.pagerView.isInfinite = true;
             self.pagerView.automaticSlidingInterval = 3.0;
-            
+
         }
     }
     
@@ -29,7 +29,7 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell =  pagerView.dequeueReusableCell(withReuseIdentifier: "test_cell", at: index) as! PagerCell;
+        let cell =  pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index) as! PagerCell;
         let item = dataResource.sliders![index];
         cell.image.loadImage(URL: item.image);
         cell.title.text = item.title;
@@ -52,12 +52,16 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
     
     override func viewDidLoad(navigationBar: UINavigationItem?) {
-
+        
     }
 }

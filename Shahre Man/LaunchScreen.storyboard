@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="186" height="100"/>
+        <image name="logo" width="93" height="50"/>
     </resources>
 </document>

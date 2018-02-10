@@ -12,6 +12,8 @@ class DashboardViewController: UITabBarController {
     override func viewDidLoad() {
         self.navigationItem.hidesBackButton = true;
         self.navigationController?.navigationBar.barTintColor = UIColor.orange;
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+
         self.navigationController?.navigationBar.isTranslucent = false;
         self.tabBar.unselectedItemTintColor = UIColor.white ;
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
@@ -25,8 +27,14 @@ class DashboardViewController: UITabBarController {
         
         
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "main"), style: .plain, target: self, action: nil);
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "main"), style: .plain, target: self, action: #selector(DashboardViewController.openContactUS));
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white;
 
+    }
+    
+    
+    @objc func openContactUS() {
+        let vc = storyboard?.instantiateViewController(viewController: ContactUsViewController.self);
+        self.navigationController?.pushViewController(vc!, animated: true);
     }
 }

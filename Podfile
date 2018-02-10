@@ -13,6 +13,8 @@ target 'Shahre Man' do
   pod 'SwiftyJSON'
   pod 'ImageLoader'
   pod 'FSPagerView'
+pod "TTGSnackbar"
+
 
 
   target 'Shahre ManTests' do

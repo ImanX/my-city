@@ -17,6 +17,8 @@
 		7E05F06A202D983B00BDFBA5 /* Shahre_ManUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E05F069202D983B00BDFBA5 /* Shahre_ManUITests.swift */; };
 		7E0775FE202EE46100427607 /* PagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0775FD202EE46100427607 /* PagerCell.swift */; };
 		7E077602202EE4D900427607 /* PagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E077601202EE4D900427607 /* PagerCell.xib */; };
+		7E077604202F0D2300427607 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E077603202F0D2300427607 /* ContactUsViewController.swift */; };
+		7E077606202F25D800427607 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E077605202F25D800427607 /* ContactController.swift */; };
 		7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E615683202DFCCD00E60611 /* Modal.storyboard */; };
 		7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615685202E03BB00E60611 /* DashboardViewController.swift */; };
 		7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615688202E2A9700E60611 /* SearchTabViewController.swift */; };
@@ -79,6 +81,8 @@
 		7E05F06B202D983B00BDFBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E0775FD202EE46100427607 /* PagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerCell.swift; sourceTree = "<group>"; };
 		7E077601202EE4D900427607 /* PagerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerCell.xib; sourceTree = "<group>"; };
+		7E077603202F0D2300427607 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		7E077605202F25D800427607 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		7E615683202DFCCD00E60611 /* Modal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Modal.storyboard; sourceTree = "<group>"; };
 		7E615685202E03BB00E60611 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7E615688202E2A9700E60611 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				7E7B4E61202DAA0200FA280D /* Controller.swift */,
 				7E7B4E65202DAB6500FA280D /* InitializeController.swift */,
 				7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */,
+				7E077605202F25D800427607 /* ContactController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				7EBED82E202DD7B2009A1FB3 /* SelectCityViewController.swift */,
 				7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */,
 				7E615685202E03BB00E60611 /* DashboardViewController.swift */,
+				7E077603202F0D2300427607 /* ContactUsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageLoader/ImageLoader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -584,6 +591,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageLoader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -614,11 +622,13 @@
 				7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */,
 				7E7B4E58202D99D100FA280D /* Request.swift in Sources */,
 				7E05F04C202D983B00BDFBA5 /* SplashViewController.swift in Sources */,
+				7E077606202F25D800427607 /* ContactController.swift in Sources */,
 				7E05F04A202D983B00BDFBA5 /* AppDelegate.swift in Sources */,
 				7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */,
 				7EBED837202DF872009A1FB3 /* Excention.swift in Sources */,
 				7E61569A202E56C600E60611 /* DataCell.swift in Sources */,
 				7E7B4E5E202D9E9800FA280D /* City.swift in Sources */,
+				7E077604202F0D2300427607 /* ContactUsViewController.swift in Sources */,
 				7E61568D202E414B00E60611 /* DataResource.swift in Sources */,
 				7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */,
 				7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */,

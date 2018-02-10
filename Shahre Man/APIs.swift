@@ -10,4 +10,5 @@ import Foundation
 enum APIs : String {
     case City = "cities.json";
     case Home = "home.json"
+    case Contact = "contact.json";
 }
