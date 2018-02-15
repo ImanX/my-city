@@ -25,7 +25,7 @@ class SplashViewController: BaseViewController {
         
         initController.getCities();
         initController.callback.didSuccessResolveCities = { (list) in
-            let modalViewController = self.storyboard?.instantiateModalViewController(modal:SelectCityViewController.self);
+            let modalViewController = self.storyboard?.instantiateModalViewController(modal:SelectCityModalViewController.self);
             modalViewController?.list = list;
             self.present(modalViewController!, animated: true, completion: nil)
             modalViewController?.callback = { item in

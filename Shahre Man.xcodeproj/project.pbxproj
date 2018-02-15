@@ -46,7 +46,7 @@
 		7E7B4E68202DAF2500FA280D /* InitializeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */; };
 		7EBED829202DCD9C009A1FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */; };
 		7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */; };
-		7EBED82F202DD7B2009A1FB3 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED82E202DD7B2009A1FB3 /* SelectCityViewController.swift */; };
+		7EBED82F202DD7B2009A1FB3 /* SelectCityModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */; };
 		7EBED833202DD8A1009A1FB3 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED832202DD8A1009A1FB3 /* CityCell.swift */; };
 		7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */; };
 		7EBED837202DF872009A1FB3 /* Excention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED836202DF872009A1FB3 /* Excention.swift */; };
@@ -117,7 +117,7 @@
 		7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeCallback.swift; sourceTree = "<group>"; };
 		7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		7EBED82E202DD7B2009A1FB3 /* SelectCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityViewController.swift; sourceTree = "<group>"; };
+		7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityModalViewController.swift; sourceTree = "<group>"; };
 		7EBED832202DD8A1009A1FB3 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModalViewController.swift; sourceTree = "<group>"; };
 		7EBED836202DF872009A1FB3 /* Excention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excention.swift; sourceTree = "<group>"; };
@@ -319,7 +319,7 @@
 				7E615687202E2A7E00E60611 /* Tabs */,
 				7E05F04B202D983B00BDFBA5 /* SplashViewController.swift */,
 				7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */,
-				7EBED82E202DD7B2009A1FB3 /* SelectCityViewController.swift */,
+				7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */,
 				7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */,
 				7E615685202E03BB00E60611 /* DashboardViewController.swift */,
 				7E077603202F0D2300427607 /* ContactUsViewController.swift */,
@@ -662,7 +662,7 @@
 				7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */,
 				7E7B4E5C202D9AA700FA280D /* Data.swift in Sources */,
 				7E7B4E5A202D99FC00FA280D /* Model.swift in Sources */,
-				7EBED82F202DD7B2009A1FB3 /* SelectCityViewController.swift in Sources */,
+				7EBED82F202DD7B2009A1FB3 /* SelectCityModalViewController.swift in Sources */,
 				7E0775FE202EE46100427607 /* PagerCell.swift in Sources */,
 				7E7B4E68202DAF2500FA280D /* InitializeCallback.swift in Sources */,
 				7E7B4E60202DA09800FA280D /* Slider.swift in Sources */,

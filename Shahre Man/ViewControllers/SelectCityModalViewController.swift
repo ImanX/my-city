@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class SelectCityViewController: BaseModalViewController<City>, UITableViewDataSource , UITableViewDelegate{
+class SelectCityModalViewController: BaseModalViewController<City>, UITableViewDataSource , UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (list?.count)!;
