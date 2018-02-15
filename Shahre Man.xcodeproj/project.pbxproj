@@ -19,6 +19,13 @@
 		7E077602202EE4D900427607 /* PagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E077601202EE4D900427607 /* PagerCell.xib */; };
 		7E077604202F0D2300427607 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E077603202F0D2300427607 /* ContactUsViewController.swift */; };
 		7E077606202F25D800427607 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E077605202F25D800427607 /* ContactController.swift */; };
+		7E077608202F8ADF00427607 /* AccountTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E077607202F8ADF00427607 /* AccountTabViewController.swift */; };
+		7E07760B202F980800427607 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760A202F980800427607 /* AuthController.swift */; };
+		7E07760D202F994F00427607 /* AuthCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760C202F994F00427607 /* AuthCallback.swift */; };
+		7E428CC2203490EE007CED56 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC1203490ED007CED56 /* Plan.swift */; };
+		7E428CC620349420007CED56 /* BuisinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC520349420007CED56 /* BuisinessController.swift */; };
+		7E428CC820349438007CED56 /* BuisinessCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC720349438007CED56 /* BuisinessCallback.swift */; };
+		7E428CCA20349ECA007CED56 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC920349ECA007CED56 /* Profile.swift */; };
 		7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E615683202DFCCD00E60611 /* Modal.storyboard */; };
 		7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615685202E03BB00E60611 /* DashboardViewController.swift */; };
 		7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615688202E2A9700E60611 /* SearchTabViewController.swift */; };
@@ -83,6 +90,13 @@
 		7E077601202EE4D900427607 /* PagerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerCell.xib; sourceTree = "<group>"; };
 		7E077603202F0D2300427607 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		7E077605202F25D800427607 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		7E077607202F8ADF00427607 /* AccountTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabViewController.swift; sourceTree = "<group>"; };
+		7E07760A202F980800427607 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		7E07760C202F994F00427607 /* AuthCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCallback.swift; sourceTree = "<group>"; };
+		7E428CC1203490ED007CED56 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		7E428CC520349420007CED56 /* BuisinessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessController.swift; sourceTree = "<group>"; };
+		7E428CC720349438007CED56 /* BuisinessCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessCallback.swift; sourceTree = "<group>"; };
+		7E428CC920349ECA007CED56 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7E615683202DFCCD00E60611 /* Modal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Modal.storyboard; sourceTree = "<group>"; };
 		7E615685202E03BB00E60611 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7E615688202E2A9700E60611 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
@@ -228,10 +242,38 @@
 			path = "Shahre ManUITests";
 			sourceTree = "<group>";
 		};
+		7E077609202F974300427607 /* init */ = {
+			isa = PBXGroup;
+			children = (
+				7E7B4E65202DAB6500FA280D /* InitializeController.swift */,
+				7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */,
+			);
+			path = init;
+			sourceTree = "<group>";
+		};
+		7E428CC3203493F9007CED56 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				7E07760C202F994F00427607 /* AuthCallback.swift */,
+				7E07760A202F980800427607 /* AuthController.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		7E428CC42034940B007CED56 /* plan */ = {
+			isa = PBXGroup;
+			children = (
+				7E428CC520349420007CED56 /* BuisinessController.swift */,
+				7E428CC720349438007CED56 /* BuisinessCallback.swift */,
+			);
+			path = plan;
+			sourceTree = "<group>";
+		};
 		7E615687202E2A7E00E60611 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
 				7E61568A202E2F6A00E60611 /* HomeTabViewController copy.swift */,
+				7E077607202F8ADF00427607 /* AccountTabViewController.swift */,
 				7E615688202E2A9700E60611 /* SearchTabViewController.swift */,
 			);
 			path = Tabs;
@@ -253,6 +295,8 @@
 				7E7B4E5B202D9AA700FA280D /* Data.swift */,
 				7E7B4E5D202D9E9800FA280D /* City.swift */,
 				7E7B4E5F202DA09800FA280D /* Slider.swift */,
+				7E428CC1203490ED007CED56 /* Plan.swift */,
+				7E428CC920349ECA007CED56 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,8 +305,9 @@
 			isa = PBXGroup;
 			children = (
 				7E7B4E61202DAA0200FA280D /* Controller.swift */,
-				7E7B4E65202DAB6500FA280D /* InitializeController.swift */,
-				7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */,
+				7E428CC42034940B007CED56 /* plan */,
+				7E428CC3203493F9007CED56 /* auth */,
+				7E077609202F974300427607 /* init */,
 				7E077605202F25D800427607 /* ContactController.swift */,
 			);
 			path = Controllers;
@@ -611,7 +656,9 @@
 				7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */,
 				7E61568B202E2F6B00E60611 /* HomeTabViewController copy.swift in Sources */,
 				7E7B4E62202DAA0200FA280D /* Controller.swift in Sources */,
+				7E07760D202F994F00427607 /* AuthCallback.swift in Sources */,
 				7EBED833202DD8A1009A1FB3 /* CityCell.swift in Sources */,
+				7E428CC820349438007CED56 /* BuisinessCallback.swift in Sources */,
 				7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */,
 				7E7B4E5C202D9AA700FA280D /* Data.swift in Sources */,
 				7E7B4E5A202D99FC00FA280D /* Model.swift in Sources */,
@@ -620,7 +667,9 @@
 				7E7B4E68202DAF2500FA280D /* InitializeCallback.swift in Sources */,
 				7E7B4E60202DA09800FA280D /* Slider.swift in Sources */,
 				7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */,
+				7E428CCA20349ECA007CED56 /* Profile.swift in Sources */,
 				7E7B4E58202D99D100FA280D /* Request.swift in Sources */,
+				7E428CC2203490EE007CED56 /* Plan.swift in Sources */,
 				7E05F04C202D983B00BDFBA5 /* SplashViewController.swift in Sources */,
 				7E077606202F25D800427607 /* ContactController.swift in Sources */,
 				7E05F04A202D983B00BDFBA5 /* AppDelegate.swift in Sources */,
@@ -629,8 +678,11 @@
 				7E61569A202E56C600E60611 /* DataCell.swift in Sources */,
 				7E7B4E5E202D9E9800FA280D /* City.swift in Sources */,
 				7E077604202F0D2300427607 /* ContactUsViewController.swift in Sources */,
+				7E077608202F8ADF00427607 /* AccountTabViewController.swift in Sources */,
+				7E07760B202F980800427607 /* AuthController.swift in Sources */,
 				7E61568D202E414B00E60611 /* DataResource.swift in Sources */,
 				7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */,
+				7E428CC620349420007CED56 /* BuisinessController.swift in Sources */,
 				7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

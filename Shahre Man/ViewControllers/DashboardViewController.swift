@@ -18,7 +18,6 @@ class DashboardViewController: UITabBarController {
         self.tabBar.unselectedItemTintColor = UIColor.white ;
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
-        
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 25));
         let imageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
         imageView.frame = CGRect(x: 0, y: 0, width: 50, height:25);

@@ -17,12 +17,12 @@ extension UIStoryboard{
     }
     
     func instantiateModalViewController<M:UIViewController>(modal:M.Type) -> M {
-       let vc =  UIStoryboard(name: "Modal", bundle: nil).instantiateViewController(withIdentifier: modal.name)
+        let vc =  UIStoryboard(name: "Modal", bundle: nil).instantiateViewController(withIdentifier: modal.name)
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve;
         return vc as! M;
     }
-  
+    
 }
 
 extension UIViewController{

@@ -29,6 +29,7 @@ class DataResource{
     private var _sliders:[Slider]?;
     private var _datas:[Data]?;
     private var _city:City?;
+    private var _token:String?;
     
     
     public var sliders:[Slider]?{
@@ -54,6 +55,20 @@ class DataResource{
     public var hasCity:Bool{
         return (_city != nil);
     }
+    
+    public var hasToken:Bool {
+        return (_token != nil);
+    }
+    
+    public var token:String?{
+        return Storage.me.value(forKey: "token") as? String;
+    }
+    
+    public var name:String?{
+        return Storage.me.value(forKey: "name") as? String;
+    }
+    
+    
     
     
     
