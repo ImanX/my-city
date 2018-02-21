@@ -13,4 +13,5 @@ class PagerCell : FSPagerViewCell{
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var title: UILabel!
+
 }

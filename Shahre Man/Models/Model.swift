@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-class Model{
+public class Model{
     
    public init() {
         

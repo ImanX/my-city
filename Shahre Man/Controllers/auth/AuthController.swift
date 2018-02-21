@@ -8,6 +8,24 @@
 
 import Foundation
 class AuthController : Controller<AuthCallback> {
+    
+    func requestSendOTP(mobile:String){
+        let request = Request(URL: APIwithQueryString(.Login,["mobile" : mobile]), method: .post);
+        request.get();
+        request.callback.didSuccess = { (json) in
+            self.callback.didSuccessSendOTP!();
+        }
+        
+        request.callback.didFailure = {
+            self.callback.didFailure($0,$1,$2);
+        }
+        
+        request.callback.didConnectionFailure = {
+            self.callback.didConnectionFailure();
+
+        }
+    }
+    
     func inquery(mobile:String){
         let request = Request(URL: APIwithQueryString(.Login,["mobile" : mobile]), method: .post);
         request.get()
@@ -26,42 +44,58 @@ class AuthController : Controller<AuthCallback> {
     
     
     func auth(mobile:String , otp:String) {
-        let request = Request(URL: APIwithQueryString(.LoginAuth,["mobile" : mobile,"code" : otp]), method: .post);
+        let request = Request(URL: APIwithQueryString(.LoginAuth,["code" : otp,"mobile" : mobile]), method: .post);
         request.get()
         request.callback.didSuccess = {(json) in
+            let a = AuthController(callback: AuthCallback());
+            a.getProfile(mobile: mobile)
+            a.callback.didSuccessResolveProfile  = { p in
+                self.callback.didSuccessAuthentication!(p);
+            }
             
         }
-        request.callback.didFailure = {_,_,_ in 
-            
+        request.callback.didFailure = {
+            self.callback.didFailure($0,$1,$2);
+
         }
         
         request.callback.didConnectionFailure = {
+            self.callback.didConnectionFailure();
             
         }
     }
     
     func register(mobile:String , name:String , family:String , email:String) {
         let url = String(format: "http://shahreman.city/api/v1/user/%@.json", arguments: [mobile]);
-        let params = ["name" : name , "family" : family , "email" : email];
+        let params = ["mobile" : mobile,"name" : name , "family" : family , "email" : email];
         let request = Request(URL: url,method: .post);
         request.params = params;
         request.get()
+        request.callback.didSuccess = { (json) in
+            self.callback.didSuccessRegisterUser?();
+        }
+        
+        request.callback.didFailure = {
+            self.callback.didFailure($0,$1,$2);
+        }
+        
+        request.callback.didConnectionFailure = {
+            self.callback.didConnectionFailure();
+        }
     }
     
 
     
     
     func getProfile(mobile:String) {
-        let url = String(format: "http://shahreman.city/api/v1/user/@%.json", arguments: [mobile]);
+        let url = String(format: "http://shahreman.city/api/v1/user/%@.json", arguments: [mobile]);
         let request = Request(URL: url,method: .get);
         request.get()
         request.callback.didSuccess = {(json) in
             
             let profile = Profile(json: json["data"]);
             self.callback.didSuccessResolveProfile!(profile);
-        
-            
-            
+
             
         }
         

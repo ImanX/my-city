@@ -11,4 +11,7 @@ class AuthCallback: RequestCallback {
     public var didFindUserAndWaitVerification : (()->Void)?;
     public var didNotFoundUser:(()->Void)?;
     public var didSuccessResolveProfile:((_ profile:Profile)->Void)?;
+    public var didSuccessRegisterUser:(()->Void)?;
+    public var didSuccessSendOTP:(()->Void)?;
+    public var didSuccessAuthentication:((_ profile:Profile)->Void)?;
 }

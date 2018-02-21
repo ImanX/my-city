@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
     private var _isHiddenNavigationBar:Bool = false;
     public var storage = Storage.me;
     public var dataResource = DataResource.defualt;
+    public var _indicator:UIIndicatorAlert?;
     
 
     @IBInspectable var hiddenNavigationBar:Bool{
@@ -37,6 +38,19 @@ class BaseViewController: UIViewController {
         return TTGSnackbar();
     }
     
+    
+    @IBInspectable var statusbarColor:UIColor{
+        set {
+            let view = UIApplication.shared.value(forKey: "statusBar") as! UIView;
+            view.backgroundColor = newValue;
+        }
+        
+        get{
+            let view = UIApplication.shared.value(forKey: "statusBar") as! UIView;
+            return view.backgroundColor!;
+        }
+    }
+
     func getErrorSnackbar(message:String) -> TTGSnackbar {
         let e = snackbar();
         e.message = message;
@@ -46,8 +60,21 @@ class BaseViewController: UIViewController {
         return e;
     }
     
-
-    
+    func getSuccessSnackbar(message:String) -> TTGSnackbar {
+        let e = snackbar();
+        e.message = message;
+        e.messageTextAlign = .right
+        e.backgroundColor = UIColor.green;
+        e.icon = #imageLiteral(resourceName: "warning");
+        return e;
+    }
+  
+    var indicatorAlert:UIIndicatorAlert?{
+        if _indicator == nil{
+            _indicator = UIIndicatorAlert();
+        }
+        return _indicator;
+    }
     
     
    public func viewDidLoad(navigationBar:UINavigationItem?) {}

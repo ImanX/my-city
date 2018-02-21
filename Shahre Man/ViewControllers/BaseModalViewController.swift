@@ -8,8 +8,11 @@
 
 import Foundation
 import UIKit
+@IBDesignable
 class BaseModalViewController<E> : BaseViewController{
     public var callback : ((E) -> Void)!;
     public var list:[E]!;
-    public var element:E!;    
+    public var element:E!;
+    
+    
 }

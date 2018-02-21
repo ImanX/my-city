@@ -24,7 +24,7 @@ class Controller<C : RequestCallback>{
         
         var queryString = "";
         for query in queries.reversed() {
-             queryString = ("\(queryString)\(query.key)=\(query.value)")
+             queryString = ("\(queryString)\("&")\(query.key)=\(query.value)")
         }
         
         return url + queryString;

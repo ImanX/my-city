@@ -44,6 +44,11 @@
 		7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E63202DAA4500FA280D /* APIs.swift */; };
 		7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E65202DAB6500FA280D /* InitializeController.swift */; };
 		7E7B4E68202DAF2500FA280D /* InitializeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */; };
+		7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */; };
+		7EB4FC7F203C1BC300E86687 /* UIIndicatorAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */; };
+		7EB4FC82203C4C4600E86687 /* RegisterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */; };
+		7EB4FC84203C61F700E86687 /* LoginModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC83203C61F700E86687 /* LoginModalViewController.swift */; };
+		7EB4FC86203D4CD900E86687 /* AccountNotifyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC85203D4CD900E86687 /* AccountNotifyDelegate.swift */; };
 		7EBED829202DCD9C009A1FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */; };
 		7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */; };
 		7EBED82F202DD7B2009A1FB3 /* SelectCityModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */; };
@@ -115,6 +120,11 @@
 		7E7B4E63202DAA4500FA280D /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		7E7B4E65202DAB6500FA280D /* InitializeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeController.swift; sourceTree = "<group>"; };
 		7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeCallback.swift; sourceTree = "<group>"; };
+		7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIndicatorAlert.swift; sourceTree = "<group>"; };
+		7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIIndicatorAlert.xib; sourceTree = "<group>"; };
+		7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModalViewController.swift; sourceTree = "<group>"; };
+		7EB4FC83203C61F700E86687 /* LoginModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModalViewController.swift; sourceTree = "<group>"; };
+		7EB4FC85203D4CD900E86687 /* AccountNotifyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNotifyDelegate.swift; sourceTree = "<group>"; };
 		7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityModalViewController.swift; sourceTree = "<group>"; };
@@ -211,8 +221,8 @@
 				7E7B4E53202D99A700FA280D /* Models */,
 				7E7B4E52202D999D00FA280D /* Http */,
 				7E05F049202D983B00BDFBA5 /* AppDelegate.swift */,
-				7E05F04D202D983B00BDFBA5 /* Main.storyboard */,
 				7E615683202DFCCD00E60611 /* Modal.storyboard */,
+				7E05F04D202D983B00BDFBA5 /* Main.storyboard */,
 				7EBED828202DCD9C009A1FB3 /* LaunchScreen.storyboard */,
 				7E05F050202D983B00BDFBA5 /* Assets.xcassets */,
 				7E05F055202D983B00BDFBA5 /* Info.plist */,
@@ -275,6 +285,7 @@
 				7E61568A202E2F6A00E60611 /* HomeTabViewController copy.swift */,
 				7E077607202F8ADF00427607 /* AccountTabViewController.swift */,
 				7E615688202E2A9700E60611 /* SearchTabViewController.swift */,
+				7EB4FC85203D4CD900E86687 /* AccountNotifyDelegate.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -316,10 +327,10 @@
 		7E7B4E69202DC77700FA280D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7EB4FC80203C4B6700E86687 /* Modal */,
 				7E615687202E2A7E00E60611 /* Tabs */,
 				7E05F04B202D983B00BDFBA5 /* SplashViewController.swift */,
 				7EBED82C202DCF18009A1FB3 /* BaseViewController.swift */,
-				7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */,
 				7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */,
 				7E615685202E03BB00E60611 /* DashboardViewController.swift */,
 				7E077603202F0D2300427607 /* ContactUsViewController.swift */,
@@ -327,9 +338,29 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		7EB4FC7D203C1BA900E86687 /* IndicatorAlert */ = {
+			isa = PBXGroup;
+			children = (
+				7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */,
+				7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */,
+			);
+			path = IndicatorAlert;
+			sourceTree = "<group>";
+		};
+		7EB4FC80203C4B6700E86687 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */,
+				7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */,
+				7EB4FC83203C61F700E86687 /* LoginModalViewController.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		7EBED830202DD887009A1FB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7EB4FC7D203C1BA900E86687 /* IndicatorAlert */,
 				7EBED831202DD88D009A1FB3 /* Cells */,
 				7E615697202E533600E60611 /* UICircleImageView.swift */,
 			);
@@ -465,6 +496,7 @@
 			files = (
 				7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */,
 				7EBED829202DCD9C009A1FB3 /* LaunchScreen.storyboard in Resources */,
+				7EB4FC7F203C1BC300E86687 /* UIIndicatorAlert.xib in Resources */,
 				7E05F051202D983B00BDFBA5 /* Assets.xcassets in Resources */,
 				7E05F04F202D983B00BDFBA5 /* Main.storyboard in Resources */,
 				7E077602202EE4D900427607 /* PagerCell.xib in Resources */,
@@ -653,6 +685,7 @@
 				7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */,
 				7E615698202E533600E60611 /* UICircleImageView.swift in Sources */,
 				7E61568F202E43E200E60611 /* Storage.swift in Sources */,
+				7EB4FC86203D4CD900E86687 /* AccountNotifyDelegate.swift in Sources */,
 				7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */,
 				7E61568B202E2F6B00E60611 /* HomeTabViewController copy.swift in Sources */,
 				7E7B4E62202DAA0200FA280D /* Controller.swift in Sources */,
@@ -674,12 +707,15 @@
 				7E077606202F25D800427607 /* ContactController.swift in Sources */,
 				7E05F04A202D983B00BDFBA5 /* AppDelegate.swift in Sources */,
 				7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */,
+				7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */,
+				7EB4FC84203C61F700E86687 /* LoginModalViewController.swift in Sources */,
 				7EBED837202DF872009A1FB3 /* Excention.swift in Sources */,
 				7E61569A202E56C600E60611 /* DataCell.swift in Sources */,
 				7E7B4E5E202D9E9800FA280D /* City.swift in Sources */,
 				7E077604202F0D2300427607 /* ContactUsViewController.swift in Sources */,
 				7E077608202F8ADF00427607 /* AccountTabViewController.swift in Sources */,
 				7E07760B202F980800427607 /* AuthController.swift in Sources */,
+				7EB4FC82203C4C4600E86687 /* RegisterModalViewController.swift in Sources */,
 				7E61568D202E414B00E60611 /* DataResource.swift in Sources */,
 				7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */,
 				7E428CC620349420007CED56 /* BuisinessController.swift in Sources */,

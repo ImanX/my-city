@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-class Profile : Model{
+public class Profile : Model{
     
     override init(json: JSON) {
         super.init();
@@ -18,11 +18,15 @@ class Profile : Model{
         email = json["email"].stringValue;
         mobile = json["mobile"].stringValue;
         passwordHash = json["passwordHash"].stringValue;
+        emailHash = json["emailHash"].stringValue;
         authToken = json["authKey"].stringValue;
         status = Profile.Status(rawValue: json["status"].intValue)!;
         ip = json["ip"].stringValue;
         createdAt = json["createAt"].stringValue;
     
+    }
+    public override init() {
+        super.init()
     }
     
     var id:Int?;
@@ -36,14 +40,15 @@ class Profile : Model{
     private var _status:Int?;
     var ip:String?;
     var createdAt:String?;
+    var emailHash:String?;
     
     var avatar:String{
-        get{return  String(format: "https://www.gravatar.com/avatar/%@?s=512&d=identicon&r=PG", arguments: [email!])  }
+        get{return  String(format: "https://www.gravatar.com/avatar/%@?s=512&d=identicon&r=PG", arguments: [emailHash!])  }
     }
     
-    var status:Status{
-        get{return Status(rawValue: _status!)!}
-        set{_status = newValue.rawValue}
+    var status:Status?{
+        get{return Status(rawValue: _status ?? 0)}
+        set{_status = newValue?.rawValue ?? 0}
     }
     
     

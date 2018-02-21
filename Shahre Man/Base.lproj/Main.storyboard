@@ -76,10 +76,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ4-m8-UnD">
-                                <rect key="frame" x="0.0" y="165" width="375" height="453"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="175" width="375" height="443"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="-1" indentationWidth="0.0" reuseIdentifier="DataCell" id="Lwy-oV-eZK" customClass="DataCell" customModule="Shahre_Man" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="-1" indentationWidth="0.0" reuseIdentifier="DataCell" id="Lwy-oV-eZK" customClass="DataCell" customModule="Shahre_Man" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lwy-oV-eZK" id="Iaf-nX-YGX">
@@ -105,6 +105,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="9pa-v7-dRL" firstAttribute="leading" secondItem="sUP-Yg-IE3" secondAttribute="trailing" constant="8" id="3EY-LX-g8i"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="usM-Au-jIR" secondAttribute="bottom" constant="20" id="3Ku-cy-3fn"/>
@@ -117,6 +118,7 @@
                                                 <constraint firstItem="usM-Au-jIR" firstAttribute="top" secondItem="sUP-Yg-IE3" secondAttribute="bottom" constant="1" id="ooB-qx-pd7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <connections>
                                             <outlet property="content" destination="usM-Au-jIR" id="vSP-Za-6CE"/>
                                             <outlet property="icon" destination="9pa-v7-dRL" id="F26-mO-fDU"/>
@@ -130,22 +132,23 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pff-Ej-GuF" customClass="FSPagerView" customModule="FSPagerView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                                <rect key="frame" x="5" y="5" width="364" height="165"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="165" id="hbs-HR-VXZ"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZZ4-m8-UnD" firstAttribute="leading" secondItem="qrI-Sy-Xej" secondAttribute="leading" id="1Pn-ps-6sI"/>
-                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="top" secondItem="pff-Ej-GuF" secondAttribute="bottom" id="6Fi-7T-Yog"/>
-                            <constraint firstItem="pff-Ej-GuF" firstAttribute="top" secondItem="Y76-Tj-BFo" secondAttribute="top" id="DXk-GF-JFp"/>
+                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="top" secondItem="pff-Ej-GuF" secondAttribute="bottom" constant="5" id="6Fi-7T-Yog"/>
+                            <constraint firstItem="pff-Ej-GuF" firstAttribute="top" secondItem="Y76-Tj-BFo" secondAttribute="top" constant="5" id="DXk-GF-JFp"/>
+                            <constraint firstItem="qrI-Sy-Xej" firstAttribute="trailing" secondItem="pff-Ej-GuF" secondAttribute="trailing" constant="6" id="HRH-OC-cEi"/>
                             <constraint firstItem="ZZ4-m8-UnD" firstAttribute="trailing" secondItem="qrI-Sy-Xej" secondAttribute="trailing" id="Qmv-3Z-YTH"/>
-                            <constraint firstItem="pff-Ej-GuF" firstAttribute="leading" secondItem="ZZ4-m8-UnD" secondAttribute="leading" id="X9o-OI-Nl4"/>
+                            <constraint firstItem="pff-Ej-GuF" firstAttribute="leading" secondItem="ZZ4-m8-UnD" secondAttribute="leading" constant="5" id="X9o-OI-Nl4"/>
                             <constraint firstItem="ZZ4-m8-UnD" firstAttribute="bottom" secondItem="qrI-Sy-Xej" secondAttribute="bottom" id="utM-36-tBt"/>
-                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="centerX" secondItem="pff-Ej-GuF" secondAttribute="centerX" id="v5C-Ki-bvY"/>
+                            <constraint firstItem="ZZ4-m8-UnD" firstAttribute="centerX" secondItem="pff-Ej-GuF" secondAttribute="centerX" constant="0.5" id="v5C-Ki-bvY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qrI-Sy-Xej"/>
                     </view>
@@ -159,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ys-d3-1lW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031.8840579710147" y="256.79347826086956"/>
+            <point key="canvasLocation" x="2031.2" y="255.92203898050977"/>
         </scene>
         <!--Search Tab View Controller-->
         <scene sceneID="TW9-QV-KK1">
@@ -275,7 +278,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiX-9F-bXE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarholder1x1" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-pL-2on">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarholder1x1" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-pL-2on" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
                                         <rect key="frame" x="153" y="28" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="B89-9e-5tw"/>
@@ -337,7 +340,14 @@
                                         <state key="normal" title="مرحله بعد">
                                             <color key="titleColor" red="0.96136253240000002" green="0.44112355590000002" blue="0.1130696249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextLevel:" destination="Vxl-E0-aAT" eventType="touchUpInside" id="g4i-mh-VLo"/>
+                                        </connections>
                                     </button>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-SN-Cnh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="453"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -347,8 +357,12 @@
                                     <constraint firstItem="qJj-qA-BRO" firstAttribute="leading" secondItem="SoI-aF-Jhd" secondAttribute="leading" constant="8" id="GzD-22-HGk"/>
                                     <constraint firstAttribute="trailing" secondItem="QI1-k5-qsk" secondAttribute="trailing" constant="8" id="Hiw-ka-tVi"/>
                                     <constraint firstAttribute="trailing" secondItem="qJj-qA-BRO" secondAttribute="trailing" constant="10" id="KzW-BD-vfw"/>
+                                    <constraint firstAttribute="bottom" secondItem="b3N-SN-Cnh" secondAttribute="bottom" id="Mqb-t8-l5W"/>
                                     <constraint firstItem="DZx-kx-zWa" firstAttribute="leading" secondItem="SoI-aF-Jhd" secondAttribute="leading" constant="8" id="UPV-Ok-afz"/>
                                     <constraint firstAttribute="trailing" secondItem="DZx-kx-zWa" secondAttribute="trailing" constant="8" id="WCB-ay-ima"/>
+                                    <constraint firstItem="b3N-SN-Cnh" firstAttribute="top" secondItem="SoI-aF-Jhd" secondAttribute="top" id="hLv-jY-c1R"/>
+                                    <constraint firstAttribute="trailing" secondItem="b3N-SN-Cnh" secondAttribute="trailing" id="m56-pq-k2a"/>
+                                    <constraint firstItem="b3N-SN-Cnh" firstAttribute="leading" secondItem="SoI-aF-Jhd" secondAttribute="leading" id="ofA-ci-t5z"/>
                                     <constraint firstItem="qJj-qA-BRO" firstAttribute="top" secondItem="SoI-aF-Jhd" secondAttribute="top" constant="23" id="phA-fr-oWX"/>
                                     <constraint firstAttribute="trailing" secondItem="Hjo-6D-J4p" secondAttribute="trailing" constant="10" id="q5Y-zv-VfV"/>
                                     <constraint firstItem="DZx-kx-zWa" firstAttribute="top" secondItem="qJj-qA-BRO" secondAttribute="bottom" constant="10" id="vgH-C4-wl9"/>
@@ -372,6 +386,7 @@
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="fldMobile" destination="DZx-kx-zWa" id="ic0-Qt-adX"/>
                         <outlet property="imgAvatar" destination="UJa-pL-2on" id="lNf-gU-9Vk"/>
                         <outlet property="lblName" destination="MeM-Mb-Ex7" id="HuE-UW-k5a"/>
                     </connections>
