@@ -18,22 +18,13 @@ class DashboardViewController: UITabBarController {
         self.tabBar.unselectedItemTintColor = UIColor.white ;
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 25));
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 38));
         let imageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
-        imageView.frame = CGRect(x: 0, y: 0, width: 60, height:30);
+        imageView.frame = CGRect(x: 0, y: 0, width: 65, height:34);
         titleView.addSubview(imageView)
         self.navigationItem.titleView = titleView
         
         
-        
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "main"), style: .plain, target: self, action: #selector(DashboardViewController.openContactUS));
-//        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white;
-
     }
     
-    
-    @objc func openContactUS() {
-        let vc = storyboard?.instantiateViewController(viewController: ContactUsViewController.self);
-        self.navigationController?.pushViewController(vc!, animated: true);
-    }
 }

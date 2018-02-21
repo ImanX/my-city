@@ -9,7 +9,24 @@
 import Foundation
 import UIKit
 class SelectCityModalViewController: BaseModalViewController<City>, UITableViewDataSource , UITableViewDelegate{
-
+    
+    var isShowCloseButton:Bool = false;
+    
+    @IBOutlet weak var navigationItems: UINavigationItem!
+    
+    override func viewDidLoad() {
+        if isShowCloseButton {
+            navigationItems.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop, target: self, action: #selector(close))
+            navigationItems.leftBarButtonItem?.tintColor = .black;
+            
+        }
+        
+    }
+    
+    @objc func close(){
+        dismiss(animated: true, completion: nil);
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (list?.count)!;
     }

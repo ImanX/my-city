@@ -15,7 +15,7 @@ class Slider: Data {
         self.image = json["image"].string!;
         self.title = json["title"].string!;
         self.caption = json["caption"].string!;
-        self.ID = json["link"]["id"].int!;
+        self.ID = json["link"]["id"].intValue;
         self.type = json["link"]["type"].string!;
     }
 }

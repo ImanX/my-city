@@ -26,6 +26,9 @@
 		7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */; };
 		7E171E14203DE1E600A4F2D0 /* ItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */; };
 		7E171E16203DE33C00A4F2D0 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E15203DE33C00A4F2D0 /* MenuCell.swift */; };
+		7E171E23203E05E700A4F2D0 /* sansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E20203E05E700A4F2D0 /* sansBold.ttf */; };
+		7E171E24203E05E700A4F2D0 /* sansLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E21203E05E700A4F2D0 /* sansLight.ttf */; };
+		7E171E25203E05E700A4F2D0 /* sansULight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E22203E05E700A4F2D0 /* sansULight.ttf */; };
 		7E428CC2203490EE007CED56 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC1203490ED007CED56 /* Plan.swift */; };
 		7E428CC620349420007CED56 /* BuisinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC520349420007CED56 /* BuisinessController.swift */; };
 		7E428CC820349438007CED56 /* BuisinessCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC720349438007CED56 /* BuisinessCallback.swift */; };
@@ -106,6 +109,9 @@
 		7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIPrettyButton.xib; sourceTree = "<group>"; };
 		7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenu.swift; sourceTree = "<group>"; };
 		7E171E15203DE33C00A4F2D0 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		7E171E20203E05E700A4F2D0 /* sansBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansBold.ttf; path = Fonts/sansBold.ttf; sourceTree = "<group>"; };
+		7E171E21203E05E700A4F2D0 /* sansLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansLight.ttf; path = Fonts/sansLight.ttf; sourceTree = "<group>"; };
+		7E171E22203E05E700A4F2D0 /* sansULight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansULight.ttf; path = Fonts/sansULight.ttf; sourceTree = "<group>"; };
 		7E428CC1203490ED007CED56 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		7E428CC520349420007CED56 /* BuisinessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessController.swift; sourceTree = "<group>"; };
 		7E428CC720349438007CED56 /* BuisinessCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessCallback.swift; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 		7E05F03D202D983B00BDFBA5 = {
 			isa = PBXGroup;
 			children = (
+				7E171E20203E05E700A4F2D0 /* sansBold.ttf */,
+				7E171E21203E05E700A4F2D0 /* sansLight.ttf */,
+				7E171E22203E05E700A4F2D0 /* sansULight.ttf */,
 				7E05F048202D983B00BDFBA5 /* Shahre Man */,
 				7E05F05D202D983B00BDFBA5 /* Shahre ManTests */,
 				7E05F068202D983B00BDFBA5 /* Shahre ManUITests */,
@@ -514,6 +523,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E171E23203E05E700A4F2D0 /* sansBold.ttf in Resources */,
+				7E171E24203E05E700A4F2D0 /* sansLight.ttf in Resources */,
+				7E171E25203E05E700A4F2D0 /* sansULight.ttf in Resources */,
 				7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */,
 				7EBED829202DCD9C009A1FB3 /* LaunchScreen.storyboard in Resources */,
 				7EB4FC7F203C1BC300E86687 /* UIIndicatorAlert.xib in Resources */,

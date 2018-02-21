@@ -36,8 +36,12 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
+        switch (indexPath.row + 1) {
+        case 4:
+            contact();
+        case 5:
+            changeCity();
+        case 6:
             logout();
         default: break
             
@@ -122,14 +126,42 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
 
     }
     
+    func contact(){
+        let vc = storyboard?.instantiateViewController(viewController: ContactUsViewController.self);
+        self.navigationController?.pushViewController(vc!, animated: true);
+    }
+    
+    func changeCity() {
+        let initt = InitializeController(callback: InitializeCallback());
+        initt.getCities();
+        initt.callback.didSuccessResolveCities = { (list) in
+            let modalViewController = self.storyboard?.instantiateModalViewController(modal:SelectCityModalViewController.self , presenetStyle: UIModalPresentationStyle.overCurrentContext);
+            modalViewController?.list = list;
+            modalViewController?.isShowCloseButton = true;
+            
+            self.present(modalViewController!, animated: true, completion: nil)
+            modalViewController?.callback = { item in
+                self.dataResource.city = item;
+            }
+        }
+        
+        initt.callback.didFailure = {_,_,_ in
+            
+        }
+        
+        initt.callback.didConnectionFailure = {
+            
+        }
+    }
+    
     func getMenuList() -> [ItemMenu]{
         var list = [ItemMenu]();
-        let i1 = ItemMenu(caption: "add", image: #imageLiteral(resourceName: "shipping"));
-        let i2 = ItemMenu(caption: "all", image: #imageLiteral(resourceName: "shop"));
-        let i3 = ItemMenu(caption: "edit", image: #imageLiteral(resourceName: "edit"));
-        let i4 = ItemMenu(caption: "mail", image: #imageLiteral(resourceName: "main"));
-        let i5 = ItemMenu(caption: "city", image: #imageLiteral(resourceName: "city"));
-        let i6 = ItemMenu(caption: "logout", image: #imageLiteral(resourceName: "logout"));
+        let i1 = ItemMenu(caption: "ثبت صنف", image: #imageLiteral(resourceName: "shipping"));
+        let i2 = ItemMenu(caption: "اصناف", image: #imageLiteral(resourceName: "shop"));
+        let i3 = ItemMenu(caption: "تغییر پروفایل", image: #imageLiteral(resourceName: "edit"));
+        let i4 = ItemMenu(caption: "ارتباط با ما", image: #imageLiteral(resourceName: "main"));
+        let i5 = ItemMenu(caption: "تغییر شهر", image: #imageLiteral(resourceName: "city"));
+        let i6 = ItemMenu(caption: "خروج", image: #imageLiteral(resourceName: "logout"));
 
 
 

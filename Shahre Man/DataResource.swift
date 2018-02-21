@@ -74,7 +74,7 @@ class DataResource{
             storage.setValue(newValue?.ID, forKey: Keys.CITY_ID);
             storage.setValue(newValue?.name, forKey: Keys.CITY_NAME);
             storage.setValue(newValue?.alternativeName, forKey: Keys.CITY_ALT);
-            self._city = city;
+            self._city = newValue;
         }
         get{return _city}
     }
