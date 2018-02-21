@@ -10,36 +10,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIPrettyButton" customModule="Shahre_Man" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIPrettyButton" customModule="Shahre_Man" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="cgj-lC-Lnn" id="J5h-eV-15A"/>
+                <outlet property="lblCaption" destination="Jet-NX-6o6" id="pMi-yi-aVV"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="265" height="66"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgj-lC-Lnn">
-                    <rect key="frame" x="219" y="12.5" width="40" height="40"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="cgj-lC-Lnn">
+                    <rect key="frame" x="229" y="23" width="20" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="sAS-5Q-0bp"/>
-                        <constraint firstAttribute="width" constant="40" id="vBb-tA-Tof"/>
+                        <constraint firstAttribute="height" constant="20" id="sAS-5Q-0bp"/>
+                        <constraint firstAttribute="width" constant="20" id="vBb-tA-Tof"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jet-NX-6o6">
-                    <rect key="frame" x="169" y="22.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dasd" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jet-NX-6o6">
+                    <rect key="frame" x="193" y="26" width="28" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cgj-lC-Lnn" secondAttribute="trailing" constant="6" id="i6F-JJ-0lS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cgj-lC-Lnn" secondAttribute="trailing" constant="16" id="i6F-JJ-0lS"/>
                 <constraint firstItem="Jet-NX-6o6" firstAttribute="centerY" secondItem="cgj-lC-Lnn" secondAttribute="centerY" id="k15-Fh-xvh"/>
                 <constraint firstItem="Jet-NX-6o6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pde-Ia-fFm"/>
                 <constraint firstItem="cgj-lC-Lnn" firstAttribute="leading" secondItem="Jet-NX-6o6" secondAttribute="trailing" constant="8" id="yQJ-tB-OZs"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="136" y="-307"/>
+            <point key="canvasLocation" x="135.5" y="-307"/>
         </view>
     </objects>
+    <resources>
+        <image name="account" width="30" height="30"/>
+    </resources>
 </document>

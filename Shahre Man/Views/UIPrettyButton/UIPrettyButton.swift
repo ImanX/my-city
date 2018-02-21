@@ -10,13 +10,31 @@ import Foundation
 import UIKit
 @IBDesignable
 class UIPrettyButton : UIView {
+    
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var lblCaption: UILabel!
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame);
+        setup();
     }
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
+        setup();
     }
+    
+    
+    @IBInspectable var image:UIImage?{
+        set{imgView.image = newValue}
+        get{return imgView.image;}
+    }
+    
+    @IBInspectable var caption:String?{
+        set{lblCaption.text = newValue}
+        get{return lblCaption.text}
+    }
+    
     
     
     func setup() {

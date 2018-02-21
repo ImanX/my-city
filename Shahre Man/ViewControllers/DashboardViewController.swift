@@ -26,8 +26,8 @@ class DashboardViewController: UITabBarController {
         
         
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "main"), style: .plain, target: self, action: #selector(DashboardViewController.openContactUS));
-        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white;
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "main"), style: .plain, target: self, action: #selector(DashboardViewController.openContactUS));
+//        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white;
 
     }
     
