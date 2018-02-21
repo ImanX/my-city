@@ -22,6 +22,8 @@
 		7E077608202F8ADF00427607 /* AccountTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E077607202F8ADF00427607 /* AccountTabViewController.swift */; };
 		7E07760B202F980800427607 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760A202F980800427607 /* AuthController.swift */; };
 		7E07760D202F994F00427607 /* AuthCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760C202F994F00427607 /* AuthCallback.swift */; };
+		7E171E0E203DC31000A4F2D0 /* UIPrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */; };
+		7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */; };
 		7E428CC2203490EE007CED56 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC1203490ED007CED56 /* Plan.swift */; };
 		7E428CC620349420007CED56 /* BuisinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC520349420007CED56 /* BuisinessController.swift */; };
 		7E428CC820349438007CED56 /* BuisinessCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC720349438007CED56 /* BuisinessCallback.swift */; };
@@ -98,6 +100,8 @@
 		7E077607202F8ADF00427607 /* AccountTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabViewController.swift; sourceTree = "<group>"; };
 		7E07760A202F980800427607 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		7E07760C202F994F00427607 /* AuthCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCallback.swift; sourceTree = "<group>"; };
+		7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrettyButton.swift; sourceTree = "<group>"; };
+		7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIPrettyButton.xib; sourceTree = "<group>"; };
 		7E428CC1203490ED007CED56 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		7E428CC520349420007CED56 /* BuisinessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessController.swift; sourceTree = "<group>"; };
 		7E428CC720349438007CED56 /* BuisinessCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessCallback.swift; sourceTree = "<group>"; };
@@ -357,9 +361,19 @@
 			path = Modal;
 			sourceTree = "<group>";
 		};
+		7EB4FC87203DBA8C00E86687 /* UIPrettyButton */ = {
+			isa = PBXGroup;
+			children = (
+				7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */,
+				7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */,
+			);
+			path = UIPrettyButton;
+			sourceTree = "<group>";
+		};
 		7EBED830202DD887009A1FB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7EB4FC87203DBA8C00E86687 /* UIPrettyButton */,
 				7EB4FC7D203C1BA900E86687 /* IndicatorAlert */,
 				7EBED831202DD88D009A1FB3 /* Cells */,
 				7E615697202E533600E60611 /* UICircleImageView.swift */,
@@ -500,6 +514,7 @@
 				7E05F051202D983B00BDFBA5 /* Assets.xcassets in Resources */,
 				7E05F04F202D983B00BDFBA5 /* Main.storyboard in Resources */,
 				7E077602202EE4D900427607 /* PagerCell.xib in Resources */,
+				7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +720,7 @@
 				7E428CC2203490EE007CED56 /* Plan.swift in Sources */,
 				7E05F04C202D983B00BDFBA5 /* SplashViewController.swift in Sources */,
 				7E077606202F25D800427607 /* ContactController.swift in Sources */,
+				7E171E0E203DC31000A4F2D0 /* UIPrettyButton.swift in Sources */,
 				7E05F04A202D983B00BDFBA5 /* AppDelegate.swift in Sources */,
 				7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */,
 				7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */,
