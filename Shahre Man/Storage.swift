@@ -30,6 +30,9 @@ class Storage: UserDefaults {
     
     func removeAll(){
         for key in self.dictionaryRepresentation().keys{
+            if key.contains("city"){
+                continue;
+            }
             removeObject(forKey: key);
         }
     }

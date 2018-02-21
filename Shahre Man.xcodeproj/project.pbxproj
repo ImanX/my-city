@@ -392,8 +392,8 @@
 				7EBED832202DD8A1009A1FB3 /* CityCell.swift */,
 				7E615699202E56C600E60611 /* DataCell.swift */,
 				7E0775FD202EE46100427607 /* PagerCell.swift */,
-				7E077601202EE4D900427607 /* PagerCell.xib */,
 				7E171E15203DE33C00A4F2D0 /* MenuCell.swift */,
+				7E077601202EE4D900427607 /* PagerCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

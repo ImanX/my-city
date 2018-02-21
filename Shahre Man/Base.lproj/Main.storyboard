@@ -311,7 +311,7 @@
                                     <constraint firstAttribute="trailing" secondItem="MeM-Mb-Ex7" secondAttribute="trailing" constant="8" id="y7T-1b-R8K"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-SN-Cnh">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-SN-Cnh">
                                 <rect key="frame" x="0.0" y="140" width="320" height="379"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mga-gu-GO7">
@@ -416,11 +416,6 @@
                             <constraint firstAttribute="trailing" secondItem="tiX-9F-bXE" secondAttribute="trailing" id="zUM-Rn-uu2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rGM-bD-4L6"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="SoI-aF-Jhd"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" image="account" id="bjB-Er-HPr">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>

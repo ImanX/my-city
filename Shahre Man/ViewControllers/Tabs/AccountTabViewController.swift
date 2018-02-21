@@ -34,6 +34,15 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
         return 1;
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            logout();
+        default: break
+            
+        }
+    }
    
     func didResolveProfile(profile: Profile) {
         dataResource.profile = profile;
@@ -76,15 +85,12 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
         authController.callback.didConnectionFailure = {
             self.indicatorAlert?.dismiss();
             self.fldMobile.text?.clear();
-
-
         }
         
-        
-        
-        
+
         
     }
+    
     override func viewDidLoad(navigationBar: UINavigationItem?) {
          //navigationBar?.title = "جستجو"
         tableView.tableFooterView = UIView()
@@ -98,11 +104,23 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
             imgAvatar.loadImage(URL: profile.avatar);
             menuView.isHidden = false;
             loginView.isHidden = true;
+        }else{
+            loginView.isHidden = false;
+            menuView.isHidden = true;
+            lblName.text = "مهمان"
+            lblNumber.text = "خوش آمدید"
+            imgAvatar.image = #imageLiteral(resourceName: "avatarholder1x1")
         }
     
     }
     
     
+    
+    func logout() {
+        dataResource.removeAll();
+        viewDidLoad();
+
+    }
     
     func getMenuList() -> [ItemMenu]{
         var list = [ItemMenu]();

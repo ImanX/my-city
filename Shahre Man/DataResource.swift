@@ -115,6 +115,11 @@ class DataResource{
         return _profile?.authToken;
     }
     
+    public func removeAll(){
+        storage.removeAll();
+        self._profile = nil;
+    }
+    
     class Keys {
         
         

@@ -85,8 +85,27 @@ class AuthController : Controller<AuthCallback> {
     }
     
 
-    
-    
+//    func logout(token:String){
+//            let url =  "http://shahreman.city/api/v1/revoke-token.json";
+//            let header = ["Authorization" : "Bearer " + token];
+//            let request = Request(URL: url,method: .post);
+//        request.header = header;
+//        request.get();
+//        
+//        request.callback.didSuccess = {(json) in
+//            self.callback.didSuccessLogout!();
+//        }
+//        
+//        request.callback.didFailure = { code , status , error in
+//            self.callback.didFailure(code , status , error);
+//        }
+//        
+//        request.callback.didConnectionFailure  = {
+//            self.callback.didConnectionFailure();
+//        }
+//        
+//    }
+//    
     func getProfile(mobile:String) {
         let url = String(format: "http://shahreman.city/api/v1/user/%@.json", arguments: [mobile]);
         let request = Request(URL: url,method: .get);

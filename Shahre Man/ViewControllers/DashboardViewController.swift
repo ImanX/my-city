@@ -20,7 +20,7 @@ class DashboardViewController: UITabBarController {
         
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 25));
         let imageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
-        imageView.frame = CGRect(x: 0, y: 0, width: 50, height:25);
+        imageView.frame = CGRect(x: 0, y: 0, width: 60, height:30);
         titleView.addSubview(imageView)
         self.navigationItem.titleView = titleView
         

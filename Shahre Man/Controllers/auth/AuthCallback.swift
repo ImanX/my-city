@@ -14,4 +14,5 @@ class AuthCallback: RequestCallback {
     public var didSuccessRegisterUser:(()->Void)?;
     public var didSuccessSendOTP:(()->Void)?;
     public var didSuccessAuthentication:((_ profile:Profile)->Void)?;
+    public var didSuccessLogout:(()->Void)?;
 }
