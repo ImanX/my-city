@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cJL-fZ-1an">
-                                <rect key="frame" x="123" y="305" width="128" height="68"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="2wb-mu-oH6">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="i5h-rH-PTB"/>
-                                    <constraint firstAttribute="width" constant="128" id="qnh-34-Oo5"/>
+                                    <constraint firstAttribute="height" constant="200" id="39T-wG-mCC"/>
+                                    <constraint firstAttribute="width" constant="200" id="SJK-hw-SAQ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96136253240000002" green="0.44112355590000002" blue="0.1130696249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cJL-fZ-1an" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5NJ-eG-gaR"/>
-                            <constraint firstItem="cJL-fZ-1an" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="5.5" id="odY-PD-8Nb"/>
+                            <constraint firstItem="2wb-mu-oH6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7Ue-mt-IpB"/>
+                            <constraint firstItem="2wb-mu-oH6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fG0-sa-MMy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="93" height="50"/>
+        <image name="logo-1" width="512" height="512"/>
     </resources>
 </document>

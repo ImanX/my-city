@@ -19,6 +19,10 @@ class ContactUsViewController : BaseViewController{
     override func viewDidLoad() {
         navigationItem.title = "تماس با ما";
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ارسال", style: .done, target: self, action: #selector(send));
+        
+        fldName.text = dataResource.profile?.name ?? "";
+        fldEmail.text = dataResource.profile?.email ?? "";
+
     }
     
     @objc func send(){
