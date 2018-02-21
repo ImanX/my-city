@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class UICircleImageView : UIImageView{
     override func layoutSubviews() {
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 0;
         self.layer.masksToBounds = false
         self.layer.cornerRadius = self.frame.height/2
         self.clipsToBounds = true
