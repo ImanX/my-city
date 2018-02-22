@@ -55,6 +55,7 @@ class Plan : Model{
         get{return _duration!}
     }
     
+
     public var accesses:[PlanAccess]{
         set{_acesses = newValue}
         get{return _acesses!}
@@ -85,6 +86,10 @@ class Plan : Model{
         public var type:String{
             set{_type = newValue}
             get{return _type!}
+        }
+        
+        public var isBoolean:Bool{
+            get{return _type == "boolean"}
         }
         
     }

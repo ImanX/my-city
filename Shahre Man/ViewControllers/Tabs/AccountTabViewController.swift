@@ -37,6 +37,8 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.row + 1) {
+        case 3:
+            buissines();
         case 4:
             contact();
         case 5:
@@ -128,6 +130,11 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
     
     func contact(){
         let vc = storyboard?.instantiateViewController(viewController: ContactUsViewController.self);
+        self.navigationController?.pushViewController(vc!, animated: true);
+    }
+    
+    func buissines() {
+        let vc = storyboard?.instantiateViewController(viewController: PlansViewController.self);
         self.navigationController?.pushViewController(vc!, animated: true);
     }
     

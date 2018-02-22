@@ -51,6 +51,9 @@
 		7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E63202DAA4500FA280D /* APIs.swift */; };
 		7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E65202DAB6500FA280D /* InitializeController.swift */; };
 		7E7B4E68202DAF2500FA280D /* InitializeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */; };
+		7E810BBC203F497800358E69 /* PlansCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BBB203F497800358E69 /* PlansCell.swift */; };
+		7E810BBE203F4B6100358E69 /* PlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E810BBD203F4B6100358E69 /* PlanCell.xib */; };
+		7E810BC0203F4DDA00358E69 /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BBF203F4DDA00358E69 /* PlansViewController.swift */; };
 		7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */; };
 		7EB4FC7F203C1BC300E86687 /* UIIndicatorAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */; };
 		7EB4FC82203C4C4600E86687 /* RegisterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */; };
@@ -134,6 +137,9 @@
 		7E7B4E63202DAA4500FA280D /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		7E7B4E65202DAB6500FA280D /* InitializeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeController.swift; sourceTree = "<group>"; };
 		7E7B4E67202DAF2500FA280D /* InitializeCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeCallback.swift; sourceTree = "<group>"; };
+		7E810BBB203F497800358E69 /* PlansCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansCell.swift; sourceTree = "<group>"; };
+		7E810BBD203F4B6100358E69 /* PlanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCell.xib; sourceTree = "<group>"; };
+		7E810BBF203F4DDA00358E69 /* PlansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansViewController.swift; sourceTree = "<group>"; };
 		7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIndicatorAlert.swift; sourceTree = "<group>"; };
 		7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIIndicatorAlert.xib; sourceTree = "<group>"; };
 		7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModalViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +358,7 @@
 				7EBED834202DEDCE009A1FB3 /* BaseModalViewController.swift */,
 				7E615685202E03BB00E60611 /* DashboardViewController.swift */,
 				7E077603202F0D2300427607 /* ContactUsViewController.swift */,
+				7E810BBF203F4DDA00358E69 /* PlansViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -402,7 +409,9 @@
 				7E615699202E56C600E60611 /* DataCell.swift */,
 				7E0775FD202EE46100427607 /* PagerCell.swift */,
 				7E171E15203DE33C00A4F2D0 /* MenuCell.swift */,
+				7E810BBB203F497800358E69 /* PlansCell.swift */,
 				7E077601202EE4D900427607 /* PagerCell.xib */,
+				7E810BBD203F4B6100358E69 /* PlanCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -533,6 +542,7 @@
 				7E05F04F202D983B00BDFBA5 /* Main.storyboard in Resources */,
 				7E077602202EE4D900427607 /* PagerCell.xib in Resources */,
 				7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */,
+				7E810BBE203F4B6100358E69 /* PlanCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +728,7 @@
 				7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */,
 				7E615698202E533600E60611 /* UICircleImageView.swift in Sources */,
 				7E61568F202E43E200E60611 /* Storage.swift in Sources */,
+				7E810BC0203F4DDA00358E69 /* PlansViewController.swift in Sources */,
 				7EB4FC86203D4CD900E86687 /* AccountNotifyDelegate.swift in Sources */,
 				7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */,
 				7E61568B202E2F6B00E60611 /* HomeTabViewController copy.swift in Sources */,
@@ -743,6 +754,7 @@
 				7E7B4E64202DAA4500FA280D /* APIs.swift in Sources */,
 				7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */,
 				7EB4FC84203C61F700E86687 /* LoginModalViewController.swift in Sources */,
+				7E810BBC203F497800358E69 /* PlansCell.swift in Sources */,
 				7EBED837202DF872009A1FB3 /* Excention.swift in Sources */,
 				7E171E14203DE1E600A4F2D0 /* ItemMenu.swift in Sources */,
 				7E61569A202E56C600E60611 /* DataCell.swift in Sources */,

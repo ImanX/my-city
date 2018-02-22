@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sansBold.ttf">
+            <string>IRANSansFaNum-Medium</string>
+        </array>
+        <array key="sansLight.ttf">
+            <string>IRANSansFaNum-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlanCell" customModule="Shahre_Man" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlanCell" customModule="Shahre_Man" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="495"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vr-oG-ada">
+                    <rect key="frame" x="16" y="40" width="301" height="34"/>
+                    <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-oc-Dmt">
+                    <rect key="frame" x="16" y="71" width="301" height="24"/>
+                    <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-mA-bfH">
+                    <rect key="frame" x="16" y="97" width="301" height="24"/>
+                    <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDm-rY-p8h">
+                    <rect key="frame" x="16" y="136" width="301" height="20.5"/>
+                    <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="12"/>
+                    <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Vr-oG-ada" secondAttribute="trailing" constant="16" id="A5l-Yw-4ds"/>
+                <constraint firstItem="PDm-rY-p8h" firstAttribute="top" secondItem="FZz-mA-bfH" secondAttribute="bottom" constant="15" id="ACQ-rW-wM5"/>
+                <constraint firstItem="8Vr-oG-ada" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="SNx-Us-m0f"/>
+                <constraint firstItem="PDm-rY-p8h" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="T1d-zj-RLr"/>
+                <constraint firstItem="cSW-oc-Dmt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="UmD-t3-lQq"/>
+                <constraint firstItem="8Vr-oG-ada" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="V4u-aI-XCq"/>
+                <constraint firstItem="FZz-mA-bfH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fKj-AQ-XqJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cSW-oc-Dmt" secondAttribute="trailing" constant="16" id="n61-OX-SIt"/>
+                <constraint firstItem="cSW-oc-Dmt" firstAttribute="top" secondItem="8Vr-oG-ada" secondAttribute="bottom" constant="-3" id="rit-FS-hkX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FZz-mA-bfH" secondAttribute="trailing" constant="16" id="sqd-Yh-tVf"/>
+                <constraint firstItem="FZz-mA-bfH" firstAttribute="top" secondItem="cSW-oc-Dmt" secondAttribute="bottom" constant="2" id="tK8-Xw-em7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PDm-rY-p8h" secondAttribute="trailing" constant="16" id="vL3-BY-Yre"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lblContent" destination="PDm-rY-p8h" id="i4w-6I-IQo"/>
+                <outlet property="lblDuration" destination="FZz-mA-bfH" id="uwK-N9-sc8"/>
+                <outlet property="lblName" destination="8Vr-oG-ada" id="5uT-M3-zLv"/>
+                <outlet property="lblPrice" destination="cSW-oc-Dmt" id="Ac3-aa-GAH"/>
+            </connections>
+            <point key="canvasLocation" x="13.5" y="-31.5"/>
+        </view>
+    </objects>
+</document>
