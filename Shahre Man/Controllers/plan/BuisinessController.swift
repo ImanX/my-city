@@ -56,6 +56,29 @@ class BuisinessController : Controller<BuisinessCallback>{
         
     }
     
+    func getMyBuisiness(){
+        let request = requestBundlAuth("http://shahreman.city/api/v1/business/my.json", .get);
+        request.get();
+        request.callback.didSuccess = { (json) in
+            let array = json["data"].array!;
+            var plans = [Buisiness]();
+            for item in array{
+                plans.append(Buisiness(json: item)) ;
+            }
+            
+            self.callback.didSuccessResolveMyBuisiness!(plans);
+        }
+        
+        request.callback.didFailure = { code , status , error in
+            self.callback.didFailure!(code , status , error);
+        }
+        
+        request.callback.didConnectionFailure = {
+            self.callback.didConnectionFailure!();
+        }
+    }
+    
+    
     func getCategories(city:City){
         let request = Request(URL: APIwithQueryString(.Buisiness,["city":city]), method: .get);
         request.get();

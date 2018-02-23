@@ -26,15 +26,22 @@ class Buisiness: Model {
     var videoExtension:String?;
     var videoCover:String?;
     
-    
-    
+//    "id": 40,
+//    "cityId": 274,
+//    "address": "",
+//    "zipCode": null,
+//    "latitude": null,
+//    "longitude": null,
+//    "updateAt": "2018-02-22 21:34:36",
+//    "createAt": "2018-02-22 10:16:58"
+//    
     
     
     override init(json: JSON) {
         super.init()
         id = json["id"].intValue;
         canEdit = json["canEdit"].boolValue;
-        name = json["canEdit"].stringValue;
+        name = json["name"].stringValue;
         image = json["image"].stringValue;
         adress = json["address"].stringValue;
         cityName = json["cityName"].stringValue;

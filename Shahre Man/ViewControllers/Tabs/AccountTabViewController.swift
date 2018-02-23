@@ -37,8 +37,12 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.row + 1) {
-        case 3:
+            
+            
+        case 1:
             buissines();
+        case 2:
+            myBuisiness();
         case 4:
             contact();
         case 5:
@@ -128,6 +132,11 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
 
     }
     
+    func myBuisiness()  {
+        let vc = storyboard?.instantiateViewController(viewController: MyBuissinessListViewController.self);
+        self.navigationController?.pushViewController(vc!, animated: true);
+    }
+    
     func contact(){
         let vc = storyboard?.instantiateViewController(viewController: ContactUsViewController.self);
         self.navigationController?.pushViewController(vc!, animated: true);
@@ -164,7 +173,7 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
     func getMenuList() -> [ItemMenu]{
         var list = [ItemMenu]();
         let i1 = ItemMenu(caption: "ثبت صنف", image: #imageLiteral(resourceName: "shipping"));
-        let i2 = ItemMenu(caption: "اصناف", image: #imageLiteral(resourceName: "shop"));
+        let i2 = ItemMenu(caption: "اصناف من", image: #imageLiteral(resourceName: "shop"));
         let i3 = ItemMenu(caption: "تغییر پروفایل", image: #imageLiteral(resourceName: "edit"));
         let i4 = ItemMenu(caption: "ارتباط با ما", image: #imageLiteral(resourceName: "main"));
         let i5 = ItemMenu(caption: "تغییر شهر", image: #imageLiteral(resourceName: "city"));
