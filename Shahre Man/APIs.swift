@@ -14,5 +14,6 @@ enum APIs : String {
     case Login = "login.json";
     case LoginAuth = "login-auth.json";
     case Plan = "plans.json"
+    case Buisiness = "business.json"
 
 }

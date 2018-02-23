@@ -25,6 +25,9 @@ class DashboardViewController: UITabBarController {
         self.navigationItem.titleView = titleView
         
         
+        print(DataResource.defualt.token);
+        
+        
     }
     
 }

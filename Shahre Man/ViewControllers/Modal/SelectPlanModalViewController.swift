@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class SelectPlanModalViewController: BaseModalViewController<String>, UITableViewDataSource , UITableViewDelegate{
+class SelectPlanModalViewController: BaseModalViewController<BuisinessCategory>, UITableViewDataSource , UITableViewDelegate{
     
     var isShowCloseButton:Bool = false;
     
@@ -36,7 +36,7 @@ class SelectPlanModalViewController: BaseModalViewController<String>, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell =   tableView.dequeueReusableCell(withIdentifier: "CityCell" , for: indexPath) as! CityCell;
-        cell.lblCityName.text = list![indexPath.row]
+        cell.lblCityName.text = list![indexPath.row].name
         return cell;
    
     }

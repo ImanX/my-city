@@ -34,10 +34,48 @@ class BuisinessController : Controller<BuisinessCallback>{
         
     }
     
+    func register(name:String , desc:String , planID:Int , catID:Int) {
+        let url = "http://shahreman.city/api/v1/business/register.json";
+        let request = requestBundlAuth(url, .post);
+        request.params = [
+            "name" : name ,"description" : desc , "planId" : planID ,"catId" : catID]
+        request.get();
+        request.callback.didSuccess = { (json) in
+        
+            let item = Buisiness(json: json["data"]);
+            self.callback.didSuccessRegisterBuisiness!(item);
+        }
+        
+        request.callback.didFailure = { code , status , error in
+            self.callback.didFailure!(code , status , error);
+        }
+        
+        request.callback.didConnectionFailure = {
+            self.callback.didConnectionFailure!();
+        }
+        
+    }
     
-    func register() {
+    func getCategories(city:City){
+        let request = Request(URL: APIwithQueryString(.Buisiness,["city":city]), method: .get);
+        request.get();
+        request.callback.didSuccess = { (json) in
+            let array = json["data"].array!;
+            var plans = [BuisinessCategory]();
+            for item in array{
+                plans.append(BuisinessCategory(json: item)) ;
+            }
+            
+            self.callback.didSuccesResolveBuisinessCategory!(plans);
+        }
         
+        request.callback.didFailure = { code , status , error in
+            self.callback.didFailure!(code , status , error);
+        }
         
+        request.callback.didConnectionFailure = {
+            self.callback.didConnectionFailure!();
+        }
     }
     
     
