@@ -19,8 +19,10 @@ class PlansViewController : BaseViewController , FSPagerViewDelegate , FSPagerVi
     }
     
     @IBAction func register(_ sender: UIButton) {
-        let item = list![controller.currentPage];
-        print(item.name);
+        let vc = storyboard?.instantiateModalViewController(modal: RegisterBuisinessModalViewController.self, presenetStyle: UIModalPresentationStyle.overFullScreen)
+        vc?.plan = list![controller.currentPage];
+        present(vc!, animated: true, completion: nil);
+        
     }
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "PlanCell", at: index) as! PlanCell;

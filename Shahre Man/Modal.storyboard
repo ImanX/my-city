@@ -40,7 +40,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4er-uH-nMH">
-                                                            <rect key="frame" x="321" y="13" width="38.5" height="18"/>
+                                                            <rect key="frame" x="266" y="13" width="38.5" height="18"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -104,6 +104,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vz-1g-95Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1036" y="785.75712143928047"/>
+        </scene>
+        <!--Register Buisiness Modal View Controller-->
+        <scene sceneID="knK-Wc-Dqo">
+            <objects>
+                <viewController storyboardIdentifier="RegisterBuisinessModalViewController" id="H9W-Xt-I3B" customClass="RegisterBuisinessModalViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9qo-D1-uii">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام کسب و کار شما" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Sa-TQ-ZS7">
+                                <rect key="frame" x="16" y="92" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kun-eH-9A8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.96136253240000002" green="0.44112355590000002" blue="0.1130696249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="5o3-nS-oaN">
+                                        <barButtonItem key="leftBarButtonItem" title="بستن" id="Q9B-ug-0b0">
+                                            <connections>
+                                                <action selector="closes:" destination="H9W-Xt-I3B" id="d0Z-4k-ajc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="ذخیره" id="RSZ-gQ-Mch">
+                                            <connections>
+                                                <action selector="register:" destination="H9W-Xt-I3B" id="zo0-vc-7Cd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="توضیحات کسب و کار شما" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMR-kP-gCO">
+                                <rect key="frame" x="16" y="139" width="343" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="Nj1-Ko-tSL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="انتخاب دسته بندی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhE-Uz-jTZ">
+                                <rect key="frame" x="16" y="364" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="categorySelect:" destination="H9W-Xt-I3B" eventType="touchUpInside" id="HOm-YY-Uf6"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="nN8-4E-cFy">
+                                <rect key="frame" x="30" y="369" width="20" height="21"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AhE-Uz-jTZ" firstAttribute="leading" secondItem="dmv-vt-HqI" secondAttribute="leading" constant="16" id="0z6-3P-sQS"/>
+                            <constraint firstItem="nN8-4E-cFy" firstAttribute="top" secondItem="AhE-Uz-jTZ" secondAttribute="bottom" constant="-25" id="2tP-n1-7No"/>
+                            <constraint firstItem="TMR-kP-gCO" firstAttribute="leading" secondItem="dmv-vt-HqI" secondAttribute="leading" constant="16" id="8gC-mK-lnK"/>
+                            <constraint firstItem="dmv-vt-HqI" firstAttribute="trailing" secondItem="TMR-kP-gCO" secondAttribute="trailing" constant="16" id="JFW-Ck-YyZ"/>
+                            <constraint firstItem="kun-eH-9A8" firstAttribute="leading" secondItem="dmv-vt-HqI" secondAttribute="leading" id="R4k-ub-Zd1"/>
+                            <constraint firstItem="7Sa-TQ-ZS7" firstAttribute="leading" secondItem="dmv-vt-HqI" secondAttribute="leading" constant="16" id="WU2-Y3-EcR"/>
+                            <constraint firstItem="AhE-Uz-jTZ" firstAttribute="leading" secondItem="nN8-4E-cFy" secondAttribute="trailing" constant="-34" id="YjY-p5-4gW"/>
+                            <constraint firstItem="nN8-4E-cFy" firstAttribute="centerY" secondItem="AhE-Uz-jTZ" secondAttribute="centerY" id="aXs-SG-wsC"/>
+                            <constraint firstItem="kun-eH-9A8" firstAttribute="trailing" secondItem="dmv-vt-HqI" secondAttribute="trailing" id="bbK-M5-dXZ"/>
+                            <constraint firstItem="dmv-vt-HqI" firstAttribute="trailing" secondItem="AhE-Uz-jTZ" secondAttribute="trailing" constant="16" id="dcR-Cj-704"/>
+                            <constraint firstItem="dmv-vt-HqI" firstAttribute="trailing" secondItem="7Sa-TQ-ZS7" secondAttribute="trailing" constant="16" id="dfj-nO-c2e"/>
+                            <constraint firstItem="nN8-4E-cFy" firstAttribute="leading" secondItem="dmv-vt-HqI" secondAttribute="leading" constant="30" id="oJI-X7-AUJ"/>
+                            <constraint firstItem="7Sa-TQ-ZS7" firstAttribute="top" secondItem="kun-eH-9A8" secondAttribute="bottom" constant="28" id="pQv-1H-uzV"/>
+                            <constraint firstItem="AhE-Uz-jTZ" firstAttribute="top" secondItem="TMR-kP-gCO" secondAttribute="bottom" constant="17" id="v9W-ad-fbZ"/>
+                            <constraint firstItem="kun-eH-9A8" firstAttribute="top" secondItem="dmv-vt-HqI" secondAttribute="top" id="x15-R9-6Hs"/>
+                            <constraint firstItem="TMR-kP-gCO" firstAttribute="top" secondItem="7Sa-TQ-ZS7" secondAttribute="bottom" constant="17" id="xoF-Rb-uyK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dmv-vt-HqI"/>
+                    </view>
+                    <connections>
+                        <outlet property="fldName" destination="7Sa-TQ-ZS7" id="T0p-HK-k14"/>
+                        <outlet property="navigation" destination="5o3-nS-oaN" id="i0k-AG-N0n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAd-1u-hkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1036" y="1467.616191904048"/>
         </scene>
         <!--Register Modal View Controller-->
         <scene sceneID="KTe-tu-oZw">
@@ -264,6 +351,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow" width="256" height="256"/>
         <image name="logofooter" width="318" height="274"/>
     </resources>
 </document>
