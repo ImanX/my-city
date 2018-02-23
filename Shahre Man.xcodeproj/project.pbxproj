@@ -55,6 +55,7 @@
 		7E810BBE203F4B6100358E69 /* PlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E810BBD203F4B6100358E69 /* PlanCell.xib */; };
 		7E810BC0203F4DDA00358E69 /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BBF203F4DDA00358E69 /* PlansViewController.swift */; };
 		7E810BC4203FEF1800358E69 /* RegisterBuisinessModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BC3203FEF1800358E69 /* RegisterBuisinessModalViewController.swift */; };
+		7E810BC6203FFA3900358E69 /* SelectPlanModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BC5203FFA3900358E69 /* SelectPlanModalViewController.swift */; };
 		7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */; };
 		7EB4FC7F203C1BC300E86687 /* UIIndicatorAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */; };
 		7EB4FC82203C4C4600E86687 /* RegisterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */; };
@@ -142,6 +143,7 @@
 		7E810BBD203F4B6100358E69 /* PlanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCell.xib; sourceTree = "<group>"; };
 		7E810BBF203F4DDA00358E69 /* PlansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansViewController.swift; sourceTree = "<group>"; };
 		7E810BC3203FEF1800358E69 /* RegisterBuisinessModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuisinessModalViewController.swift; sourceTree = "<group>"; };
+		7E810BC5203FFA3900358E69 /* SelectPlanModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlanModalViewController.swift; sourceTree = "<group>"; };
 		7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIndicatorAlert.swift; sourceTree = "<group>"; };
 		7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIIndicatorAlert.xib; sourceTree = "<group>"; };
 		7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModalViewController.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			children = (
 				7E810BC3203FEF1800358E69 /* RegisterBuisinessModalViewController.swift */,
 				7EBED82E202DD7B2009A1FB3 /* SelectCityModalViewController.swift */,
+				7E810BC5203FFA3900358E69 /* SelectPlanModalViewController.swift */,
 				7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */,
 				7EB4FC83203C61F700E86687 /* LoginModalViewController.swift */,
 			);
@@ -749,6 +752,7 @@
 				7E7B4E60202DA09800FA280D /* Slider.swift in Sources */,
 				7E7B4E57202D99D100FA280D /* RequestCallback.swift in Sources */,
 				7E428CCA20349ECA007CED56 /* Profile.swift in Sources */,
+				7E810BC6203FFA3900358E69 /* SelectPlanModalViewController.swift in Sources */,
 				7E7B4E58202D99D100FA280D /* Request.swift in Sources */,
 				7E428CC2203490EE007CED56 /* Plan.swift in Sources */,
 				7E05F04C202D983B00BDFBA5 /* SplashViewController.swift in Sources */,

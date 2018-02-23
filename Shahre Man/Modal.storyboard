@@ -40,7 +40,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4er-uH-nMH">
-                                                            <rect key="frame" x="266" y="13" width="38.5" height="18"/>
+                                                            <rect key="frame" x="321" y="13" width="38.5" height="18"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -149,14 +149,11 @@
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="انتخاب دسته بندی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhE-Uz-jTZ">
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="انتخاب دسته بندی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhE-Uz-jTZ">
                                 <rect key="frame" x="16" y="364" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="categorySelect:" destination="H9W-Xt-I3B" eventType="touchUpInside" id="HOm-YY-Uf6"/>
-                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="nN8-4E-cFy">
                                 <rect key="frame" x="30" y="369" width="20" height="21"/>
@@ -184,6 +181,7 @@
                         <viewLayoutGuide key="safeArea" id="dmv-vt-HqI"/>
                     </view>
                     <connections>
+                        <outlet property="fldCategory" destination="AhE-Uz-jTZ" id="OVh-0X-pPO"/>
                         <outlet property="fldName" destination="7Sa-TQ-ZS7" id="T0p-HK-k14"/>
                         <outlet property="navigation" destination="5o3-nS-oaN" id="i0k-AG-N0n"/>
                     </connections>
@@ -348,6 +346,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwM-GG-KKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="349.60000000000002" y="785.75712143928047"/>
+        </scene>
+        <!--Select Plan Modal View Controller-->
+        <scene sceneID="zpd-6U-kye">
+            <objects>
+                <viewController storyboardIdentifier="SelectPlanModalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PQo-fe-P6E" customClass="SelectPlanModalViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hq-1i-pBR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apy-5C-SnV">
+                                <rect key="frame" x="0.0" y="327" width="375" height="340"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MNU-sB-m22">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="296"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CityCell" id="SQx-m4-xhY" customClass="CityCell" customModule="Shahre_Man" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SQx-m4-xhY" id="efE-ud-A55">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-Em-gNZ">
+                                                            <rect key="frame" x="321" y="13" width="38.5" height="18"/>
+                                                            <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="ytc-Em-gNZ" secondAttribute="bottom" constant="2" id="4HF-dA-lx2"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="ytc-Em-gNZ" secondAttribute="trailing" constant="0.5" id="Nq8-rO-VyA"/>
+                                                        <constraint firstItem="ytc-Em-gNZ" firstAttribute="top" secondItem="efE-ud-A55" secondAttribute="topMargin" constant="2" id="TLv-hG-dz8"/>
+                                                        <constraint firstItem="ytc-Em-gNZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="efE-ud-A55" secondAttribute="leadingMargin" id="qVh-Kl-8SG"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="lblCityName" destination="ytc-Em-gNZ" id="eO5-T3-AUj"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="PQo-fe-P6E" id="JrW-h5-Oaf"/>
+                                            <outlet property="delegate" destination="PQo-fe-P6E" id="yed-eQ-3HD"/>
+                                        </connections>
+                                    </tableView>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGh-6w-yJU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="barTintColor" red="1" green="0.54195007549999996" blue="0.19302083880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <items>
+                                            <navigationItem title="انتخاب کسب و کار" id="VhW-rn-Nm1"/>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MNU-sB-m22" firstAttribute="top" secondItem="apy-5C-SnV" secondAttribute="top" constant="44" id="46b-OV-qTt"/>
+                                    <constraint firstItem="MNU-sB-m22" firstAttribute="leading" secondItem="apy-5C-SnV" secondAttribute="leading" id="gS9-pn-KkP"/>
+                                    <constraint firstAttribute="bottom" secondItem="MNU-sB-m22" secondAttribute="bottom" id="mwV-AZ-owg"/>
+                                    <constraint firstAttribute="trailing" secondItem="MNU-sB-m22" secondAttribute="trailing" id="rue-Ln-fye"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjq-AT-1rb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="apy-5C-SnV" firstAttribute="bottom" secondItem="Xtz-BT-S3t" secondAttribute="bottom" id="4UK-Rl-1eV"/>
+                            <constraint firstItem="apy-5C-SnV" firstAttribute="top" secondItem="Sjq-AT-1rb" secondAttribute="bottom" id="UPw-LA-iG6"/>
+                            <constraint firstAttribute="trailing" secondItem="apy-5C-SnV" secondAttribute="trailing" id="YvS-Q6-g1C"/>
+                            <constraint firstItem="Sjq-AT-1rb" firstAttribute="top" secondItem="0hq-1i-pBR" secondAttribute="top" id="ba3-oP-s5r"/>
+                            <constraint firstItem="Sjq-AT-1rb" firstAttribute="trailing" secondItem="Xtz-BT-S3t" secondAttribute="trailing" id="ckY-Ej-YBc"/>
+                            <constraint firstItem="Sjq-AT-1rb" firstAttribute="leading" secondItem="Xtz-BT-S3t" secondAttribute="leading" id="jSG-hc-BKS"/>
+                            <constraint firstItem="apy-5C-SnV" firstAttribute="leading" secondItem="0hq-1i-pBR" secondAttribute="leading" id="lef-9T-bo8"/>
+                            <constraint firstItem="apy-5C-SnV" firstAttribute="top" secondItem="Xtz-BT-S3t" secondAttribute="top" constant="307" id="wMU-2d-DFp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xtz-BT-S3t"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationItems" destination="VhW-rn-Nm1" id="Jip-wS-sxe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EvB-AD-sVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1689" y="1468"/>
         </scene>
     </scenes>
     <resources>
