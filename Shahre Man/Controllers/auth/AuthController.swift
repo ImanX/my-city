@@ -84,6 +84,28 @@ class AuthController : Controller<AuthCallback> {
         }
     }
     
+    
+    func editProfile(profile:Profile) {
+        let url = String(format: "http://shahreman.city/api/v1/user/edit/%@.json", arguments: [profile.mobile!]);
+        let params = ["mobile" : profile.mobile,"name" : profile.name , "family" : profile.family , "email" : profile.email];
+        let request = Request(URL: url,method: .post);
+        request.params = params;
+        request.get();
+        request.callback.didSuccess = { (json) in
+            self.callback.didSuccessEditProfile!(profile);
+        }
+        
+        request.callback.didFailure = {
+            self.callback.didFailure($0,$1,$2);
+        }
+        
+        request.callback.didConnectionFailure = {
+            self.callback.didConnectionFailure();
+        }
+        
+        
+    }
+    
 
 //    func logout(token:String){
 //            let url =  "http://shahreman.city/api/v1/revoke-token.json";

@@ -8,20 +8,24 @@
 
 import Foundation
 class ContactController : Controller<RequestCallback>{
+    
+    
+    
     func post(name:String , email:String,content:String) {
         let request = Request(URL: API(.Contact), method: .post)
+        request.params = ["name" : name , "email" : email , "body" : content];
         request.get();
         request.callback.didSuccess  = {
-            request.callback.didSuccess($0);
+            self.callback.didSuccess($0);
         }
         
         request.callback.didFailure = {
-            request.callback.didFailure($0,$1,$2);
+            self.callback.didFailure($0,$1,$2);
             
         }
         
         request.callback.didConnectionFailure = {
-            request.callback.didConnectionFailure();
+            self.callback.didConnectionFailure();
         }
     }
 }

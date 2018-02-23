@@ -43,6 +43,8 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
             buissines();
         case 2:
             myBuisiness();
+        case 3:
+            editProfile();
         case 4:
             contact();
         case 5:
@@ -125,11 +127,14 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
     }
     
     
+    func editProfile() {
+        let vc = storyboard?.instantiateViewController(viewController: EditProfileViewController.self);
+        self.navigationController?.pushViewController(vc!, animated: true);
+    }
     
     func logout() {
         dataResource.removeAll();
         viewDidLoad();
-
     }
     
     func myBuisiness()  {

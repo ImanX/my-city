@@ -46,19 +46,23 @@ class ContactUsViewController : BaseViewController{
             return;
         }
         
-        
+        indicatorAlert?.show();
         let p = ContactController(callback: RequestCallback());
         p.post(name: fldName.text!, email: fldEmail.text!, content: fldContent.text!);
         p.callback.didSuccess = {_ in
-            
+            self.indicatorAlert?.dismiss();
+            self.navigationController?.popViewController(animated: true);
+
         }
         
         p.callback.didFailure = {_,_,_ in
-            
+            self.indicatorAlert?.dismiss();
+
         }
         
         p.callback.didConnectionFailure = {
-            
+            self.indicatorAlert?.dismiss();
+
         }
         
         

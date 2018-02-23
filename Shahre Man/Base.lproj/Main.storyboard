@@ -434,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2d-yp-utb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="690"/>
+            <point key="canvasLocation" x="-154" y="830"/>
         </scene>
         <!--Account Tab View Controller-->
         <scene sceneID="DG0-69-0gY">
@@ -603,6 +603,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkS-Cw-Ob0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2683.125" y="29.577464788732396"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="qTt-2r-7Zr">
+            <objects>
+                <viewController storyboardIdentifier="EditProfileViewController" id="ZyG-8w-CCj" customClass="EditProfileViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BMC-Fp-pry">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logofooter" translatesAutoresizingMaskIntoConstraints="NO" id="O88-NR-PaT">
+                                <rect key="frame" x="125" y="390" width="80" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Upp-zU-pzJ"/>
+                                    <constraint firstAttribute="width" constant="80" id="gvx-4e-OMD"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-BF-93G">
+                                <rect key="frame" x="16" y="38" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام ‌خانوادگی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcg-oL-cHc">
+                                <rect key="frame" x="16" y="85" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="پست الکترونیکی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTx-xr-TjJ">
+                                <rect key="frame" x="16" y="132" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RTx-xr-TjJ" firstAttribute="top" secondItem="pcg-oL-cHc" secondAttribute="bottom" constant="17" id="GvC-8X-C1E"/>
+                            <constraint firstItem="pcg-oL-cHc" firstAttribute="leading" secondItem="Ihb-WA-8Xs" secondAttribute="leading" constant="16" id="K3b-17-4B6"/>
+                            <constraint firstItem="Ihb-WA-8Xs" firstAttribute="trailing" secondItem="a9K-BF-93G" secondAttribute="trailing" constant="16" id="VQK-cz-bBv"/>
+                            <constraint firstItem="Ihb-WA-8Xs" firstAttribute="trailing" secondItem="RTx-xr-TjJ" secondAttribute="trailing" constant="16" id="ZKd-ct-Wgo"/>
+                            <constraint firstItem="RTx-xr-TjJ" firstAttribute="leading" secondItem="Ihb-WA-8Xs" secondAttribute="leading" constant="16" id="dXF-qp-f7r"/>
+                            <constraint firstItem="Ihb-WA-8Xs" firstAttribute="bottom" secondItem="O88-NR-PaT" secondAttribute="bottom" constant="20" id="eRV-wg-7Ed"/>
+                            <constraint firstItem="pcg-oL-cHc" firstAttribute="top" secondItem="a9K-BF-93G" secondAttribute="bottom" constant="17" id="jKG-z7-DMc"/>
+                            <constraint firstItem="O88-NR-PaT" firstAttribute="centerX" secondItem="Ihb-WA-8Xs" secondAttribute="centerX" constant="4.5" id="lXl-z8-wBs"/>
+                            <constraint firstItem="a9K-BF-93G" firstAttribute="top" secondItem="Ihb-WA-8Xs" secondAttribute="top" constant="18" id="muM-Pj-sQP"/>
+                            <constraint firstItem="a9K-BF-93G" firstAttribute="leading" secondItem="Ihb-WA-8Xs" secondAttribute="leading" constant="16" id="sTS-Ma-YMw"/>
+                            <constraint firstItem="Ihb-WA-8Xs" firstAttribute="trailing" secondItem="pcg-oL-cHc" secondAttribute="trailing" constant="16" id="shc-Uf-Bch"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ihb-WA-8Xs"/>
+                    </view>
+                    <connections>
+                        <outlet property="fldEmail" destination="RTx-xr-TjJ" id="Xe1-Ys-5qU"/>
+                        <outlet property="fldFamily" destination="pcg-oL-cHc" id="MPp-tI-lss"/>
+                        <outlet property="fldName" destination="a9K-BF-93G" id="Skd-hw-kvq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yis-94-tqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="830"/>
         </scene>
     </scenes>
     <resources>

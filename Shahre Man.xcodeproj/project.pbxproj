@@ -60,6 +60,7 @@
 		7E810BCA2040226400358E69 /* Buisiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BC92040226400358E69 /* Buisiness.swift */; };
 		7E810BCC204035F800358E69 /* MyBuisinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BCB204035F700358E69 /* MyBuisinessListViewController.swift */; };
 		7E810BCE204038F800358E69 /* MyBuisinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E810BCD204038F800358E69 /* MyBuisinessCell.swift */; };
+		7EB0300B2040B84A00383247 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0300A2040B84A00383247 /* EditProfileViewController.swift */; };
 		7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */; };
 		7EB4FC7F203C1BC300E86687 /* UIIndicatorAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */; };
 		7EB4FC82203C4C4600E86687 /* RegisterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */; };
@@ -152,6 +153,7 @@
 		7E810BC92040226400358E69 /* Buisiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buisiness.swift; sourceTree = "<group>"; };
 		7E810BCB204035F700358E69 /* MyBuisinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBuisinessListViewController.swift; sourceTree = "<group>"; };
 		7E810BCD204038F800358E69 /* MyBuisinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBuisinessCell.swift; sourceTree = "<group>"; };
+		7EB0300A2040B84A00383247 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIndicatorAlert.swift; sourceTree = "<group>"; };
 		7EB4FC7E203C1BC300E86687 /* UIIndicatorAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIIndicatorAlert.xib; sourceTree = "<group>"; };
 		7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModalViewController.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				7E615685202E03BB00E60611 /* DashboardViewController.swift */,
 				7E077603202F0D2300427607 /* ContactUsViewController.swift */,
 				7E810BBF203F4DDA00358E69 /* PlansViewController.swift */,
+				7EB0300A2040B84A00383247 /* EditProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				7E61568D202E414B00E60611 /* DataResource.swift in Sources */,
 				7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */,
 				7E428CC620349420007CED56 /* BuisinessController.swift in Sources */,
+				7EB0300B2040B84A00383247 /* EditProfileViewController.swift in Sources */,
 				7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
