@@ -17,7 +17,7 @@ class ContactController : Controller<RequestCallback>{
         request.get();
         request.callback.didSuccess  = {
             self.callback.didSuccess($0);
-        }
+        } 
         
         request.callback.didFailure = {
             self.callback.didFailure($0,$1,$2);
