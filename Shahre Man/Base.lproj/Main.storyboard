@@ -664,6 +664,21 @@
             </objects>
             <point key="canvasLocation" x="527" y="830"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Udm-hr-Da4">
+            <objects>
+                <viewController storyboardIdentifier="PageViewController" id="shE-Ca-dZp" customClass="PageViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BMn-8M-Q8H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="d9N-DO-zRs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Reg-TN-gtT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033" y="830"/>
+        </scene>
     </scenes>
     <resources>
         <image name="account" width="30" height="30"/>

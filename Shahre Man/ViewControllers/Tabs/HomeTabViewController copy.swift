@@ -53,7 +53,10 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
+        vc?.data = dataResource.datas?[indexPath.row];
         
+        self.navigationController?.pushViewController(vc!, animated: true);
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

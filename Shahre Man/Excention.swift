@@ -51,6 +51,35 @@ extension String {
     mutating func clear() {
         self  = "";
     }
+//
+//    func parse() -> String {
+//
+//        let htmlString = self;
+//        if let htmldata = htmlString.data(using: String.Encoding.utf8), let attributedString = try?    NSMutableAttributedString(data: htmldata ,options: [.documentType : NSAttributedString.DocumentType.html],
+//                                                                                                                documentAttributes: nil)  {
+//
+//            return attributedString.string;
+//        }
+//
+//        return self;
+//    }
+    
+    
+    var html2AttributedString: NSAttributedString? {
+        do {
+            return try NSAttributedString(data: self.data(using: String.Encoding.utf8)!,
+                                          options: [.documentType: NSAttributedString.DocumentType.html,
+                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+                                          documentAttributes: nil)
+        } catch {
+            print("error: ", error)
+            return nil
+        }
+    }
+    var html2String: String {
+        return html2AttributedString?.string ?? self;
+    }
+
 }
 
 extension UIImageView{

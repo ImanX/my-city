@@ -47,7 +47,7 @@ class ContactUsViewController : BaseViewController{
         }
         
         indicatorAlert?.show();
-        let p = ContactController(callback: RequestCallback());
+        let p = ContactController(callback: ContactCallback());
         p.post(name: fldName.text!, email: fldEmail.text!, content: fldContent.text!);
         p.callback.didSuccess = {_ in
             self.indicatorAlert?.dismiss();
