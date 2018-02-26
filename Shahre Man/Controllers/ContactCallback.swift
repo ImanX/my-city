@@ -9,4 +9,5 @@
 import Foundation
 class ContactCallback: RequestCallback {
     public var didSuccessResolvePage:((_ page:Page)->Void)?
+    public var didSuccessPreSearch:((_ news:[Page],_ buisiness:[Buisiness],_ post:[Page])->Void)?
 }
