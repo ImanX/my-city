@@ -23,11 +23,18 @@ class DashboardViewController: UITabBarController {
         imageView.frame = CGRect(x: 0, y: 0, width: 65, height:34);
         titleView.addSubview(imageView)
         self.navigationItem.titleView = titleView
-        
+    
         
         print(DataResource.defualt.token);
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.selectedIndex  = 1
+        self.viewControllers?.forEach{$0.view}
+
+
     }
     
 }
