@@ -25,42 +25,74 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RelatedCell") as! RelatedCell;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell") as! DataCell;
         let item = page?.relatedPages![indexPath.row];
-        cell.img.loadImage(URL: (item?.cover)!)
-        cell.lblTitle.text = item?.title;
-        cell.lblContent.text = item?.content;
+        cell.icon.loadImage(URL: (item?.cover)!)
+        cell.title.text = item?.title;
+        cell.content.text = item?.content;
         return cell;
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
+        vc?.page = page?.relatedPages![indexPath.row];
+        self.navigationController?.pushViewController(vc!, animated: true);
     }
     
     @IBOutlet weak var imgCover: UIImageView!
     @IBOutlet weak var lblContent: UILabel!
     var page:Page?;
-    var tableView:UITableView?;
     var data:Data?;
-
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         indicatorAlert?.show()
-        self.navigationItem.title = data?.title!;
         let controller = ContactController(callback: ContactCallback());
-        controller.getPageView(id: (data?.ID!)!);
+        tableView?.tableFooterView = UIView()
+        tableView.tableHeaderView = UIView();
+
+        if data != nil{
+            self.navigationItem.title = data?.title!;
+            controller.getPageView(id: (data?.ID!)!);
+        }else{
+            self.navigationItem.title = page?.title!;
+            self.imgCover.loadImage(URL: (page?.cover)!);
+            self.lblContent.text = page?.content;
+            self.indicatorAlert?.dismiss();
+            self.lblContent.isHidden = false;
+            self.tableView?.isHidden = true;
+
+
+            
+
+            
+            
+            
+        }
         controller.callback.didSuccessResolvePage = { page in
             self.page = page;
             self.indicatorAlert?.dismiss();
-           // self.imgCover.loadImage(URL: page.cover);
-//            self.lblContent.text = page.content;
+            self.imgCover.loadImage(URL: page.cover);
+            self.lblContent.text = page.content;
+            self.navigationItem.title = page.title;
+            
+            
+            self.tableView?.isHidden = false;
+            self.lblContent.isHidden = false;
             self.tableView?.reloadData();
+
         }
         
         controller.callback.didFailure = {_,_,_ in
             self.indicatorAlert?.dismiss();
-
+            
         }
         
         controller.callback.didConnectionFailure = {
             self.indicatorAlert?.dismiss();
-
+            
             
         }
     }

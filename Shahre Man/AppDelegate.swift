@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       ///c1 UINavigationBar.appearance().isHidden = true;
+        ///c1 UINavigationBar.appearance().isHidden = true;
+       
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "IRANSansFaNum-Light", size: 15)!], for: UIControlState.normal)
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.gray, NSAttributedStringKey.font : UIFont(name: "IRANSansFaNum-Light", size: 15)! ], for: .highlighted)
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedStringKey.font: UIFont(name: "IRANSansFaNum-Medium", size: 15)!
+        ]
+        
+
+
         return true
     }
 

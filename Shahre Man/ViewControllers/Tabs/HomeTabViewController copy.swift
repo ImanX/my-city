@@ -30,12 +30,11 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell =  pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index) as! PagerCell;
-        let item = dataResource.sliders![index];
-        cell.image.loadImage(URL: item.image);
-        cell.title.text = item.title;
-        cell.content.text = item.caption;
+        cell.put(item: dataResource.sliders![index],vc: self);
         return cell;
     }
+    
+
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,10 +52,16 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if dataResource.datas![indexPath.row].type.contains("page"){
         let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
         vc?.data = dataResource.datas?[indexPath.row];
-        
         self.navigationController?.pushViewController(vc!, animated: true);
+            return
+        }
+        
+        if  dataResource.datas![indexPath.row].type.contains("news") {
+            self.tabBarController?.selectedIndex = 0;
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
