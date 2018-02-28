@@ -25,6 +25,7 @@ class DashboardViewController: UITabBarController {
         self.navigationItem.titleView = titleView
     
         
+    
         print(DataResource.defualt.token);
         
         
@@ -32,7 +33,7 @@ class DashboardViewController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.selectedIndex  = 1
-        self.viewControllers?.forEach{$0.view}
+      //  self.viewControllers?.forEach{$0.view}
 
 
     }

@@ -53,7 +53,7 @@ class DataResource{
         self._profile = profile;
     }
     private var _sliders:[Slider]?;
-    private var _datas:[Data]?;
+    private var _datas:[Info]?;
     private var _city:City?;
     private var _token:String?;
     private var _profile:Profile?;
@@ -64,7 +64,7 @@ class DataResource{
         get{return _sliders}
     }
     
-    public var datas:[Data]?{
+    public var datas:[Info]?{
         set{_datas = newValue}
         get{return _datas}
     }

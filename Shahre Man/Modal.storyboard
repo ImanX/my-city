@@ -446,6 +446,70 @@
             </objects>
             <point key="canvasLocation" x="-1689" y="1468"/>
         </scene>
+        <!--Location Modal View Controller-->
+        <scene sceneID="dX7-Gr-g2R">
+            <objects>
+                <viewController storyboardIdentifier="LocationModalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nvt-jP-ad7" customClass="LocationModalViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1kp-Ss-bSc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ag2-fc-GqU">
+                                <rect key="frame" x="0.0" y="327" width="320" height="241"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-TH-gxA">
+                                        <rect key="frame" x="0.0" y="-98" width="320" height="339"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="efZ-TH-gxA" secondAttribute="trailing" id="8ei-Hj-RgH"/>
+                                    <constraint firstItem="efZ-TH-gxA" firstAttribute="leading" secondItem="ag2-fc-GqU" secondAttribute="leading" id="Eqc-tc-ROA"/>
+                                    <constraint firstAttribute="bottom" secondItem="efZ-TH-gxA" secondAttribute="bottom" id="nGs-74-qJz"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d43-AY-JKj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WC4-7Y-CQF">
+                                <rect key="frame" x="0.0" y="185" width="320" height="44"/>
+                                <color key="barTintColor" red="1" green="0.54195007549999996" blue="0.19302083880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="جغرافیا" id="1rt-Su-IQ7">
+                                        <barButtonItem key="rightBarButtonItem" title="ذخیره" id="b8Z-o7-xbZ">
+                                            <connections>
+                                                <action selector="save:" destination="Nvt-jP-ad7" id="Ls9-jE-fto"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="efZ-TH-gxA" firstAttribute="top" secondItem="WC4-7Y-CQF" secondAttribute="bottom" id="51G-RQ-1rm"/>
+                            <constraint firstItem="ag2-fc-GqU" firstAttribute="leading" secondItem="1kp-Ss-bSc" secondAttribute="leading" id="6s9-Sz-bpK"/>
+                            <constraint firstItem="d43-AY-JKj" firstAttribute="leading" secondItem="z5s-ub-vT6" secondAttribute="leading" id="7uQ-P6-NUR"/>
+                            <constraint firstItem="ag2-fc-GqU" firstAttribute="bottom" secondItem="z5s-ub-vT6" secondAttribute="bottom" id="9le-LF-pF9"/>
+                            <constraint firstItem="d43-AY-JKj" firstAttribute="trailing" secondItem="z5s-ub-vT6" secondAttribute="trailing" id="BOl-rQ-2i9"/>
+                            <constraint firstItem="WC4-7Y-CQF" firstAttribute="trailing" secondItem="efZ-TH-gxA" secondAttribute="trailing" id="LrH-8x-dnn"/>
+                            <constraint firstItem="d43-AY-JKj" firstAttribute="top" secondItem="1kp-Ss-bSc" secondAttribute="top" id="MhK-P3-vic"/>
+                            <constraint firstItem="WC4-7Y-CQF" firstAttribute="leading" secondItem="efZ-TH-gxA" secondAttribute="leading" id="ba5-zR-V71"/>
+                            <constraint firstItem="WC4-7Y-CQF" firstAttribute="top" secondItem="d43-AY-JKj" secondAttribute="bottom" id="dAG-8d-i6w"/>
+                            <constraint firstItem="ag2-fc-GqU" firstAttribute="top" secondItem="z5s-ub-vT6" secondAttribute="top" constant="307" id="eLO-Xk-6Zz"/>
+                            <constraint firstItem="WC4-7Y-CQF" firstAttribute="top" secondItem="1kp-Ss-bSc" secondAttribute="top" constant="185" id="s06-9R-ktb"/>
+                            <constraint firstAttribute="trailing" secondItem="ag2-fc-GqU" secondAttribute="trailing" id="xfv-qA-p7f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z5s-ub-vT6"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapKit" destination="efZ-TH-gxA" id="TFZ-Ad-kEG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="He9-1f-JAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2463.75" y="1453.5211267605634"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow" width="256" height="256"/>

@@ -12,6 +12,7 @@ class BuisinessCallback: RequestCallback {
     public var didSuccesResolveBuisinessCategory:((_ list:[BuisinessCategory])->Void)?;
     public var didSuccessResolveMyBuisiness:((_ list:[Buisiness])->Void)?;
     public var didSuccessRegisterBuisiness:((_ buisiness: Buisiness)->Void)?;
+    public var didSuccessResolveFileds:((_ basics:[Field] ,_ extras:[Field] ,_ medias:[Field])->Void)?
 
     
 }

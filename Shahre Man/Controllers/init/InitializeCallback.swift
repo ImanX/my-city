@@ -9,6 +9,6 @@
 import Foundation
 class InitializeCallback:RequestCallback {
     public var didSuccessResolveCities:((_ list:[City])->Void)!;
-    public var didSuccessInitialize:((_ sliders:[Slider] , _ menu:[Data])->Void)!;
+    public var didSuccessInitialize:((_ sliders:[Slider] , _ menu:[Info])->Void)!;
 }
 

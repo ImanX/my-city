@@ -44,6 +44,11 @@ class SearchTabViewController : BaseViewController ,UITableViewDelegate , UITabl
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
+        vc?.page = news?[indexPath.row];
+        self.navigationController?.pushViewController(vc!, animated: true);
+    }
     
     override func viewDidLoad(navigationBar: UINavigationItem?) {
        

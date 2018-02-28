@@ -24,6 +24,23 @@ class MyBuissinessListViewController: BaseViewController , UITableViewDataSource
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indicatorAlert?.show();
+        let buissines    = list![indexPath.row];
+        let b = BuisinessController(callback: BuisinessCallback());
+        b.getFields(buissinesId: buissines.id!);
+        b.callback.didSuccessResolveFileds = {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "BuisinessTabViewController");
+            BuisinessTabViewController.buissines = buissines;
+            BuisinessTabViewController.basicFields = $0;
+            BuisinessTabViewController.extraFields = $1;
+            BuisinessTabViewController.medaFields = $2;
+            self.navigationController?.pushViewController(vc!, animated: true);
+            self.indicatorAlert?.dismiss();
+        }
+     
+    }
+    
     override func viewDidLoad() {
         navigationItem.title = "اصناف من"
         indicatorAlert?.show();

@@ -14,10 +14,10 @@ class PagerCell : FSPagerViewCell{
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var title: UILabel!
     var vc:BaseViewController?;
-    var item:Data?;
+    var item:Info?;
     
     
-    func put(item:Data ,vc:BaseViewController){
+    func put(item:Info ,vc:BaseViewController){
         self.image.loadImage(URL: item.image);
         self.title.text = item.title;
         self.content.text = item.caption;

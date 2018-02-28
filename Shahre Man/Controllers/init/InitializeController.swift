@@ -41,13 +41,13 @@ class InitializeController : Controller<InitializeCallback>{
            
             let json = json["data"];
             var sliders = [Slider]();
-            var menus = [Data]();
+            var menus = [Info]();
             for slider in json["slider"].array! {
                 sliders.append(Slider(json: slider));
             }
             
             for menu in json["menu"].array! {
-                menus.append(Data(json: menu));
+                menus.append(Info(json: menu));
             }
             
             self.callback.didSuccessInitialize(sliders,menus);

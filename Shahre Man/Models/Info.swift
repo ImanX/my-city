@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-class Data : Model{
+class Info : Model{
     
     private var _image:String!;
     private var _title:String!;

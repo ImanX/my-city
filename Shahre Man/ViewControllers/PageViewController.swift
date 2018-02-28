@@ -43,7 +43,7 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
     @IBOutlet weak var imgCover: UIImageView!
     @IBOutlet weak var lblContent: UILabel!
     var page:Page?;
-    var data:Data?;
+    var data:Info?;
     
     @IBOutlet weak var tableView: UITableView!
     

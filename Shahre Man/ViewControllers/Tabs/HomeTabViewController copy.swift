@@ -23,7 +23,7 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
         }
     }
     
-    
+
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return (dataResource.sliders?.count)!;
     }
@@ -69,7 +69,5 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     }
     
     
-    override func viewDidLoad(navigationBar: UINavigationItem?) {
-        
-    }
+  
 }

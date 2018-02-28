@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-class Slider: Data {
+class Slider: Info {
 
      override init(json: JSON) {
         super.init();
