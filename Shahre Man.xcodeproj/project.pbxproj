@@ -23,6 +23,7 @@
 		7E07760B202F980800427607 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760A202F980800427607 /* AuthController.swift */; };
 		7E07760D202F994F00427607 /* AuthCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760C202F994F00427607 /* AuthCallback.swift */; };
 		7E133A80204899EC004FD581 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E133A7F204899EC004FD581 /* PaddingLabel.swift */; };
+		7E133A822048B41A004FD581 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E133A812048B41A004FD581 /* NewsViewController.swift */; };
 		7E171E0E203DC31000A4F2D0 /* UIPrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */; };
 		7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */; };
 		7E171E14203DE1E600A4F2D0 /* ItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */; };
@@ -129,6 +130,7 @@
 		7E07760A202F980800427607 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		7E07760C202F994F00427607 /* AuthCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCallback.swift; sourceTree = "<group>"; };
 		7E133A7F204899EC004FD581 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		7E133A812048B41A004FD581 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrettyButton.swift; sourceTree = "<group>"; };
 		7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIPrettyButton.xib; sourceTree = "<group>"; };
 		7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenu.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				7E810BBF203F4DDA00358E69 /* PlansViewController.swift */,
 				7EB0300A2040B84A00383247 /* EditProfileViewController.swift */,
 				7E3FD3AB2042100A00C83386 /* PageViewController.swift */,
+				7E133A812048B41A004FD581 /* NewsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -854,6 +857,7 @@
 				7E61568D202E414B00E60611 /* DataResource.swift in Sources */,
 				7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */,
 				7E428CC620349420007CED56 /* BuisinessController.swift in Sources */,
+				7E133A822048B41A004FD581 /* NewsViewController.swift in Sources */,
 				7EB0300B2040B84A00383247 /* EditProfileViewController.swift in Sources */,
 				7EBED835202DEDCE009A1FB3 /* BaseModalViewController.swift in Sources */,
 			);

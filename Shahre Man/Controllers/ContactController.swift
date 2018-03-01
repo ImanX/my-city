@@ -9,8 +9,9 @@
 import Foundation
 class ContactController : Controller<ContactCallback>{
     
-    func getPageView(id:Int){
-        let url = String(format: "http://shahreman.city/api/v1/page/%d.json?city=271", arguments: [id])
+    func getPageView(id:Int,type:String){
+       let mtype = (type == "news/view") ? "news" : "page";
+        let url = String(format: "http://shahreman.city/api/v1/\(mtype)/%d.json?city=271", arguments: [id])
         let request = Request(URL: url, method: .get)
         request.get();
         request.callback.didSuccess  = { json in
@@ -28,6 +29,30 @@ class ContactController : Controller<ContactCallback>{
         }
     }
     
+    
+    func getNews(city:City)  {
+        let url = APIwithQueryString(.News, ["city" : city.ID]);
+        let request = Request(URL: url, method: .get);
+        request.get();
+        request.callback.didSuccess = { json in
+            let json = json["data"];
+            var sliders = [Slider]();
+            var news = [Page]();
+            for slide in json["sliders"].arrayValue{
+                sliders.append(Slider(json: slide));
+            }
+            
+            for new in json["models"].arrayValue{
+                news.append(Page(json: new));
+            }
+            
+            
+            
+            self.callback.didSuccessNews!(news,sliders);
+        }
+        
+        
+    }
    
     
     func preSearch(city:City) {

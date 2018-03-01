@@ -67,12 +67,15 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
         if dataResource.datas![indexPath.row].type.contains("page"){
         let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
         vc?.ID = dataResource.datas?[indexPath.row].ID;
+    
+            vc?.type =  (dataResource.datas?[indexPath.row].type)!;
         self.navigationController?.pushViewController(vc!, animated: true);
             return
         }
         
         if  dataResource.datas![indexPath.row].type.contains("news") {
-            self.tabBarController?.selectedIndex = 0;
+            let vc = storyboard?.instantiateViewController(viewController: NewsViewController.self);
+            self.navigationController?.pushViewController(vc!, animated: true);
         }
     }
     

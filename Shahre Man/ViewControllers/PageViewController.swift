@@ -13,6 +13,7 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
     @IBOutlet weak var lblContent: UILabel!
     var page:Page?;
     var ID:Int?;
+    var type:String = "page";
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,6 +41,7 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
         vc?.ID = page?.relatedPages![indexPath.row].id;
+        vc?.type =  (page?.relatedPages![indexPath.row].type)!;
         self.navigationController?.pushViewController(vc!, animated: true);
     }
     
@@ -68,7 +70,7 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
         }
         
         indicatorAlert?.show()
-        controller.getPageView(id: ID!);
+        controller.getPageView(id: ID!,type: type);
         
         controller.callback.didSuccessResolvePage = { page in
             self.page = page;

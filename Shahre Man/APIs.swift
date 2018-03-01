@@ -17,6 +17,7 @@ enum APIs : String {
     case Buisiness = "business.json";
     case My = "my.json";
     case Search = "search.json";
+    case News = "news.json"
 
 
 }

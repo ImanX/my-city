@@ -12,6 +12,10 @@ class SearchTabViewController : BaseViewController ,UITableViewDelegate , UITabl
     
     var news:[Page]?;
     @IBOutlet weak var tblNews: UITableView!
+    @IBOutlet weak var fldSearch: UITextField!
+    @IBOutlet weak var imgSearch: UIImageView!
+    @IBOutlet weak var lblCaption: UILabel!
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //
@@ -28,8 +32,7 @@ class SearchTabViewController : BaseViewController ,UITableViewDelegate , UITabl
         
     }
     
-    @IBOutlet weak var fldSearch: UITextField!
-    @IBOutlet weak var imgSearch: UIImageView!
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
@@ -50,34 +53,28 @@ class SearchTabViewController : BaseViewController ,UITableViewDelegate , UITabl
         self.navigationController?.pushViewController(vc!, animated: true);
     }
     
-    override func viewDidLoad(navigationBar: UINavigationItem?) {
-       
+    
+    
+    @objc func search() {
+        
+        if (fldSearch.text?.isEmpty)!{
+            return;
+        }
+        
+        indicatorAlert?.show();
+        let c = ContactController(callback: ContactCallback());
+        c.search(city: dataResource.city!, query: fldSearch.text!)
+        c.callback.didSuccessPreSearch = { l1,l2,l3 in
+            self.news = l1;
+            self.tblNews.reloadData();
+            self.indicatorAlert?.dismiss();
+            self.lblCaption.text =  "نتایج \("'" + self.fldSearch.text! + "'")"
+            
+        }
         
         
     }
     
-    @IBOutlet weak var lblCaption: UILabel!
-    
-   @objc func search() {
-
-    if (fldSearch.text?.isEmpty)!{
-        return;
-    }
-    
-    indicatorAlert?.show();
-    let c = ContactController(callback: ContactCallback());
-    c.search(city: dataResource.city!, query: fldSearch.text!)
-    c.callback.didSuccessPreSearch = { l1,l2,l3 in
-        self.news = l1;
-        self.tblNews.reloadData();
-        self.indicatorAlert?.dismiss();
-        self.lblCaption.text =  "نتایج \("'" + self.fldSearch.text! + "'")"
-
-    }
-    
-    
-    }
-
     
     override func viewDidLoad() {
         indicatorAlert?.show();
