@@ -82,13 +82,13 @@ extension String {
 
 }
 
-//extension UITextField{
-//    static var ـfield:Field?;
-//    var field:Field?{
-//        set{UITextField.ـfield = newValue}
-//        get{return UITextField.ـfield}
-//    }
-//}
+extension UITextField{
+    static var ـfield:Field?;
+    var field:Field?{
+        set{UITextField.ـfield = newValue}
+        get{return UITextField.ـfield}
+    }
+}
 
 extension UIImageView{
     func loadImage(URL:String) {

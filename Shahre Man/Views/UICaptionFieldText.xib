@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UICaptionFieldText" customModule="Shahre_Man" customModuleProvider="target">
             <connections>
                 <outlet property="fldText" destination="58J-Ru-8yd" id="AWQ-JQ-0xM"/>
+                <outlet property="imgSpinner" destination="De6-Ne-UX0" id="rQm-lz-RFj"/>
                 <outlet property="lblCaption" destination="7eW-Jg-eED" id="pi8-qk-Rnk"/>
             </connections>
         </placeholder>
@@ -27,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58J-Ru-8yd">
-                    <rect key="frame" x="20" y="29" width="399" height="31"/>
+                    <rect key="frame" x="20" y="29" width="399" height="38"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -38,16 +39,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="De6-Ne-UX0">
+                    <rect key="frame" x="27" y="38" width="21" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8tK-q0-eZj"/>
+                        <constraint firstAttribute="width" constant="21" id="XmP-Zw-GaJ"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="7eW-Jg-eED" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="3Dj-J2-qNk"/>
+                <constraint firstItem="De6-Ne-UX0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="27" id="9Ie-jH-arC"/>
                 <constraint firstItem="58J-Ru-8yd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="AhD-BR-yot"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7eW-Jg-eED" secondAttribute="trailing" constant="22" id="C3L-BU-LR6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="58J-Ru-8yd" secondAttribute="trailing" constant="20" id="GkC-B2-qTI"/>
                 <constraint firstItem="58J-Ru-8yd" firstAttribute="top" secondItem="7eW-Jg-eED" secondAttribute="bottom" constant="5" id="GxT-5J-UDY"/>
+                <constraint firstItem="De6-Ne-UX0" firstAttribute="centerY" secondItem="58J-Ru-8yd" secondAttribute="centerY" id="aU8-yA-End"/>
                 <constraint firstItem="7eW-Jg-eED" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bpq-pz-5YM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="58J-Ru-8yd" secondAttribute="bottom" constant="10" id="eLE-dq-gaV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="58J-Ru-8yd" secondAttribute="bottom" constant="3" id="eLE-dq-gaV"/>
                 <constraint firstItem="58J-Ru-8yd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="29" id="q6O-1o-DOl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -55,4 +65,7 @@
             <point key="canvasLocation" x="59.5" y="-391"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow" width="256" height="256"/>
+    </resources>
 </document>

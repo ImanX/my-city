@@ -36,6 +36,7 @@ class MyBuissinessListViewController: BaseViewController , UITableViewDataSource
             BuisinessTabViewController.extraFields = $1;
             BuisinessTabViewController.medaFields = $2;
             self.navigationController?.pushViewController(vc!, animated: true);
+
             self.indicatorAlert?.dismiss();
         }
      

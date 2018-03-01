@@ -56,10 +56,10 @@ class RegisterModalViewController : BaseModalViewController<Profile> {
             vc?.mobile = self.mobile;
             vc?.delegate = self.delegate;
             self.present(vc!, animated: true, completion: nil);
-           
             
-
-
+            
+            
+            
             self.indicatorAlert?.dismiss()
         }
         registerController.callback.didFailure = {_,_,_ in

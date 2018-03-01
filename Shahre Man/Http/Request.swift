@@ -95,7 +95,7 @@ class Request{
                     return;
                 }
                 
-                self._callback.didFailure(statusCode! ,-1, String(describing: response.result.value));
+                self._callback.didFailure(statusCode ?? 0 ,-1, String(describing: response.result.value));
         }
         
     }

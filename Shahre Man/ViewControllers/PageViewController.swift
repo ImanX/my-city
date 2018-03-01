@@ -52,6 +52,7 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
         let controller = ContactController(callback: ContactCallback());
         tableView?.tableFooterView = UIView()
         tableView.tableHeaderView = UIView();
+        navigationItem.backBarButtonItem =  UIBarButtonItem(title: "بازگشت", style: .done, target: self, action: #selector(dismiss(animated:completion:)))
 
         if data != nil{
             self.navigationItem.title = data?.title!;
@@ -64,11 +65,6 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
             self.lblContent.isHidden = false;
             self.tableView?.isHidden = true;
 
-
-            
-
-            
-            
             
         }
         controller.callback.didSuccessResolvePage = { page in

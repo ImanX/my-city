@@ -163,6 +163,11 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
             self.present(modalViewController!, animated: true, completion: nil)
             modalViewController?.callback = { item in
                 self.dataResource.city = item;
+                let homeViewController =   self.tabBarController?.viewControllers![1] as! HomeTabViewController;
+                homeViewController.changeCity();
+                
+                self.getSuccessSnackbar(message: "شهر به موفقیت تغییر کرد").show();
+                
             }
         }
         

@@ -11,6 +11,11 @@ class UICaptionFieldText : UIView{
     @IBOutlet weak var fldText: UITextField!
     @IBOutlet weak var lblCaption: UILabel!
     
+    @IBOutlet weak var imgSpinner: UIImageView!{
+        didSet{
+            imgSpinner.isHidden = true;
+        }
+    }
     var field:Field?;
     
     override init(frame: CGRect) {
@@ -32,6 +37,13 @@ class UICaptionFieldText : UIView{
         set{fldText = newValue}
         get{return fldText}
     }
+    
+    var isSpinner:Bool{
+        set{imgSpinner.isHidden = !newValue}
+        get{return imgSpinner.isHidden}
+    }
+    
+    
     
     
     

@@ -64,7 +64,7 @@ class BaseViewController: UIViewController {
         let e = snackbar();
         e.message = message;
         e.messageTextAlign = .right
-        e.backgroundColor = UIColor.green;
+        e.backgroundColor = UIColor(red: 0, green: 0.4863, blue: 0.1059, alpha: 1.0)
         e.icon = #imageLiteral(resourceName: "warning");
         return e;
     }

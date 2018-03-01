@@ -68,6 +68,7 @@
 		7EAD1D69204728920015A3DF /* BuissinesTabExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD1D68204728920015A3DF /* BuissinesTabExtra.swift */; };
 		7EAD1D6B204767940015A3DF /* UICaptionFieldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD1D6A204767940015A3DF /* UICaptionFieldText.swift */; };
 		7EAD1D6D204767AB0015A3DF /* UICaptionFieldText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EAD1D6C204767AB0015A3DF /* UICaptionFieldText.xib */; };
+		7EAD1D6F2047F9230015A3DF /* BuissinessTabMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD1D6E2047F9230015A3DF /* BuissinessTabMedia.swift */; };
 		7EAE9507204357F50037599E /* RelatedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAE9506204357F50037599E /* RelatedCell.swift */; };
 		7EB0300B2040B84A00383247 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0300A2040B84A00383247 /* EditProfileViewController.swift */; };
 		7EB4FC7C203C1A8F00E86687 /* UIIndicatorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */; };
@@ -172,6 +173,7 @@
 		7EAD1D68204728920015A3DF /* BuissinesTabExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuissinesTabExtra.swift; sourceTree = "<group>"; };
 		7EAD1D6A204767940015A3DF /* UICaptionFieldText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICaptionFieldText.swift; sourceTree = "<group>"; };
 		7EAD1D6C204767AB0015A3DF /* UICaptionFieldText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICaptionFieldText.xib; sourceTree = "<group>"; };
+		7EAD1D6E2047F9230015A3DF /* BuissinessTabMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuissinessTabMedia.swift; sourceTree = "<group>"; };
 		7EAE9506204357F50037599E /* RelatedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedCell.swift; sourceTree = "<group>"; };
 		7EB0300A2040B84A00383247 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		7EB4FC7B203C1A8F00E86687 /* UIIndicatorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIndicatorAlert.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				7EB9AC54204498B000F120BA /* BuisinessTabViewController.swift */,
 				7EB9AC572044A16600F120BA /* BuissinesTabDetails.swift */,
 				7EAD1D68204728920015A3DF /* BuissinesTabExtra.swift */,
+				7EAD1D6E2047F9230015A3DF /* BuissinessTabMedia.swift */,
 			);
 			path = BuissinesTab;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				7E810BC0203F4DDA00358E69 /* PlansViewController.swift in Sources */,
 				7E810BCC204035F800358E69 /* MyBuisinessListViewController.swift in Sources */,
 				7E3FD3AA20420A6B00C83386 /* Page.swift in Sources */,
+				7EAD1D6F2047F9230015A3DF /* BuissinessTabMedia.swift in Sources */,
 				7EAD1D6B204767940015A3DF /* UICaptionFieldText.swift in Sources */,
 				7EB4FC86203D4CD900E86687 /* AccountNotifyDelegate.swift in Sources */,
 				7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */,

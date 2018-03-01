@@ -504,6 +504,7 @@
                     </view>
                     <connections>
                         <outlet property="mapKit" destination="efZ-TH-gxA" id="TFZ-Ad-kEG"/>
+                        <outlet property="viewc" destination="d43-AY-JKj" id="e0G-wp-yEE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He9-1f-JAj" userLabel="First Responder" sceneMemberID="firstResponder"/>

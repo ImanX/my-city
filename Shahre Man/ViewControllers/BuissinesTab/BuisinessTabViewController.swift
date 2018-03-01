@@ -17,11 +17,6 @@ class BuisinessTabViewController : UITabBarController {
 
     
     override func viewDidLoad() {
-        
-        
-        
-//        let vc = storyboard?.instantiateModalViewController(modal: LocationModalViewController.self, presenetStyle: .overCurrentContext)
-//        vc?.buissinesID = BuisinessTabViewController.buissines?.id;
-//        self.present(vc!, animated: true, completion: nil);
+    
     }
 }

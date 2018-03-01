@@ -87,11 +87,7 @@ class BuisinessController : Controller<BuisinessCallback>{
         let request = requestBundlAuth(url,.get);
         request.get()
         request.callback.didSuccess = { json in
-//            var mediaFields = json["EditBusinessMedia"].arrayValue;
-//            var basicFields = json["EditBusinessBasic"].arrayValue;
-//            var extraField = json["EditBusinessBasic"].arrayValue;
-            
-            
+
             
 
             var mediaFields = [Field]();
@@ -128,14 +124,19 @@ class BuisinessController : Controller<BuisinessCallback>{
     }
     
     
-    func uploadImage(data:Data)  {
-        let parameters = ["name": "MainImage" ,"businessId": "11"];
-//        let data = UIImageJPEGRepresentation(image, 0.9)
+    func uploadImage(ID:Int,image:UIImage)  {
+        
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 1000
+
+
+        let parameters = ["name": "MainImage" ,"businessId": ID.description];
+        let data = UIImageJPEGRepresentation(image, 0.9)
         var header = HTTPHeaders();
         header["Authorization"] = "Bearer \(DataResource.defualt.token!)";
         
-        Alamofire.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(data, withName: "value", fileName: "file.jpg", mimeType: "image/jpg")
+        manager.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(data!, withName: "value", fileName: "file.jpg", mimeType: "image/jpg")
             for (key, value) in parameters {
                 multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
@@ -152,10 +153,12 @@ class BuisinessController : Controller<BuisinessCallback>{
                 
                 upload.responseJSON { response in
                     print(response.result.value)
+                    self.callback.didSuccessUploadImage!();
                 }
                 
             case .failure(let encodingError):
                 print(encodingError)
+                self.callback.didFailure(0,0,"");
             }
         }
         
@@ -168,12 +171,13 @@ class BuisinessController : Controller<BuisinessCallback>{
         request.params = ["name" : "Map" , "value" : location , "businessId" : id];
         request.get();
         request.callback.didSuccess = { (json) in
-            
+            self.callback.didSuccessAddLocation!();
             print(json);
             
         }
         
         request.callback.didFailure = {_,_,_ in
+            self.callback.didFailure(0,0,"");
             print("failure");
         }
         
@@ -182,6 +186,28 @@ class BuisinessController : Controller<BuisinessCallback>{
         }
     }
     
+    
+    func update(index:String , value:String , id:Int) {
+      let url =   "http://shahreman.city/api/v1/business/update-info.json"
+        let request = requestBundlAuth(url , .post);
+        request.params  = ["name": index,"value" : value ,"businessId": id.description];
+
+        request.get();
+        request.callback.didSuccess  = {_ in
+            print("OK");
+        }
+        
+        request.callback.didFailure = {_,_,_ in 
+            
+        }
+        
+        request.callback.didConnectionFailure = {
+            
+        }
+
+        
+
+    }
     
     func getCategories(city:City){
         let request = Request(URL: APIwithQueryString(.Buisiness,["city":city]), method: .get);

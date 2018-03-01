@@ -12,13 +12,18 @@ import MapKit
 import CoreLocation
 class LocationModalViewController : BaseModalViewController<String> , MKMapViewDelegate , CLLocationManagerDelegate , UIGestureRecognizerDelegate
 {
+    @IBOutlet weak var viewc: UIView!
     @IBOutlet weak var mapKit: MKMapView!
   private var locationManager:CLLocationManager?;
     private var currentLocation:CLLocationCoordinate2D?;
     public var buissinesID:Int?;
     
+    
+
     override func viewDidLoad() {
         
+        self.viewc.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(close)))
+        self.viewc.isUserInteractionEnabled = true;
         self.locationManager = CLLocationManager();
         self.locationManager?.requestWhenInUseAuthorization();
         
@@ -41,11 +46,31 @@ class LocationModalViewController : BaseModalViewController<String> , MKMapViewD
     
     @IBAction func save(_ sender: UIBarButtonItem) {
         
+        if currentLocation == nil {
+            getErrorSnackbar(message: "لطفا محل مورد نظر را وارد کنید").show();
+            return
+        }
+    
+        indicatorAlert?.show();
+        
         
         let b = BuisinessController(callback: BuisinessCallback());
-//        b.addLocation(id: buissinesID!, lon: (currentLocation?.longitude.description)!, lat: (currentLocation?.latitude.description)!)
+        b.addLocation(id: buissinesID!, lon: (currentLocation?.longitude.description)!, lat: (currentLocation?.latitude.description)!)
+        b.callback.didSuccessAddLocation = {
+            self.getSuccessSnackbar(message: "محل مورد نظر شما با موفقیت ثبت شد").show()
+            self.dismiss(animated: true, completion: nil);
+            self.indicatorAlert?.dismiss();
+
+        }
+        b.callback.didFailure = {_,_,_ in
+self.getErrorSnackbar(message: "ارتباط با خدا مواجه شد").show()
+            self.indicatorAlert?.dismiss();
+            self.dismiss(animated: true, completion: nil);
+            
+
+        }
         
-        b.getFields(buissinesId: buissinesID!);
+    
         
     }
     
@@ -66,7 +91,9 @@ class LocationModalViewController : BaseModalViewController<String> , MKMapViewD
     }
     
     
-    
+    @objc func close(){
+        dismiss(animated: true, completion: nil)
+    }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
       //  defer { currentLocation = locations.last }

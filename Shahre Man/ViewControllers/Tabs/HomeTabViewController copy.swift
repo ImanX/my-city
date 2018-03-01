@@ -11,7 +11,8 @@ import UIKit
 import FSPagerView
 class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableViewDataSource , FSPagerViewDataSource{
   
-
+    var tableView:UITableView?;
+    
     @IBOutlet weak var pagerView: FSPagerView!{
         didSet{
             let nib = UINib(nibName: "PagerCell", bundle: nil);
@@ -19,7 +20,6 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
             self.pagerView.dataSource = self;
             self.pagerView.isInfinite = true;
             self.pagerView.automaticSlidingInterval = 3.0;
-
         }
     }
     
@@ -35,9 +35,21 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     }
     
 
+    func changeCity() {
+        let initialize = InitializeController(callback: InitializeCallback());
+        initialize.initialize(cityID: (dataResource.city?.ID)!);
+        initialize.callback.didSuccessInitialize = { slider , news in
+           self.dataResource.datas = news;
+             self.dataResource.sliders = slider;
+             self.pagerView.reloadData();
+            self.tableView?.reloadData();
+            
+        }
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.tableView = tableView;
         return (dataResource.datas?.count)!;
     }
     
