@@ -22,6 +22,7 @@
 		7E077608202F8ADF00427607 /* AccountTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E077607202F8ADF00427607 /* AccountTabViewController.swift */; };
 		7E07760B202F980800427607 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760A202F980800427607 /* AuthController.swift */; };
 		7E07760D202F994F00427607 /* AuthCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760C202F994F00427607 /* AuthCallback.swift */; };
+		7E133A80204899EC004FD581 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E133A7F204899EC004FD581 /* PaddingLabel.swift */; };
 		7E171E0E203DC31000A4F2D0 /* UIPrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */; };
 		7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */; };
 		7E171E14203DE1E600A4F2D0 /* ItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */; };
@@ -127,6 +128,7 @@
 		7E077607202F8ADF00427607 /* AccountTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabViewController.swift; sourceTree = "<group>"; };
 		7E07760A202F980800427607 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		7E07760C202F994F00427607 /* AuthCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCallback.swift; sourceTree = "<group>"; };
+		7E133A7F204899EC004FD581 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrettyButton.swift; sourceTree = "<group>"; };
 		7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIPrettyButton.xib; sourceTree = "<group>"; };
 		7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenu.swift; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 				7EB4FC7D203C1BA900E86687 /* IndicatorAlert */,
 				7EBED831202DD88D009A1FB3 /* Cells */,
 				7E615697202E533600E60611 /* UICircleImageView.swift */,
+				7E133A7F204899EC004FD581 /* PaddingLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				7E7B4E62202DAA0200FA280D /* Controller.swift in Sources */,
 				7E07760D202F994F00427607 /* AuthCallback.swift in Sources */,
 				7EBED833202DD8A1009A1FB3 /* CityCell.swift in Sources */,
+				7E133A80204899EC004FD581 /* PaddingLabel.swift in Sources */,
 				7E428CC820349438007CED56 /* BuisinessCallback.swift in Sources */,
 				7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */,
 				7E7B4E5C202D9AA700FA280D /* Info.swift in Sources */,

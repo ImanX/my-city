@@ -34,7 +34,7 @@ class PagerCell : FSPagerViewCell{
     
     @objc func open(){
         let vc2 = self.vc?.storyboard?.instantiateViewController(viewController: PageViewController.self);
-        vc2?.data = item;
+        vc2?.ID = item?.ID;
         self.vc?.navigationController?.pushViewController(vc2!, animated: true);
     }
 

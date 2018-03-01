@@ -38,7 +38,7 @@ class ContactController : Controller<ContactCallback>{
             let news  = json["data"]["news"].array;
             let bs = json["data"]["business"].array;
             let ps = json["data"]["post"].array;
-            
+                        
             var nArray = [Page]();
             var bArray = [Buisiness]();
             var pArray = [Page]();

@@ -26,6 +26,7 @@ class Page: Model {
         self.relatedPages = [Page]();
      
         let json = (j["item"].exists()) ? j["item"] : j;
+        id = json["id"].intValue;
         title = json["title"].stringValue;
         cover = json["cover"].stringValue;
         content =  json["filteredContent"].stringValue.html2String;
@@ -33,7 +34,7 @@ class Page: Model {
         hasLocation = map["status"].boolValue;
         location = map["location"].stringValue;
         let link = json["linl"];
-        id = link["id"].intValue;
+        //id = link["id"].intValue;
         type = link["type"].stringValue;
         
         

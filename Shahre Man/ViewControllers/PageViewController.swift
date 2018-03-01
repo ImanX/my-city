@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDataSource {
+    @IBOutlet weak var imgCover: UIImageView!
+    @IBOutlet weak var lblContent: UILabel!
+    var page:Page?;
+    var ID:Int?;
     
-    
-    
+    @IBOutlet weak var tableView: UITableView!
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,37 +39,37 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
-        vc?.page = page?.relatedPages![indexPath.row];
+        vc?.ID = page?.relatedPages![indexPath.row].id;
         self.navigationController?.pushViewController(vc!, animated: true);
     }
     
-    @IBOutlet weak var imgCover: UIImageView!
-    @IBOutlet weak var lblContent: UILabel!
-    var page:Page?;
-    var data:Info?;
-    
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-        indicatorAlert?.show()
         let controller = ContactController(callback: ContactCallback());
         tableView?.tableFooterView = UIView()
         tableView.tableHeaderView = UIView();
         navigationItem.backBarButtonItem =  UIBarButtonItem(title: "بازگشت", style: .done, target: self, action: #selector(dismiss(animated:completion:)))
-
-        if data != nil{
-            self.navigationItem.title = data?.title!;
-            controller.getPageView(id: (data?.ID!)!);
-        }else{
-            self.navigationItem.title = page?.title!;
-            self.imgCover.loadImage(URL: (page?.cover)!);
+        
+        if page != nil {
+            self.imgCover.loadImage(URL: page!.cover);
             self.lblContent.text = page?.content;
-            self.indicatorAlert?.dismiss();
-            self.lblContent.isHidden = false;
-            self.tableView?.isHidden = true;
-
+            self.navigationItem.title = page?.title;
             
+            self.lblContent.isHidden = false;
+            if !(page?.hasRelatedPages)! {
+                self.tableView?.isHidden = true;
+                self.tableView.gone();
+            }else{
+                self.tableView.isHidden = false;
+                self.tableView?.reloadData();
+            }
+            
+            return
         }
+        
+        indicatorAlert?.show()
+        controller.getPageView(id: ID!);
+        
         controller.callback.didSuccessResolvePage = { page in
             self.page = page;
             self.indicatorAlert?.dismiss();
@@ -74,11 +77,17 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
             self.lblContent.text = page.content;
             self.navigationItem.title = page.title;
             
-            
-            self.tableView?.isHidden = false;
             self.lblContent.isHidden = false;
-            self.tableView?.reloadData();
-
+            if !page.hasRelatedPages {
+                self.tableView?.isHidden = true;
+                self.tableView.gone();
+            }else{
+                self.tableView.isHidden = false;
+                self.tableView?.reloadData();
+            }
+            
+            
+            
         }
         
         controller.callback.didFailure = {_,_,_ in

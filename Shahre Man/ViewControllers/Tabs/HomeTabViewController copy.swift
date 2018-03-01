@@ -66,7 +66,7 @@ class HomeTabViewController : BaseViewController ,UITableViewDelegate , UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if dataResource.datas![indexPath.row].type.contains("page"){
         let vc = storyboard?.instantiateViewController(viewController: PageViewController.self);
-        vc?.data = dataResource.datas?[indexPath.row];
+        vc?.ID = dataResource.datas?[indexPath.row].ID;
         self.navigationController?.pushViewController(vc!, animated: true);
             return
         }
