@@ -156,6 +156,7 @@ class BuisinessController : Controller<BuisinessCallback>{
                     self.callback.didSuccessUploadImage!();
                 }
                 
+                
             case .failure(let encodingError):
                 print(encodingError)
                 self.callback.didFailure(0,0,"");

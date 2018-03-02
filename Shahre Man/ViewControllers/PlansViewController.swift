@@ -21,7 +21,12 @@ class PlansViewController : BaseViewController , FSPagerViewDelegate , FSPagerVi
     @IBAction func register(_ sender: UIButton) {
         let vc = storyboard?.instantiateModalViewController(modal: RegisterBuisinessModalViewController.self, presenetStyle: UIModalPresentationStyle.overFullScreen)
         vc?.plan = list![controller.currentPage];
-        present(vc!, animated: true, completion: nil);
+        vc?.callback = { item in
+            let vc = self.storyboard?.instantiateViewController(viewController: MyBuissinessListViewController.self);
+            self.navigationController?.pushViewController(vc!, animated: true);
+        }
+        self.present(vc!, animated: true, completion: nil);
+
         
     }
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {

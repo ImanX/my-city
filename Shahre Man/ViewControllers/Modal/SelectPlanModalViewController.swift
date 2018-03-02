@@ -12,11 +12,14 @@ class SelectPlanModalViewController: BaseModalViewController<BuisinessCategory>,
     
     var isShowCloseButton:Bool = false;
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationItems: UINavigationItem!
     
     @IBAction func categorySelect(_ sender: UITextField) {
     }
+    
     override func viewDidLoad() {
+        tableView?.tableFooterView = UIView();
         if isShowCloseButton {
             navigationItems.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop, target: self, action: #selector(close))
             navigationItems.leftBarButtonItem?.tintColor = .black;

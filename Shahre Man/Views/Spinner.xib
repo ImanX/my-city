@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sansLight.ttf">
+            <string>IRANSansFaNum-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Spinner" customModule="Shahre_Man" customModuleProvider="target">
+            <connections>
+                <outlet property="lblCaption" destination="nsG-eu-jsj" id="97W-0J-NKp"/>
+                <outlet property="parent" destination="mMX-VC-fgb" id="eoh-4O-VmP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="43"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMX-VC-fgb">
+                    <rect key="frame" x="10" y="3" width="376" height="37"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsG-eu-jsj">
+                            <rect key="frame" x="327" y="4" width="41" height="29"/>
+                            <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="GgQ-tM-7sO" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
+                            <rect key="frame" x="8" y="6" width="21" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="21" id="Pxv-rd-ITS"/>
+                                <constraint firstAttribute="height" constant="24" id="rrJ-Rk-bIn"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nsG-eu-jsj" firstAttribute="top" secondItem="mMX-VC-fgb" secondAttribute="top" constant="4" id="6tS-B4-bxl"/>
+                        <constraint firstAttribute="bottom" secondItem="nsG-eu-jsj" secondAttribute="bottom" constant="4" id="MrK-8u-TSl"/>
+                        <constraint firstItem="GgQ-tM-7sO" firstAttribute="leading" secondItem="mMX-VC-fgb" secondAttribute="leading" constant="8" id="Tet-B4-oOV"/>
+                        <constraint firstAttribute="trailing" secondItem="nsG-eu-jsj" secondAttribute="trailing" constant="8" id="X4q-Yv-5uZ"/>
+                        <constraint firstItem="GgQ-tM-7sO" firstAttribute="centerY" secondItem="nsG-eu-jsj" secondAttribute="centerY" id="giP-6a-lZD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mMX-VC-fgb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-10" id="4cg-L4-sWh"/>
+                <constraint firstItem="mMX-VC-fgb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-3" id="Iuh-5O-GaP"/>
+                <constraint firstItem="mMX-VC-fgb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Yfo-JE-i79"/>
+                <constraint firstItem="mMX-VC-fgb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="ufe-rU-tzv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-23" y="-269.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow" width="256" height="256"/>
+    </resources>
+</document>

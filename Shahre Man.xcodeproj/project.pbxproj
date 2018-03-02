@@ -34,6 +34,8 @@
 		7E171E25203E05E700A4F2D0 /* sansULight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E22203E05E700A4F2D0 /* sansULight.ttf */; };
 		7E1A118D2045BFB700DFEDD4 /* LocationModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A118C2045BFB700DFEDD4 /* LocationModalViewController.swift */; };
 		7E1A118F2047024B00DFEDD4 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A118E2047024B00DFEDD4 /* Field.swift */; };
+		7E2FD18E2049740200323CFC /* Spinner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E2FD18D2049740200323CFC /* Spinner.xib */; };
+		7E2FD1902049749100323CFC /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2FD18F2049749100323CFC /* Spinner.swift */; };
 		7E3FD3AA20420A6B00C83386 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3FD3A920420A6B00C83386 /* Page.swift */; };
 		7E3FD3AC2042100A00C83386 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3FD3AB2042100A00C83386 /* PageViewController.swift */; };
 		7E3FD3AE204213B400C83386 /* ContactCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3FD3AD204213B400C83386 /* ContactCallback.swift */; };
@@ -142,6 +144,8 @@
 		7E171E22203E05E700A4F2D0 /* sansULight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansULight.ttf; path = Fonts/sansULight.ttf; sourceTree = "<group>"; };
 		7E1A118C2045BFB700DFEDD4 /* LocationModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModalViewController.swift; sourceTree = "<group>"; };
 		7E1A118E2047024B00DFEDD4 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		7E2FD18D2049740200323CFC /* Spinner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Spinner.xib; sourceTree = "<group>"; };
+		7E2FD18F2049749100323CFC /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		7E3FD3A920420A6B00C83386 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		7E3FD3AB2042100A00C83386 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		7E3FD3AD204213B400C83386 /* ContactCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCallback.swift; sourceTree = "<group>"; };
@@ -328,6 +332,15 @@
 			path = init;
 			sourceTree = "<group>";
 		};
+		7E2FD18C204973E600323CFC /* CaptionField */ = {
+			isa = PBXGroup;
+			children = (
+				7EAD1D6A204767940015A3DF /* UICaptionFieldText.swift */,
+				7EAD1D6C204767AB0015A3DF /* UICaptionFieldText.xib */,
+			);
+			path = CaptionField;
+			sourceTree = "<group>";
+		};
 		7E428CC3203493F9007CED56 /* auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,8 +476,9 @@
 		7EBED830202DD887009A1FB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7EAD1D6A204767940015A3DF /* UICaptionFieldText.swift */,
-				7EAD1D6C204767AB0015A3DF /* UICaptionFieldText.xib */,
+				7E2FD18F2049749100323CFC /* Spinner.swift */,
+				7E2FD18D2049740200323CFC /* Spinner.xib */,
+				7E2FD18C204973E600323CFC /* CaptionField */,
 				7EB4FC87203DBA8C00E86687 /* UIPrettyButton */,
 				7EB4FC7D203C1BA900E86687 /* IndicatorAlert */,
 				7EBED831202DD88D009A1FB3 /* Cells */,
@@ -617,6 +631,7 @@
 				7EAD1D6D204767AB0015A3DF /* UICaptionFieldText.xib in Resources */,
 				7E077602202EE4D900427607 /* PagerCell.xib in Resources */,
 				7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */,
+				7E2FD18E2049740200323CFC /* Spinner.xib in Resources */,
 				7E810BBE203F4B6100358E69 /* PlanCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,6 +819,7 @@
 				7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */,
 				7E133A8420494323004FD581 /* EnterMobileModalViewController.swift in Sources */,
 				7E615698202E533600E60611 /* UICircleImageView.swift in Sources */,
+				7E2FD1902049749100323CFC /* Spinner.swift in Sources */,
 				7E61568F202E43E200E60611 /* Storage.swift in Sources */,
 				7EAD1D69204728920015A3DF /* BuissinesTabExtra.swift in Sources */,
 				7E810BC0203F4DDA00358E69 /* PlansViewController.swift in Sources */,

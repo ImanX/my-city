@@ -14,7 +14,9 @@ import FSPagerView
 
 extension UIStoryboard{
     func instantiateViewController<V:UIViewController>(viewController:V.Type) -> V{
-        return instantiateViewController(withIdentifier:viewController.name) as! V;
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:viewController.name) as! V;
+        return vc;
+        
     }
     
     func instantiateModalViewController<M:UIViewController>(modal:M.Type,presenetStyle:UIModalPresentationStyle) -> M {

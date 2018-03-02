@@ -118,6 +118,10 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
     }
     
     @objc func buissines() {
+        if dataResource.profile == nil{
+            login();
+            return
+        }
         let vc = storyboard?.instantiateViewController(viewController: PlansViewController.self);
         self.navigationController?.pushViewController(vc!, animated: true);
     }

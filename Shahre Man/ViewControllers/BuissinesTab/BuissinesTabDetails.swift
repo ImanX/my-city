@@ -32,29 +32,42 @@ class BuissinesTabDetails : BaseViewController  {
         btnView.layer.cornerRadius = 15;
         
         for item in BuisinessTabViewController.basicFields!{
-            let fldText = UICaptionFieldText();
+            let v:UIView;
             //  fldText.center = stack.center;
-            fldText.field = item;
-            fldText.caption = item.label;
-            fldText.fldText.text = item.value;
-            fldText.fldText.placeholder = item.captionRequire;
-        
+         
             if item.type == "spinner" {
-                fldText.isSpinner = true;
-            fldText.fldText.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchDown)));
-                fldText.fldText.text = item.label;
+                let child = Spinner();
+                child.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchDown)));
+                child.caption = item.label;
+                child.field = item;
+                v = child;
 
+            }else{
+                let child = UICaptionFieldText();
+                child.field = item;
+                child.caption = item.label;
+                child.fldText.text = item.value;
+                child.fldText.placeholder = item.captionRequire;
+                v = child;
             }
             
-            let h:CGFloat = (item.key == "description" || item.key == "Address-address") ? 200 : 60;
+            let h:CGFloat;
+            if  (item.key == "description" || item.key == "Address-address") {
+                h = 200;
+            }else if item.type == "spinner" {
+                h = 40;
+            }else{
+                h = 60
+                
+            }
 
             
             
-            fldText.heightAnchor.constraint(equalToConstant: h).isActive = true;
-            fldText.widthAnchor.constraint(equalToConstant: 100).isActive = true;
+            v.heightAnchor.constraint(equalToConstant: h).isActive = true;
+            v.widthAnchor.constraint(equalToConstant: 100).isActive = true;
             
             
-            stack.addArrangedSubview(fldText);
+            stack.addArrangedSubview(v);
         }
         
 
@@ -85,19 +98,25 @@ class BuissinesTabDetails : BaseViewController  {
 
         for item in stack.subviews{
 
-            let v  =  (item as! UICaptionFieldText);
-            let f = v.field;
- 
-            if (f?.isRequire)! && (v.fldText.text?.isEmpty)!{
-                getErrorSnackbar(message: "لطفا فیلد های اجباری را پر نمایید").show();
-                self.indicatorAlert?.dismiss();
-
-                return
+            let f  =  (item is UICaptionFieldText) ? (item as! UICaptionFieldText).field : (item as! Spinner).field
+            let value:String;
+        
+            if item is Spinner {
+                value = (f?.value)!;
+            }else {
+                let v = (item as! UICaptionFieldText);
+                if (f?.isRequire)! && (v.fldText.text?.isEmpty)!{
+                    getErrorSnackbar(message: "لطفا فیلد های اجباری را پر نمایید").show();
+                    self.indicatorAlert?.dismiss();
+                    return
+                }
+                value = v.fldText.text!;
             }
+ 
+          
             
             let controller = BuisinessController(callback: BuisinessCallback());
-            let value = f?.type == "spinner" ? f?.value :  v.fldText.text;
-            controller.update(index: (f?.key)!, value: value! , id: (BuisinessTabViewController.buissines?.id)!);
+            controller.update(index: (f?.key)!, value: value , id: (BuisinessTabViewController.buissines?.id)!);
         }
         
         
@@ -113,11 +132,11 @@ class BuissinesTabDetails : BaseViewController  {
             let modalViewController = self.storyboard?.instantiateModalViewController(modal:SelectCityModalViewController.self , presenetStyle: UIModalPresentationStyle.overCurrentContext);
             modalViewController?.list = list;
             self.present(modalViewController!, animated: true, completion: nil)
-            modalViewController?.callback = { item in
+            modalViewController?.callback = { field in
                 for i in self.stack.subviews{
-                    if (i as! UICaptionFieldText).field?.type == "spinner" {
-                        (i as! UICaptionFieldText).fldText.text = item.name;
-                        (i as! UICaptionFieldText).field?.value = item.ID.description;
+                    if (i is Spinner){
+                        (i as! Spinner).caption = field.name;
+                        (i as! Spinner).field?.value = field.ID.description;
                         return
                     }
                 }

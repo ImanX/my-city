@@ -9,9 +9,9 @@
 import Foundation
 class ContactController : Controller<ContactCallback>{
     
-    func getPageView(id:Int,type:String){
+    func getPageView(city:City,id:Int,type:String){
        let mtype = (type == "news/view") ? "news" : "page";
-        let url = String(format: "http://shahreman.city/api/v1/\(mtype)/%d.json?city=271", arguments: [id])
+        let url = String(format: "http://shahreman.city/api/v1/%@/%d.json?city=%d", arguments: [mtype,id,city.ID])
         let request = Request(URL: url, method: .get)
         request.get();
         request.callback.didSuccess  = { json in

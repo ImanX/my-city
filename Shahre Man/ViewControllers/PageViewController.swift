@@ -70,7 +70,7 @@ class PageViewController: BaseViewController,UITableViewDelegate , UITableViewDa
         }
         
         indicatorAlert?.show()
-        controller.getPageView(id: ID!,type: type);
+        controller.getPageView(city: dataResource.city!,id: ID!,type: type);
         
         controller.callback.didSuccessResolvePage = { page in
             self.page = page;

@@ -13,7 +13,7 @@ class RegisterBuisinessModalViewController : BaseModalViewController<Buisiness> 
     @IBOutlet weak var fldName: UITextField!
 
     @IBOutlet weak var fldDescription: UITextField!
-    @IBOutlet weak var fldCategory: UITextField!
+    @IBOutlet weak var fldCategory: Spinner!
     @IBOutlet weak var navigation: UINavigationItem!
     var plan:Plan!;
     var categories:[BuisinessCategory]?;
@@ -23,7 +23,9 @@ class RegisterBuisinessModalViewController : BaseModalViewController<Buisiness> 
     override func viewDidLoad() {
         super.viewDidLoad();
         navigation.title = "ثبت صنف " + plan.name;
-        self.fldCategory.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchDown)));
+        
+        fldCategory.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchDown)))
+        
         
         indicatorAlert?.show();
         buisiness.getCategories(city: dataResource.city!);
@@ -46,11 +48,11 @@ class RegisterBuisinessModalViewController : BaseModalViewController<Buisiness> 
     
     @objc func touchDown() {
         
-    
+        view.endEditing(true);
         let v = storyboard?.instantiateModalViewController(modal: SelectPlanModalViewController.self, presenetStyle: UIModalPresentationStyle.overCurrentContext);
         v?.list = categories;
         v?.callback = {
-            self.fldCategory.text = $0.name;
+            self.fldCategory.caption = $0.name;
             self.buisinessSelected = $0;
         }
         present(v!, animated: true, completion: nil);
@@ -87,6 +89,14 @@ class RegisterBuisinessModalViewController : BaseModalViewController<Buisiness> 
         buisiness.register(name: name, desc: desc, planID: plan.id, catID: (buisinessSelected?.id)!);
         buisiness.callback.didSuccessRegisterBuisiness = { item in
             self.indicatorAlert?.dismiss();
+
+            self.dismiss(animated: true, completion: nil);
+                self.getSuccessSnackbar(message: "صنف شما با موفقیت ثبت شد").show();
+                self.callback(item);
+            
+
+         
+            
         }
         
         buisiness.callback.didFailure = {_,_,_ in
