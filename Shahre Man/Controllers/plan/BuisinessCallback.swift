@@ -15,5 +15,6 @@ class BuisinessCallback: RequestCallback {
     public var didSuccessResolveFileds:((_ basics:[Field] ,_ extras:[Field] ,_ medias:[Field])->Void)?
     public var didSuccessUploadImage:(()->Void)?;
     public var didSuccessAddLocation:(()->Void)?;
+    public var didSuccessResolveBuissinesDeatils:((_ item:Buisiness)->Void)?;
     
 }

@@ -84,7 +84,6 @@ self.getErrorSnackbar(message: "ارتباط با خدا مواجه شد").show(
         let annotation = MKPointAnnotation()
         annotation.coordinate = currentLocation!;
         self.mapKit.removeAnnotations(mapKit.annotations);
-
         self.mapKit.addAnnotation(annotation);
         
         

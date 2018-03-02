@@ -26,6 +26,15 @@ class BuissinessTabMedia: BaseViewController ,UINavigationControllerDelegate, UI
         if let image = BuisinessTabViewController.buissines?.image{
             imgLogoSelected.loadImage(URL: image);
         }
+        
+        var location = CLLocationCoordinate2D();
+        location.latitude = (BuisinessTabViewController.buissines?.lat)!;
+        location.longitude = (BuisinessTabViewController.buissines?.lon)!;
+        let viewRegion = MKCoordinateRegionMakeWithDistance(location, 500, 500)
+        mapView.setRegion(viewRegion, animated: true);
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location;
+        mapView.addAnnotation(annotation);
     }
     
     

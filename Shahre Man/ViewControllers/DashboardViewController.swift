@@ -29,6 +29,17 @@ class DashboardViewController: UITabBarController {
             tab.imageInsets = UIEdgeInsetsMake(6,0,-6,0)
         }
         
+        
+        
+        let b = BuisinessController(callback: BuisinessCallback());
+        b.getDetails(id: 16)
+        b.callback.didSuccessResolveBuissinesDeatils = { item in
+            let vc = self.storyboard?.instantiateViewController(viewController: BuissinesDetailsViewController.self);
+            vc?.buissines = item
+            self.navigationController?.pushViewController(vc!, animated: true);
+            
+        }
+        
 
 
         

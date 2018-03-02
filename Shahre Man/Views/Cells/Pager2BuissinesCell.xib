@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageBuissinesCell" customModule="Shahre_Man" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PageBuissinesCell" customModule="Shahre_Man" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="515" height="221"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VhG-nT-Zng">
+                    <rect key="frame" x="0.0" y="0.0" width="515" height="221"/>
+                </imageView>
+                <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d9b-zc-fuF">
+                    <rect key="frame" x="0.0" y="0.0" width="515" height="221"/>
+                </mapView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d9b-zc-fuF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2yX-Sr-ws3"/>
+                <constraint firstItem="d9b-zc-fuF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="6nx-HD-3dy"/>
+                <constraint firstItem="VhG-nT-Zng" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9Bw-C1-Zcn"/>
+                <constraint firstItem="VhG-nT-Zng" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Cu3-ni-lWj"/>
+                <constraint firstItem="d9b-zc-fuF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="M4t-g6-zEF"/>
+                <constraint firstItem="d9b-zc-fuF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Nro-vz-kEH"/>
+                <constraint firstItem="VhG-nT-Zng" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Smb-uh-e5A"/>
+                <constraint firstItem="VhG-nT-Zng" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="phV-Y1-gC5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="image" destination="VhG-nT-Zng" id="ZGX-ZX-ijA"/>
+                <outlet property="mapView" destination="d9b-zc-fuF" id="rb0-Jg-REP"/>
+            </connections>
+            <point key="canvasLocation" x="49.5" y="-176.5"/>
+        </view>
+    </objects>
+</document>

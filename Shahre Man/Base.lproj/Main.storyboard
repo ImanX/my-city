@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Nd-dV-psz">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,7 +27,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Nd-dV-psz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g0w-89-0bW">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -43,18 +44,18 @@
             <objects>
                 <viewController storyboardIdentifier="SplashViewController" id="5lU-dD-uhs" customClass="SplashViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS8-47-If2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="T6I-Mr-qJi">
-                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="20I-AX-Sn4"/>
                                     <constraint firstAttribute="height" constant="200" id="lMj-wi-HNk"/>
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bdK-ZW-ZPa">
-                                <rect key="frame" x="169.5" y="414.5" width="37" height="37"/>
+                                <rect key="frame" x="142" y="365" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.96136253240000002" green="0.44112355590000002" blue="0.1130696249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,34 +81,34 @@
             <objects>
                 <viewController id="CNd-eu-xmt" customClass="HomeTabViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y76-Tj-BFo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ4-m8-UnD">
-                                <rect key="frame" x="0.0" y="213" width="375" height="405"/>
+                                <rect key="frame" x="0.0" y="213" width="320" height="306"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="-1" indentationWidth="0.0" reuseIdentifier="DataCell" id="Lwy-oV-eZK" customClass="DataCell" customModule="Shahre_Man" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lwy-oV-eZK" id="Iaf-nX-YGX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-v7-dRL" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
-                                                    <rect key="frame" x="280" y="10" width="80" height="80"/>
+                                                    <rect key="frame" x="225" y="10" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="9pa-v7-dRL" secondAttribute="height" multiplier="1:1" id="Ufe-cM-s5e"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUP-Yg-IE3">
-                                                    <rect key="frame" x="235" y="27" width="37" height="31"/>
+                                                    <rect key="frame" x="180" y="27" width="37" height="31"/>
                                                     <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usM-Au-jIR">
-                                                    <rect key="frame" x="246.5" y="55" width="25.5" height="17"/>
+                                                    <rect key="frame" x="191.5" y="55" width="25.5" height="17"/>
                                                     <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="10"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -141,7 +142,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pff-Ej-GuF" customClass="FSPagerView" customModule="FSPagerView">
-                                <rect key="frame" x="5" y="5" width="364" height="200"/>
+                                <rect key="frame" x="5" y="5" width="309" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="250" constant="200" id="hbs-HR-VXZ"/>
@@ -177,11 +178,11 @@
             <objects>
                 <viewController storyboardIdentifier="PlansViewController" id="k8Y-Ks-x85" customClass="PlansViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lYx-eh-uRu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ED-Mi-iOj" customClass="FSPagerView" customModule="FSPagerView">
-                                <rect key="frame" x="16" y="20" width="343" height="600"/>
+                                <rect key="frame" x="16" y="20" width="288" height="501"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="automaticSlidingInterval">
@@ -190,7 +191,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrR-DJ-rpk">
-                                <rect key="frame" x="24" y="577" width="327" height="38"/>
+                                <rect key="frame" x="24" y="478" width="272" height="38"/>
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="15"/>
                                 <state key="normal" title="ثبت اطلاعات صنف">
                                     <color key="titleColor" red="0.96136253240000002" green="0.44112355590000002" blue="0.1130696249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -200,7 +201,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-1o-oXV" customClass="FSPageControl" customModule="FSPagerView">
-                                <rect key="frame" x="79" y="628" width="218" height="23"/>
+                                <rect key="frame" x="79" y="529" width="163" height="23"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
                         </subviews>
@@ -234,17 +235,17 @@
             <objects>
                 <viewController id="LB2-C4-DKm" customClass="SearchTabViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zZa-h1-bgZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvx-IM-FCM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q8N-1C-US8">
-                                        <rect key="frame" x="9" y="78" width="359" height="589"/>
+                                        <rect key="frame" x="9" y="78" width="304" height="490"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آخرین اخبار" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8aC-Zd-xYK">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="23"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="304" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="13"/>
                                             <nil key="textColor"/>
@@ -252,26 +253,26 @@
                                         </label>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="-1" indentationWidth="0.0" reuseIdentifier="DataCell" id="z9e-SY-m3g" customClass="DataCell" customModule="Shahre_Man" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="51" width="359" height="100"/>
+                                                <rect key="frame" x="0.0" y="51" width="304" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z9e-SY-m3g" id="41v-kp-IQh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="100"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUI-Ax-lDH" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
-                                                            <rect key="frame" x="264" y="10" width="80" height="80"/>
+                                                            <rect key="frame" x="209" y="10" width="80" height="80"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="tUI-Ax-lDH" secondAttribute="height" multiplier="1:1" id="Nda-eh-oox"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRT-ho-VbM">
-                                                            <rect key="frame" x="219" y="27" width="37" height="24"/>
+                                                            <rect key="frame" x="164" y="27" width="37" height="24"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34X-Hv-2cg">
-                                                            <rect key="frame" x="15" y="48" width="241" height="17"/>
+                                                            <rect key="frame" x="15" y="48" width="186" height="17"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="10"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -304,7 +305,7 @@
                                         </connections>
                                     </tableView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="جستجو" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSp-hu-FgH">
-                                        <rect key="frame" x="8" y="8" width="359" height="30"/>
+                                        <rect key="frame" x="8" y="8" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -378,49 +379,49 @@
             <objects>
                 <viewController storyboardIdentifier="MyBuissinessListViewController" id="yph-hq-SJG" customClass="MyBuissinessListViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="75L-To-Rjd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cg2-Lw-BHH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyBuisinessCell" id="Vgg-go-eDi" customClass="MyBuisinessCell" customModule="Shahre_Man" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vgg-go-eDi" id="Kfv-E9-KUd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kpG-zo-Zbb" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
-                                                    <rect key="frame" x="290" y="14" width="70" height="70"/>
+                                                    <rect key="frame" x="235" y="14" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="kpG-zo-Zbb" secondAttribute="height" multiplier="1:1" id="eLI-qk-11T"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQc-YL-OHQ">
-                                                    <rect key="frame" x="246" y="20" width="36" height="24"/>
+                                                    <rect key="frame" x="191" y="20" width="36" height="24"/>
                                                     <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-no-bNz">
-                                                    <rect key="frame" x="254" y="42" width="28" height="19"/>
+                                                    <rect key="frame" x="199" y="42" width="28" height="19"/>
                                                     <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="11"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgD-h9-FPf">
-                                                    <rect key="frame" x="10" y="61" width="272" height="19"/>
+                                                    <rect key="frame" x="10" y="61" width="217" height="19"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vua-SW-Jzr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="228.5" height="19"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="173.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="وضعیت:  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3a-Qj-rng">
-                                                            <rect key="frame" x="228.5" y="0.0" width="43.5" height="19"/>
+                                                            <rect key="frame" x="173.5" y="0.0" width="43.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="11"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -619,23 +620,23 @@
             <objects>
                 <viewController storyboardIdentifier="ContactUsViewController" id="82F-BG-A91" customClass="ContactUsViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="79j-To-VBt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0XV-Xb-LrF">
-                                <rect key="frame" x="10" y="35" width="349" height="30"/>
+                                <rect key="frame" x="10" y="35" width="294" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ایمیل" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghI-4t-Tnr">
-                                <rect key="frame" x="10" y="73" width="349" height="30"/>
+                                <rect key="frame" x="10" y="73" width="294" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="متن" textAlignment="right" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="fIE-cg-DZC">
-                                <rect key="frame" x="10" y="111" width="349" height="100"/>
+                                <rect key="frame" x="10" y="111" width="294" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="jGt-D7-hrT"/>
                                 </constraints>
@@ -644,7 +645,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logofooter" translatesAutoresizingMaskIntoConstraints="NO" id="oBB-cc-sCJ">
-                                <rect key="frame" x="147.5" y="577" width="80" height="70"/>
+                                <rect key="frame" x="120" y="478" width="80" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="cBQ-dD-xba"/>
                                     <constraint firstAttribute="width" constant="80" id="kil-xi-aLs"/>
@@ -683,27 +684,27 @@
             <objects>
                 <viewController id="Vxl-E0-aAT" customClass="AccountTabViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pao-WU-49p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiX-9F-bXE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarholder1x1" translatesAutoresizingMaskIntoConstraints="NO" id="UJa-pL-2on" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
-                                        <rect key="frame" x="153" y="16" width="70" height="70"/>
+                                        <rect key="frame" x="125.5" y="16" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="B89-9e-5tw"/>
                                             <constraint firstAttribute="width" constant="70" id="z1a-af-UMT"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مهمان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeM-Mb-Ex7">
-                                        <rect key="frame" x="8" y="90" width="359" height="25.5"/>
+                                        <rect key="frame" x="8" y="90" width="304" height="25.5"/>
                                         <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خوش آمدید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m0-f9-rIu">
-                                        <rect key="frame" x="8" y="109.5" width="359" height="24"/>
+                                        <rect key="frame" x="8" y="109.5" width="304" height="24"/>
                                         <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -723,21 +724,21 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-SN-Cnh">
-                                <rect key="frame" x="0.0" y="140" width="375" height="478"/>
+                                <rect key="frame" x="0.0" y="140" width="320" height="379"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mga-gu-GO7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="478"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="379"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" id="AQR-bi-2c5" customClass="MenuCell" customModule="Shahre_Man" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                                <rect key="frame" x="0.0" y="28" width="320" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AQR-bi-2c5" id="ofx-Zh-MXu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGh-qE-hm0" customClass="UIPrettyButton" customModule="Shahre_Man" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                     </subviews>
@@ -797,30 +798,30 @@
             <objects>
                 <viewController storyboardIdentifier="EditProfileViewController" id="ZyG-8w-CCj" customClass="EditProfileViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BMC-Fp-pry">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logofooter" translatesAutoresizingMaskIntoConstraints="NO" id="O88-NR-PaT">
-                                <rect key="frame" x="152" y="577" width="80" height="70"/>
+                                <rect key="frame" x="124.5" y="478" width="80" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Upp-zU-pzJ"/>
                                     <constraint firstAttribute="width" constant="80" id="gvx-4e-OMD"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-BF-93G">
-                                <rect key="frame" x="16" y="38" width="343" height="30"/>
+                                <rect key="frame" x="16" y="38" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام ‌خانوادگی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcg-oL-cHc">
-                                <rect key="frame" x="16" y="85" width="343" height="30"/>
+                                <rect key="frame" x="16" y="85" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="پست الکترونیکی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTx-xr-TjJ">
-                                <rect key="frame" x="16" y="132" width="343" height="30"/>
+                                <rect key="frame" x="16" y="132" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -988,17 +989,17 @@
             <objects>
                 <viewController storyboardIdentifier="BuissinessTabExtra" id="yoz-jT-ZmK" customClass="BuissinessTabExtra" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R2v-9j-AoR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kd0-Vq-d5F">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZg-bW-1My">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JEt-Ws-l2R">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1041,16 +1042,153 @@
             </objects>
             <point key="canvasLocation" x="1624" y="3463"/>
         </scene>
+        <!--Buissines Details View Controller-->
+        <scene sceneID="pg1-JU-syR">
+            <objects>
+                <viewController storyboardIdentifier="BuissinesDetailsViewController" id="jVz-w1-egA" customClass="BuissinesDetailsViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZU4-sG-FT1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-x6-YYp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4n-Zr-rXb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-zr-CRp" customClass="FSPagerView" customModule="FSPagerView">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="172" id="0pH-do-0mm"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyD-RF-fRT">
+                                                <rect key="frame" x="8" y="244" width="304" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-8u-FsP">
+                                                        <rect key="frame" x="8" y="3" width="288" height="25.5"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="CM9-g7-tng">
+                                                        <rect key="frame" x="282" y="32" width="15" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="15" id="ABe-2g-zXy"/>
+                                                            <constraint firstAttribute="height" constant="15" id="P9b-3w-LKg"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-lo-S9S">
+                                                        <rect key="frame" x="20" y="33" width="260" height="17"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="qiy-Jo-bxy">
+                                                        <rect key="frame" x="282" y="50" width="15" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="15" id="6jg-Ug-gUe"/>
+                                                            <constraint firstAttribute="height" constant="15" id="tVx-dp-tlg"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uo-KJ-7Q4">
+                                                        <rect key="frame" x="20" y="51" width="260" height="17"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="t3O-8u-FsP" firstAttribute="leading" secondItem="fyD-RF-fRT" secondAttribute="leading" constant="8" id="0lp-Sw-U5l"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qiy-Jo-bxy" secondAttribute="trailing" constant="7" id="ASf-DR-yUS"/>
+                                                    <constraint firstItem="JJb-lo-S9S" firstAttribute="leading" secondItem="fyD-RF-fRT" secondAttribute="leading" constant="20" id="HYr-Vq-5cQ"/>
+                                                    <constraint firstItem="CM9-g7-tng" firstAttribute="firstBaseline" secondItem="t3O-8u-FsP" secondAttribute="baseline" constant="12.5" id="K3K-ce-PDe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CM9-g7-tng" secondAttribute="trailing" constant="7" id="LcD-Hv-5XK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="t3O-8u-FsP" secondAttribute="trailing" constant="8" id="V8a-KV-d37"/>
+                                                    <constraint firstAttribute="height" constant="81" id="ayT-jk-Vrr"/>
+                                                    <constraint firstItem="9uo-KJ-7Q4" firstAttribute="leading" secondItem="fyD-RF-fRT" secondAttribute="leading" constant="20" id="cUe-CI-H0Q"/>
+                                                    <constraint firstItem="qiy-Jo-bxy" firstAttribute="top" secondItem="CM9-g7-tng" secondAttribute="bottom" constant="3" id="ceS-h0-Ul6"/>
+                                                    <constraint firstItem="t3O-8u-FsP" firstAttribute="top" secondItem="fyD-RF-fRT" secondAttribute="top" constant="3" id="gcV-9F-unG"/>
+                                                    <constraint firstItem="CM9-g7-tng" firstAttribute="leading" secondItem="JJb-lo-S9S" secondAttribute="trailing" constant="2" id="llR-id-nxr"/>
+                                                    <constraint firstItem="JJb-lo-S9S" firstAttribute="firstBaseline" secondItem="t3O-8u-FsP" secondAttribute="baseline" constant="24.5" id="pbL-iA-J6w"/>
+                                                    <constraint firstItem="9uo-KJ-7Q4" firstAttribute="top" secondItem="JJb-lo-S9S" secondAttribute="bottom" constant="1" id="rAn-du-2V8"/>
+                                                    <constraint firstItem="qiy-Jo-bxy" firstAttribute="leading" secondItem="9uo-KJ-7Q4" secondAttribute="trailing" constant="2" id="rq3-39-wPb"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-Fd-fwa" customClass="PaddingLabel" customModule="Shahre_Man" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="348" width="304" height="22.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I6P-YS-NsO">
+                                                <rect key="frame" x="8" y="400" width="304" height="592"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fyD-RF-fRT" secondAttribute="trailing" constant="8" id="6rX-7F-Kq9"/>
+                                            <constraint firstItem="fyD-RF-fRT" firstAttribute="top" secondItem="fKi-zr-CRp" secondAttribute="bottom" constant="72" id="89R-NA-2jT"/>
+                                            <constraint firstAttribute="trailing" secondItem="I6P-YS-NsO" secondAttribute="trailing" constant="8" id="9n8-1j-0MD"/>
+                                            <constraint firstAttribute="trailing" secondItem="fKi-zr-CRp" secondAttribute="trailing" id="JAU-ew-z5J"/>
+                                            <constraint firstItem="fKi-zr-CRp" firstAttribute="top" secondItem="X4n-Zr-rXb" secondAttribute="top" id="KDz-4G-I0G"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fdh-Fd-fwa" secondAttribute="trailing" constant="8" id="Pmd-al-tnB"/>
+                                            <constraint firstAttribute="bottom" secondItem="I6P-YS-NsO" secondAttribute="bottom" constant="8" id="Qso-lQ-gJ6"/>
+                                            <constraint firstItem="Fdh-Fd-fwa" firstAttribute="top" secondItem="fyD-RF-fRT" secondAttribute="bottom" constant="23" id="SQ1-vu-Re1"/>
+                                            <constraint firstItem="fyD-RF-fRT" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" constant="8" id="Zyz-cu-306"/>
+                                            <constraint firstItem="I6P-YS-NsO" firstAttribute="top" secondItem="Fdh-Fd-fwa" secondAttribute="bottom" constant="29.5" id="hm1-kt-Pjs"/>
+                                            <constraint firstItem="I6P-YS-NsO" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" constant="8" id="mdC-Pm-hkB"/>
+                                            <constraint firstItem="fKi-zr-CRp" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" id="owe-35-k7v"/>
+                                            <constraint firstItem="Fdh-Fd-fwa" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" constant="8" id="vmH-Oh-d16"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="X4n-Zr-rXb" secondAttribute="trailing" id="Mbc-zv-PFC"/>
+                                    <constraint firstAttribute="bottom" secondItem="X4n-Zr-rXb" secondAttribute="bottom" id="NDh-8i-8EM"/>
+                                    <constraint firstItem="X4n-Zr-rXb" firstAttribute="leading" secondItem="aIF-x6-YYp" secondAttribute="leading" id="Vve-8X-EGG"/>
+                                    <constraint firstItem="X4n-Zr-rXb" firstAttribute="top" secondItem="aIF-x6-YYp" secondAttribute="top" id="ozO-li-9yL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aIF-x6-YYp" firstAttribute="top" secondItem="ZU4-sG-FT1" secondAttribute="top" id="2oI-ph-AYM"/>
+                            <constraint firstItem="aIF-x6-YYp" firstAttribute="leading" secondItem="dca-mG-ybm" secondAttribute="leading" id="O8H-Dw-xSv"/>
+                            <constraint firstItem="X4n-Zr-rXb" firstAttribute="width" secondItem="ZU4-sG-FT1" secondAttribute="width" id="cxy-Ku-8gC"/>
+                            <constraint firstItem="aIF-x6-YYp" firstAttribute="bottom" secondItem="dca-mG-ybm" secondAttribute="bottom" id="kBm-fn-XkJ"/>
+                            <constraint firstItem="X4n-Zr-rXb" firstAttribute="height" secondItem="ZU4-sG-FT1" secondAttribute="height" priority="250" id="vzZ-fy-kTR"/>
+                            <constraint firstItem="aIF-x6-YYp" firstAttribute="trailing" secondItem="dca-mG-ybm" secondAttribute="trailing" id="w2e-AW-8Hl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dca-mG-ybm"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="1000"/>
+                    <connections>
+                        <outlet property="lblAddress" destination="9uo-KJ-7Q4" id="LNp-vS-QXt"/>
+                        <outlet property="lblContent" destination="Fdh-Fd-fwa" id="PY0-4k-sDV"/>
+                        <outlet property="lblOwner" destination="JJb-lo-S9S" id="zuB-Jw-hv0"/>
+                        <outlet property="lblTitle" destination="t3O-8u-FsP" id="6Cy-aW-dWj"/>
+                        <outlet property="pager" destination="fKi-zr-CRp" id="ZH2-mt-vC2"/>
+                        <outlet property="stack" destination="I6P-YS-NsO" id="Obb-U5-OUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rw-V7-kr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806.25" y="3122.5352112676055"/>
+        </scene>
         <!--چند رسانه ای-->
         <scene sceneID="kC6-dR-2pm">
             <objects>
                 <viewController storyboardIdentifier="BuissinessTabMedia" id="ka4-EF-R31" customClass="BuissinessTabMedia" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MC-1l-JBs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-QO-KHy">
-                                <rect key="frame" x="-4" y="20" width="383" height="596"/>
+                                <rect key="frame" x="-4" y="20" width="328" height="497"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logofooter" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-R6-Heg">
                                         <rect key="frame" x="124" y="506" width="80" height="70"/>
@@ -1162,37 +1300,37 @@
             <objects>
                 <viewController storyboardIdentifier="NewsViewController" id="D1e-44-1nL" customClass="NewsViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y19-06-bSg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZd-l2-dw9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kAr-QF-qOt">
-                                        <rect key="frame" x="9" y="208" width="359" height="451"/>
+                                        <rect key="frame" x="9" y="208" width="304" height="352"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="-1" indentationWidth="0.0" reuseIdentifier="DataCell" id="bxh-N1-qrX" customClass="DataCell" customModule="Shahre_Man" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="359" height="150"/>
+                                                <rect key="frame" x="0.0" y="28" width="304" height="150"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bxh-N1-qrX" id="0aM-tP-oNy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="150"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="150"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2nX-gg-jT4" customClass="UICircleImageView" customModule="Shahre_Man" customModuleProvider="target">
-                                                            <rect key="frame" x="264" y="10" width="80" height="80"/>
+                                                            <rect key="frame" x="209" y="10" width="80" height="80"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="2nX-gg-jT4" secondAttribute="height" multiplier="1:1" id="ywP-CB-05a"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxp-hZ-tJS">
-                                                            <rect key="frame" x="14" y="18" width="242" height="24"/>
+                                                            <rect key="frame" x="14" y="18" width="187" height="24"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akP-Ad-Mjh">
-                                                            <rect key="frame" x="14" y="39" width="242" height="17"/>
+                                                            <rect key="frame" x="14" y="39" width="187" height="17"/>
                                                             <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="10"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1225,7 +1363,7 @@
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PrA-xE-ABn" customClass="FSPagerView" customModule="FSPagerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="376" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="fRx-Ai-gz1"/>

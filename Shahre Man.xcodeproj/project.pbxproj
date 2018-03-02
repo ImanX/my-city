@@ -43,6 +43,9 @@
 		7E428CC620349420007CED56 /* BuisinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC520349420007CED56 /* BuisinessController.swift */; };
 		7E428CC820349438007CED56 /* BuisinessCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC720349438007CED56 /* BuisinessCallback.swift */; };
 		7E428CCA20349ECA007CED56 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428CC920349ECA007CED56 /* Profile.swift */; };
+		7E4DAC822049A3B3005C09DA /* BuissinesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4DAC812049A3B3005C09DA /* BuissinesDetailsViewController.swift */; };
+		7E4DAC852049BB4D005C09DA /* PageBuissinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4DAC842049BB4D005C09DA /* PageBuissinesCell.swift */; };
+		7E4DAC872049BFE3005C09DA /* Pager2BuissinesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4DAC862049BFE3005C09DA /* Pager2BuissinesCell.xib */; };
 		7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E615683202DFCCD00E60611 /* Modal.storyboard */; };
 		7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615685202E03BB00E60611 /* DashboardViewController.swift */; };
 		7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615688202E2A9700E60611 /* SearchTabViewController.swift */; };
@@ -153,6 +156,9 @@
 		7E428CC520349420007CED56 /* BuisinessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessController.swift; sourceTree = "<group>"; };
 		7E428CC720349438007CED56 /* BuisinessCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuisinessCallback.swift; sourceTree = "<group>"; };
 		7E428CC920349ECA007CED56 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		7E4DAC812049A3B3005C09DA /* BuissinesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuissinesDetailsViewController.swift; sourceTree = "<group>"; };
+		7E4DAC842049BB4D005C09DA /* PageBuissinesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBuissinesCell.swift; sourceTree = "<group>"; };
+		7E4DAC862049BFE3005C09DA /* Pager2BuissinesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pager2BuissinesCell.xib; sourceTree = "<group>"; };
 		7E615683202DFCCD00E60611 /* Modal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Modal.storyboard; sourceTree = "<group>"; };
 		7E615685202E03BB00E60611 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7E615688202E2A9700E60611 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +432,7 @@
 				7EB0300A2040B84A00383247 /* EditProfileViewController.swift */,
 				7E3FD3AB2042100A00C83386 /* PageViewController.swift */,
 				7E133A812048B41A004FD581 /* NewsViewController.swift */,
+				7E4DAC812049A3B3005C09DA /* BuissinesDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -491,6 +498,8 @@
 		7EBED831202DD88D009A1FB3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7E4DAC862049BFE3005C09DA /* Pager2BuissinesCell.xib */,
+				7E4DAC842049BB4D005C09DA /* PageBuissinesCell.swift */,
 				7EBED832202DD8A1009A1FB3 /* CityCell.swift */,
 				7E615699202E56C600E60611 /* DataCell.swift */,
 				7E0775FD202EE46100427607 /* PagerCell.swift */,
@@ -621,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E171E23203E05E700A4F2D0 /* sansBold.ttf in Resources */,
+				7E4DAC872049BFE3005C09DA /* Pager2BuissinesCell.xib in Resources */,
 				7E171E24203E05E700A4F2D0 /* sansLight.ttf in Resources */,
 				7E171E25203E05E700A4F2D0 /* sansULight.ttf in Resources */,
 				7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */,
@@ -867,11 +877,13 @@
 				7E171E14203DE1E600A4F2D0 /* ItemMenu.swift in Sources */,
 				7E810BCA2040226400358E69 /* Buisiness.swift in Sources */,
 				7E61569A202E56C600E60611 /* DataCell.swift in Sources */,
+				7E4DAC852049BB4D005C09DA /* PageBuissinesCell.swift in Sources */,
 				7E7B4E5E202D9E9800FA280D /* City.swift in Sources */,
 				7EAE9507204357F50037599E /* RelatedCell.swift in Sources */,
 				7E171E16203DE33C00A4F2D0 /* MenuCell.swift in Sources */,
 				7E077604202F0D2300427607 /* ContactUsViewController.swift in Sources */,
 				7E077608202F8ADF00427607 /* AccountTabViewController.swift in Sources */,
+				7E4DAC822049A3B3005C09DA /* BuissinesDetailsViewController.swift in Sources */,
 				7E07760B202F980800427607 /* AuthController.swift in Sources */,
 				7EB4FC82203C4C4600E86687 /* RegisterModalViewController.swift in Sources */,
 				7E61568D202E414B00E60611 /* DataResource.swift in Sources */,

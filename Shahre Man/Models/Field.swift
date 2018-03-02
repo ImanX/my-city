@@ -25,6 +25,13 @@ class Field: Model {
         isRequire = json["fildrequire"].boolValue;
     }
     
+    init(js : JSON) {
+        super.init();
+        label = js["label"].stringValue;
+        key = js["key"].stringValue;
+        value = js["value"].stringValue;
+    }
+    
     
     var captionRequire:String{
         return (isRequire)! ? "اجباری" :  "اختیاری"

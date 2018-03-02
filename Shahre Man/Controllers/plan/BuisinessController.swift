@@ -87,9 +87,9 @@ class BuisinessController : Controller<BuisinessCallback>{
         let request = requestBundlAuth(url,.get);
         request.get()
         request.callback.didSuccess = { json in
-
             
-
+            
+            
             var mediaFields = [Field]();
             var basicFields = [Field]();
             var extraField = [Field]();
@@ -100,7 +100,7 @@ class BuisinessController : Controller<BuisinessCallback>{
             
             for item in json["data"]["EditBusinessExtraData"]["filds"].arrayValue{
                 extraField.append(Field(json: item));
-
+                
             }
             
             for item in json["data"]["EditBusinessBasic"]["filds"].arrayValue{
@@ -128,8 +128,8 @@ class BuisinessController : Controller<BuisinessCallback>{
         
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 1000
-
-
+        
+        
         let parameters = ["name": "MainImage" ,"businessId": ID.description];
         let data = UIImageJPEGRepresentation(image, 0.9)
         var header = HTTPHeaders();
@@ -141,8 +141,8 @@ class BuisinessController : Controller<BuisinessCallback>{
                 multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
         },to:"http://shahreman.city/api/v1/business/update-info.json",headers: header)
-        
-        
+            
+            
         { (result) in
             switch result {
             case .success(let upload, _, _):
@@ -189,10 +189,10 @@ class BuisinessController : Controller<BuisinessCallback>{
     
     
     func update(index:String , value:String , id:Int) {
-      let url =   "http://shahreman.city/api/v1/business/update-info.json"
+        let url =   "http://shahreman.city/api/v1/business/update-info.json"
         let request = requestBundlAuth(url , .post);
         request.params  = ["name": index,"value" : value ,"businessId": id.description];
-
+        
         request.get();
         request.callback.didSuccess  = {_ in
             print("OK");
@@ -205,33 +205,52 @@ class BuisinessController : Controller<BuisinessCallback>{
         request.callback.didConnectionFailure = {
             
         }
-
         
-
+        
+        
     }
     
-    func getCategories(city:City){
-        let request = Request(URL: APIwithQueryString(.Buisiness,["city":city]), method: .get);
+    func getDetails(id:Int)  {
+        let url = "http://shahreman.city/api/v1/business/view.json?id=\(id)";
+        let request = Request(URL: url, method: .get);
         request.get();
-        request.callback.didSuccess = { (json) in
-            let array = json["data"].array!;
-            var plans = [BuisinessCategory]();
-            for item in array{
-                plans.append(BuisinessCategory(json: item)) ;
+        request.callback.didSuccess = { (json)  in
+            let data = json["data"];
+            self.callback.didSuccessResolveBuissinesDeatils!(Buisiness(json: data));
+        }
+            
+            
+            request.callback.didFailure = { code , status , error in
+                self.callback.didFailure!(code , status , error);
             }
             
-            self.callback.didSuccesResolveBuisinessCategory!(plans);
+            request.callback.didConnectionFailure = {
+                self.callback.didConnectionFailure!();
+            }
         }
         
-        request.callback.didFailure = { code , status , error in
-            self.callback.didFailure!(code , status , error);
+        func getCategories(city:City){
+            let request = Request(URL: APIwithQueryString(.Buisiness,["city":city]), method: .get);
+            request.get();
+            request.callback.didSuccess = { (json) in
+                let array = json["data"].array!;
+                var plans = [BuisinessCategory]();
+                for item in array{
+                    plans.append(BuisinessCategory(json: item)) ;
+                }
+                
+                self.callback.didSuccesResolveBuisinessCategory!(plans);
+            }
+            
+            request.callback.didFailure = { code , status , error in
+                self.callback.didFailure!(code , status , error);
+            }
+            
+            request.callback.didConnectionFailure = {
+                self.callback.didConnectionFailure!();
+            }
         }
         
-        request.callback.didConnectionFailure = {
-            self.callback.didConnectionFailure!();
-        }
-    }
-    
-    
-    
+        
+        
 }
