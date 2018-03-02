@@ -360,9 +360,6 @@
                             <constraint firstItem="qyG-3Y-ajy" firstAttribute="trailing" secondItem="Imf-DG-8CD" secondAttribute="trailing" constant="16" id="zC2-Tu-QD6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qyG-3Y-ajy"/>
-                        <connections>
-                            <outlet property="indicator" destination="6KN-k0-y80" id="ROL-5x-klS"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="fldOTP" destination="NVr-lR-XHQ" id="p9h-px-ecf"/>
