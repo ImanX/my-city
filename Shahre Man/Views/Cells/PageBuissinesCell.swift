@@ -13,7 +13,7 @@ import MapKit
 class PageBuissinesCell : FSPagerViewCell{
     @IBOutlet weak var image: UIImageView!
     @IBOutlet var mapView: MKMapView!
-    
+    var location:CLLocationCoordinate2D?;
 
     func putMap(location:CLLocationCoordinate2D) {
         image.isHidden = true;
@@ -26,7 +26,13 @@ class PageBuissinesCell : FSPagerViewCell{
         let annotation = MKPointAnnotation()
         annotation.coordinate = location;
         mapView.addAnnotation(annotation);
-    
+        self.location = location;
+        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openMap)))
+    }
+  
+ @objc   func openMap(){
+    let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.location!, addressDictionary:nil))
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
     }
     
     func putImage(url:String)  {

@@ -171,7 +171,7 @@ class AccountTabViewController : BaseViewController , AccountNotifyDelegate,UITa
 
         }
         
-        let i4 = ItemMenu(caption: "ارتباط با ما", image: #imageLiteral(resourceName: "main"), selector: #selector(contact));
+        let i4 = ItemMenu(caption: "ارتباط با ما", image: #imageLiteral(resourceName: "Email"), selector: #selector(contact));
         let i5 = ItemMenu(caption: "تغییر شهر", image: #imageLiteral(resourceName: "city") ,selector: #selector(changeCity));
         
         list.append(i4);

@@ -58,16 +58,26 @@ class BuissinesDetailsViewController: BaseViewController,FSPagerViewDataSource {
     
     override func viewDidLoad() {
         lblTitle.text = buissines?.name;
-        lblOwner.text = buissines?.ownerName;
+        lblOwner.text = (buissines?.ownerName?.isEmpty)! ? "بدون نام" : buissines?.ownerName;
         lblContent.text = buissines?.description;
-        lblAddress.text = buissines?.address
-        ;
+        lblAddress.text = buissines?.address;
+        navigationItem.title = "جزییات صنف"
+    
         
         if (buissines?.hasField)! {
             for meta in (buissines?.fields)!{
-                let lbl = UILabel()
-                lbl.text = meta.value;
-                stack.addArrangedSubview(lbl);
+                if (meta.value?.isEmpty)! || (meta.key == "MainImage") || (meta.key == "Video") || (meta.key == "Address"){
+                    continue;
+                    
+                }
+                
+                
+                let viewd = UIDetailsView();
+                viewd.put(f: meta);
+            
+                viewd.heightAnchor.constraint(equalToConstant: 60).isActive = true;
+                viewd.widthAnchor.constraint(equalToConstant: 100).isActive = true;
+                stack.addArrangedSubview(viewd);
             }
         }
     }

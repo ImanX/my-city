@@ -23,12 +23,12 @@ class Info : Model{
     
      override init(json: JSON) {
         super.init();
-        self._image = json["icon"].string!;
-        self._title = json["title"].string!;
-        self._caption = json["description"].string!;
+        self._image = json["icon"].stringValue;
+        self._title = json["title"].stringValue;
+        self._caption = json["description"].stringValue;
         let linkJSON = json["link"];
-        self._ID = linkJSON["id"].int;
-        self._type = linkJSON["type"].string!;
+        self._ID = linkJSON["id"].intValue;
+        self._type = linkJSON["type"].stringValue;
 
     }
     

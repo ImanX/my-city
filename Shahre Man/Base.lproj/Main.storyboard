@@ -1064,10 +1064,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyD-RF-fRT">
-                                                <rect key="frame" x="8" y="244" width="304" height="81"/>
+                                                <rect key="frame" x="8" y="203" width="304" height="81"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-8u-FsP">
-                                                        <rect key="frame" x="8" y="3" width="288" height="25.5"/>
+                                                        <rect key="frame" x="8" y="3" width="288" height="26"/>
                                                         <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1085,7 +1085,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="qiy-Jo-bxy">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="details" translatesAutoresizingMaskIntoConstraints="NO" id="qiy-Jo-bxy">
                                                         <rect key="frame" x="282" y="50" width="15" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="15" id="6jg-Ug-gUe"/>
@@ -1117,32 +1117,40 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-Fd-fwa" customClass="PaddingLabel" customModule="Shahre_Man" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="348" width="304" height="22.5"/>
+                                                <rect key="frame" x="8" y="292" width="304" height="23"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I6P-YS-NsO">
-                                                <rect key="frame" x="8" y="400" width="304" height="592"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logofooter" translatesAutoresizingMaskIntoConstraints="NO" id="Tno-AM-7Jh">
+                                                <rect key="frame" x="120" y="896" width="80" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="ifV-ou-qcm"/>
+                                                    <constraint firstAttribute="height" constant="70" id="qm3-O5-eKl"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="I6P-YS-NsO">
+                                                <rect key="frame" x="8" y="338" width="304" height="474.5"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="fyD-RF-fRT" secondAttribute="trailing" constant="8" id="6rX-7F-Kq9"/>
-                                            <constraint firstItem="fyD-RF-fRT" firstAttribute="top" secondItem="fKi-zr-CRp" secondAttribute="bottom" constant="72" id="89R-NA-2jT"/>
+                                            <constraint firstItem="fyD-RF-fRT" firstAttribute="top" secondItem="fKi-zr-CRp" secondAttribute="bottom" constant="31" id="89R-NA-2jT"/>
                                             <constraint firstAttribute="trailing" secondItem="I6P-YS-NsO" secondAttribute="trailing" constant="8" id="9n8-1j-0MD"/>
                                             <constraint firstAttribute="trailing" secondItem="fKi-zr-CRp" secondAttribute="trailing" id="JAU-ew-z5J"/>
                                             <constraint firstItem="fKi-zr-CRp" firstAttribute="top" secondItem="X4n-Zr-rXb" secondAttribute="top" id="KDz-4G-I0G"/>
                                             <constraint firstAttribute="trailing" secondItem="Fdh-Fd-fwa" secondAttribute="trailing" constant="8" id="Pmd-al-tnB"/>
-                                            <constraint firstAttribute="bottom" secondItem="I6P-YS-NsO" secondAttribute="bottom" constant="8" id="Qso-lQ-gJ6"/>
-                                            <constraint firstItem="Fdh-Fd-fwa" firstAttribute="top" secondItem="fyD-RF-fRT" secondAttribute="bottom" constant="23" id="SQ1-vu-Re1"/>
+                                            <constraint firstItem="Fdh-Fd-fwa" firstAttribute="top" secondItem="fyD-RF-fRT" secondAttribute="bottom" constant="8" id="SQ1-vu-Re1"/>
                                             <constraint firstItem="fyD-RF-fRT" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" constant="8" id="Zyz-cu-306"/>
-                                            <constraint firstItem="I6P-YS-NsO" firstAttribute="top" secondItem="Fdh-Fd-fwa" secondAttribute="bottom" constant="29.5" id="hm1-kt-Pjs"/>
+                                            <constraint firstItem="I6P-YS-NsO" firstAttribute="top" secondItem="Fdh-Fd-fwa" secondAttribute="bottom" constant="23" id="hm1-kt-Pjs"/>
                                             <constraint firstItem="I6P-YS-NsO" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" constant="8" id="mdC-Pm-hkB"/>
                                             <constraint firstItem="fKi-zr-CRp" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" id="owe-35-k7v"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tno-AM-7Jh" secondAttribute="bottom" constant="34" id="sgS-un-XOZ"/>
+                                            <constraint firstItem="Tno-AM-7Jh" firstAttribute="centerX" secondItem="I6P-YS-NsO" secondAttribute="centerX" id="vGP-Ss-gnZ"/>
                                             <constraint firstItem="Fdh-Fd-fwa" firstAttribute="leading" secondItem="X4n-Zr-rXb" secondAttribute="leading" constant="8" id="vmH-Oh-d16"/>
+                                            <constraint firstItem="Tno-AM-7Jh" firstAttribute="top" secondItem="I6P-YS-NsO" secondAttribute="bottom" constant="83.5" id="zAN-jL-7f1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1154,7 +1162,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aIF-x6-YYp" firstAttribute="top" secondItem="ZU4-sG-FT1" secondAttribute="top" id="2oI-ph-AYM"/>
                             <constraint firstItem="aIF-x6-YYp" firstAttribute="leading" secondItem="dca-mG-ybm" secondAttribute="leading" id="O8H-Dw-xSv"/>
@@ -1167,9 +1175,9 @@
                     </view>
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
-                        <outlet property="lblAddress" destination="9uo-KJ-7Q4" id="LNp-vS-QXt"/>
+                        <outlet property="lblAddress" destination="9uo-KJ-7Q4" id="41f-yh-USV"/>
                         <outlet property="lblContent" destination="Fdh-Fd-fwa" id="PY0-4k-sDV"/>
-                        <outlet property="lblOwner" destination="JJb-lo-S9S" id="zuB-Jw-hv0"/>
+                        <outlet property="lblOwner" destination="JJb-lo-S9S" id="lEK-fs-2os"/>
                         <outlet property="lblTitle" destination="t3O-8u-FsP" id="6Cy-aW-dWj"/>
                         <outlet property="pager" destination="fKi-zr-CRp" id="ZH2-mt-vC2"/>
                         <outlet property="stack" destination="I6P-YS-NsO" id="Obb-U5-OUM"/>
