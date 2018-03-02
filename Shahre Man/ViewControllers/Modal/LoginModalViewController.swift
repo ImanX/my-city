@@ -14,6 +14,7 @@ class LoginModalViewController: BaseModalViewController<Profile> {
     var delegate:AccountNotifyDelegate!;
     let auth = AuthController(callback: AuthCallback());
 
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     @IBAction func close(_ sender: UIBarButtonItem) {
         dismiss(animated: true,completion: nil);
@@ -25,10 +26,9 @@ class LoginModalViewController: BaseModalViewController<Profile> {
             return
         }
         
-        indicatorAlert?.show();
+        indicator.isHidden = false;
         auth.auth(mobile: mobile, otp: otp);
         auth.callback.didSuccessAuthentication = { profile in
-            self.indicatorAlert?.dismiss();
             self.dismiss(animated: true, completion: nil);
             self.delegate.didResolveProfile(profile: profile);
             
@@ -36,12 +36,15 @@ class LoginModalViewController: BaseModalViewController<Profile> {
         }
         
         auth.callback.didFailure = {_,_,_ in
+            self.getErrorSnackbar(message: "کد وارد شده اشتباه است").show();
+            self.indicator.isHidden = true;
             self.indicatorAlert?.dismiss();
 
             
         }
         
         auth.callback.didConnectionFailure = {
+            self.indicator.isHidden = true;
             self.indicatorAlert?.dismiss();
 
             
@@ -49,10 +52,8 @@ class LoginModalViewController: BaseModalViewController<Profile> {
     }
     override func viewDidLoad() {
         statusbarColor = .orange;
-        indicatorAlert?.show();
         auth.requestSendOTP(mobile: mobile!)
         auth.callback.didSuccessSendOTP = {
-            self.indicatorAlert?.dismiss();
             self.getSuccessSnackbar(message: "پیامک ارسال شد").show();
 
         }

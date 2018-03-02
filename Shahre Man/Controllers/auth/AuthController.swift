@@ -8,7 +8,7 @@
 
 import Foundation
 class AuthController : Controller<AuthCallback> {
-    
+
     func requestSendOTP(mobile:String){
         let request = Request(URL: APIwithQueryString(.Login,["mobile" : mobile]), method: .post);
         request.get();
@@ -27,6 +27,8 @@ class AuthController : Controller<AuthCallback> {
     }
     
     func inquery(mobile:String){
+        
+        
         let request = Request(URL: APIwithQueryString(.Login,["mobile" : mobile]), method: .post);
         request.get()
         request.callback.didSuccess = {(json) in

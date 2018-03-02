@@ -11,9 +11,10 @@ import UIKit
 class ItemMenu {
     var caption:String?;
     var image:UIImage?;
-    
-    init(caption:String , image:UIImage) {
+    var selector:Selector?;
+    init(caption:String , image:UIImage , selector:Selector) {
         self.caption = caption;
         self.image = image;
+        self.selector = selector;
     }
 }

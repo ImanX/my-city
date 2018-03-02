@@ -12,6 +12,7 @@ class UIIndicatorAlert : UIView{
     
     var view:UIView?;
     var lastWindow: UIWindow?;
+    var isShowing:Bool = false;
     
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -31,12 +32,13 @@ class UIIndicatorAlert : UIView{
         view?.layer.cornerRadius = 10;
         lastWindow?.isUserInteractionEnabled = false;
         lastWindow?.addSubview(view!);
+        self.isShowing = true;
     }
     
     func dismiss()  {
         lastWindow?.isUserInteractionEnabled = true;
-
          self.view?.removeFromSuperview();
+        self.isShowing = false;
     }
     
     

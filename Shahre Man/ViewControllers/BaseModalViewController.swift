@@ -14,8 +14,10 @@ class BaseModalViewController<E> : BaseViewController{
     public var list:[E]!;
     public var element:E!;
     
+
     
     override func viewDidLoad() {
         statusbarColor  = .orange;
     }
+
 }

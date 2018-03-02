@@ -9,4 +9,6 @@
 import Foundation
 public protocol AccountNotifyDelegate {
     func didResolveProfile(profile:Profile);
+    func didUserNotRegister(mobile:String);
+    func didUserNotVerfication(mobile:String);
 }

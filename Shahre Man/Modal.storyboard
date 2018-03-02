@@ -11,8 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="sansBold.ttf">
+            <string>IRANSansFaNum-Medium</string>
+        </array>
         <array key="sansLight.ttf">
             <string>IRANSansFaNum-Light</string>
+        </array>
+        <array key="sansULight.ttf">
+            <string>IRANSansFaNum-UltraLight</string>
         </array>
     </customFonts>
     <scenes>
@@ -327,35 +333,145 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد پیامک شده به تلفن خود را وارد نمایید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-DG-8CD">
-                                <rect key="frame" x="16" y="115" width="288" height="25.5"/>
-                                <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="15"/>
+                                <rect key="frame" x="16" y="114" width="288" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6KN-k0-y80">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="idP-Py-fFD" firstAttribute="centerX" secondItem="qyG-3Y-ajy" secondAttribute="centerX" constant="4.5" id="5ZJ-XI-j9q"/>
                             <constraint firstItem="NVr-lR-XHQ" firstAttribute="leading" secondItem="qyG-3Y-ajy" secondAttribute="leading" constant="16" id="C6y-yI-fCX"/>
                             <constraint firstItem="zr3-uD-O6m" firstAttribute="leading" secondItem="qyG-3Y-ajy" secondAttribute="leading" id="FJj-OC-wcM"/>
-                            <constraint firstItem="Imf-DG-8CD" firstAttribute="top" secondItem="zr3-uD-O6m" secondAttribute="bottom" constant="51" id="RgM-Ch-K3T"/>
+                            <constraint firstItem="6KN-k0-y80" firstAttribute="centerX" secondItem="SpP-OZ-vd2" secondAttribute="centerX" id="GJb-zr-m98"/>
+                            <constraint firstItem="Imf-DG-8CD" firstAttribute="top" secondItem="zr3-uD-O6m" secondAttribute="bottom" constant="50" id="RgM-Ch-K3T"/>
                             <constraint firstItem="qyG-3Y-ajy" firstAttribute="bottom" secondItem="idP-Py-fFD" secondAttribute="bottom" constant="20" id="Rsk-h0-bWA"/>
                             <constraint firstItem="zr3-uD-O6m" firstAttribute="trailing" secondItem="qyG-3Y-ajy" secondAttribute="trailing" id="URI-8D-3pb"/>
                             <constraint firstItem="zr3-uD-O6m" firstAttribute="top" secondItem="SpP-OZ-vd2" secondAttribute="top" constant="20" id="ccN-wB-sbO"/>
                             <constraint firstItem="qyG-3Y-ajy" firstAttribute="trailing" secondItem="NVr-lR-XHQ" secondAttribute="trailing" constant="16" id="ksl-Dd-Is9"/>
                             <constraint firstItem="NVr-lR-XHQ" firstAttribute="top" secondItem="zr3-uD-O6m" secondAttribute="bottom" constant="80" id="rmL-eu-VAH"/>
                             <constraint firstItem="Imf-DG-8CD" firstAttribute="leading" secondItem="qyG-3Y-ajy" secondAttribute="leading" constant="16" id="sId-cP-8rH"/>
+                            <constraint firstItem="6KN-k0-y80" firstAttribute="centerY" secondItem="SpP-OZ-vd2" secondAttribute="centerY" id="y0O-hE-UWY"/>
                             <constraint firstItem="qyG-3Y-ajy" firstAttribute="trailing" secondItem="Imf-DG-8CD" secondAttribute="trailing" constant="16" id="zC2-Tu-QD6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qyG-3Y-ajy"/>
+                        <connections>
+                            <outlet property="indicator" destination="6KN-k0-y80" id="ROL-5x-klS"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="fldOTP" destination="NVr-lR-XHQ" id="p9h-px-ecf"/>
+                        <outlet property="indicator" destination="6KN-k0-y80" id="pV2-pU-NaA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwM-GG-KKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="349.60000000000002" y="785.75712143928047"/>
+        </scene>
+        <!--Enter Mobile View Controller-->
+        <scene sceneID="Sdn-Le-5Ws">
+            <objects>
+                <viewController storyboardIdentifier="EnterMobileViewController" id="Y5o-5F-Rh7" customClass="EnterMobileViewController" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xvg-dk-RtJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-Ob-Ztv">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.96136253240000002" green="0.44112355590000002" blue="0.1130696249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ورود به حساب" id="PnZ-E5-j5e">
+                                        <barButtonItem key="leftBarButtonItem" title="بستن" id="yLA-Hc-JO0">
+                                            <connections>
+                                                <action selector="close:" destination="Y5o-5F-Rh7" id="jPn-Yc-77X"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="مرحله بعد" id="X2E-mF-2Mh">
+                                            <connections>
+                                                <action selector="nextLevel:" destination="Y5o-5F-Rh7" id="UuH-1d-ZDn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frr-Dc-k9y">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XN0-fR-jfo">
+                                        <rect key="frame" x="8" y="84" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="IRANSansFaNum-Light" family="IRANSans(FaNum)" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره تلفن همراه خود را وارد نمایید:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-j4-HgC">
+                                        <rect key="frame" x="94" y="50" width="216" height="26"/>
+                                        <fontDescription key="fontDescription" name="IRANSansFaNum-Medium" family="IRANSans(FaNum)" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="درصورتی که قبلا ثبت نام نکردید، مراحل ثبت نام به صورت خودکار طی خواهد شد." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyW-hc-y5r">
+                                        <rect key="frame" x="8" y="127" width="304" height="41"/>
+                                        <fontDescription key="fontDescription" name="IRANSansFaNum-UltraLight" family="IRANSans(FaNum)" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logofooter" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-NE-ZP2">
+                                        <rect key="frame" x="120" y="418" width="80" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="7fz-6U-mZ4"/>
+                                            <constraint firstAttribute="height" constant="70" id="kiH-SF-0Rc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IBV-lU-gxU">
+                                        <rect key="frame" x="142" y="234" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jyW-hc-y5r" secondAttribute="trailing" constant="8" id="0bz-9w-uNo"/>
+                                    <constraint firstItem="IBV-lU-gxU" firstAttribute="centerX" secondItem="frr-Dc-k9y" secondAttribute="centerX" id="217-KU-LBb"/>
+                                    <constraint firstItem="XN0-fR-jfo" firstAttribute="leading" secondItem="frr-Dc-k9y" secondAttribute="leading" constant="8" id="2mF-zc-bhk"/>
+                                    <constraint firstItem="lLg-NE-ZP2" firstAttribute="centerX" secondItem="jyW-hc-y5r" secondAttribute="centerX" id="4ET-B9-k2U"/>
+                                    <constraint firstItem="IBV-lU-gxU" firstAttribute="centerY" secondItem="frr-Dc-k9y" secondAttribute="centerY" id="6u4-7m-9GJ"/>
+                                    <constraint firstItem="Nfr-j4-HgC" firstAttribute="top" secondItem="frr-Dc-k9y" secondAttribute="top" constant="50" id="DIi-KZ-6y7"/>
+                                    <constraint firstItem="jyW-hc-y5r" firstAttribute="top" secondItem="XN0-fR-jfo" secondAttribute="bottom" constant="13" id="I3h-gr-ppW"/>
+                                    <constraint firstItem="jyW-hc-y5r" firstAttribute="leading" secondItem="frr-Dc-k9y" secondAttribute="leading" constant="8" id="cwi-6K-QQu"/>
+                                    <constraint firstAttribute="trailing" secondItem="XN0-fR-jfo" secondAttribute="trailing" constant="8" id="frK-Rj-Fh0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nfr-j4-HgC" secondAttribute="trailing" constant="10" id="t96-cl-2YD"/>
+                                    <constraint firstAttribute="bottom" secondItem="lLg-NE-ZP2" secondAttribute="bottom" constant="16" id="uUK-O3-fq1"/>
+                                    <constraint firstItem="XN0-fR-jfo" firstAttribute="top" secondItem="Nfr-j4-HgC" secondAttribute="bottom" constant="8" id="xGJ-8l-Hv4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ON9-Ob-Ztv" firstAttribute="top" secondItem="xvg-dk-RtJ" secondAttribute="top" constant="20" id="8Ug-sg-RT5"/>
+                            <constraint firstItem="frr-Dc-k9y" firstAttribute="leading" secondItem="UkD-al-7wW" secondAttribute="leading" id="9LC-YN-J2K"/>
+                            <constraint firstItem="ON9-Ob-Ztv" firstAttribute="trailing" secondItem="UkD-al-7wW" secondAttribute="trailing" id="9jy-pl-qxS"/>
+                            <constraint firstItem="frr-Dc-k9y" firstAttribute="trailing" secondItem="UkD-al-7wW" secondAttribute="trailing" id="OHD-Wc-Pod"/>
+                            <constraint firstItem="frr-Dc-k9y" firstAttribute="bottom" secondItem="UkD-al-7wW" secondAttribute="bottom" id="QbC-zf-Zft"/>
+                            <constraint firstItem="ON9-Ob-Ztv" firstAttribute="leading" secondItem="UkD-al-7wW" secondAttribute="leading" id="cYk-LH-3Of"/>
+                            <constraint firstItem="frr-Dc-k9y" firstAttribute="top" secondItem="ON9-Ob-Ztv" secondAttribute="bottom" id="gdk-cz-vci"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UkD-al-7wW"/>
+                    </view>
+                    <connections>
+                        <outlet property="fldMobile" destination="XN0-fR-jfo" id="ABT-nU-Ng0"/>
+                        <outlet property="indicator" destination="IBV-lU-gxU" id="WFC-p8-f3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLH-gl-Bva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162.5" y="784.85915492957747"/>
         </scene>
         <!--Select Plan Modal View Controller-->
         <scene sceneID="zpd-6U-kye">

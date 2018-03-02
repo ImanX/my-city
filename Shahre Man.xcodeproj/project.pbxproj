@@ -24,6 +24,7 @@
 		7E07760D202F994F00427607 /* AuthCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07760C202F994F00427607 /* AuthCallback.swift */; };
 		7E133A80204899EC004FD581 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E133A7F204899EC004FD581 /* PaddingLabel.swift */; };
 		7E133A822048B41A004FD581 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E133A812048B41A004FD581 /* NewsViewController.swift */; };
+		7E133A8420494323004FD581 /* EnterMobileModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E133A8320494323004FD581 /* EnterMobileModalViewController.swift */; };
 		7E171E0E203DC31000A4F2D0 /* UIPrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */; };
 		7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */; };
 		7E171E14203DE1E600A4F2D0 /* ItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */; };
@@ -131,6 +132,7 @@
 		7E07760C202F994F00427607 /* AuthCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCallback.swift; sourceTree = "<group>"; };
 		7E133A7F204899EC004FD581 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		7E133A812048B41A004FD581 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		7E133A8320494323004FD581 /* EnterMobileModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileModalViewController.swift; sourceTree = "<group>"; };
 		7E171E0D203DC31000A4F2D0 /* UIPrettyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrettyButton.swift; sourceTree = "<group>"; };
 		7E171E0F203DC3C300A4F2D0 /* UIPrettyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIPrettyButton.xib; sourceTree = "<group>"; };
 		7E171E13203DE1E600A4F2D0 /* ItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenu.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 				7EB4FC81203C4C4600E86687 /* RegisterModalViewController.swift */,
 				7EB4FC83203C61F700E86687 /* LoginModalViewController.swift */,
 				7E1A118C2045BFB700DFEDD4 /* LocationModalViewController.swift */,
+				7E133A8320494323004FD581 /* EnterMobileModalViewController.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 			files = (
 				7EB9AC55204498B000F120BA /* BuisinessTabViewController.swift in Sources */,
 				7EBED82D202DCF18009A1FB3 /* BaseViewController.swift in Sources */,
+				7E133A8420494323004FD581 /* EnterMobileModalViewController.swift in Sources */,
 				7E615698202E533600E60611 /* UICircleImageView.swift in Sources */,
 				7E61568F202E43E200E60611 /* Storage.swift in Sources */,
 				7EAD1D69204728920015A3DF /* BuissinesTabExtra.swift in Sources */,

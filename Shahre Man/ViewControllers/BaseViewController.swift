@@ -70,8 +70,9 @@ class BaseViewController: UIViewController {
     }
   
     var indicatorAlert:UIIndicatorAlert?{
-        if _indicator == nil{
+        if _indicator == nil || !(_indicator?.isShowing)!{
             _indicator = UIIndicatorAlert();
+
         }
         return _indicator;
     }
