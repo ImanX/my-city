@@ -369,6 +369,24 @@
 			path = plan;
 			sourceTree = "<group>";
 		};
+		7E4DAC8C2049F9B8005C09DA /* UIDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7E4DAC882049C80B005C09DA /* UIDetailsView.swift */,
+				7E4DAC8A2049C857005C09DA /* UIDetailsView.xib */,
+			);
+			path = UIDetails;
+			sourceTree = "<group>";
+		};
+		7E4DAC8D2049F9C4005C09DA /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				7E2FD18F2049749100323CFC /* Spinner.swift */,
+				7E2FD18D2049740200323CFC /* Spinner.xib */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
 		7E615687202E2A7E00E60611 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,10 +505,8 @@
 		7EBED830202DD887009A1FB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7E4DAC882049C80B005C09DA /* UIDetailsView.swift */,
-				7E4DAC8A2049C857005C09DA /* UIDetailsView.xib */,
-				7E2FD18F2049749100323CFC /* Spinner.swift */,
-				7E2FD18D2049740200323CFC /* Spinner.xib */,
+				7E4DAC8D2049F9C4005C09DA /* Spinner */,
+				7E4DAC8C2049F9B8005C09DA /* UIDetails */,
 				7E2FD18C204973E600323CFC /* CaptionField */,
 				7EB4FC87203DBA8C00E86687 /* UIPrettyButton */,
 				7EB4FC7D203C1BA900E86687 /* IndicatorAlert */,
