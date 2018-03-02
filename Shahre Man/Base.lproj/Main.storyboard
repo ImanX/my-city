@@ -162,7 +162,6 @@
                         <viewLayoutGuide key="safeArea" id="qrI-Sy-Xej"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" id="pDU-sF-2I2">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -341,9 +340,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gai-xz-WhC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="search" landscapeImage="search" id="YYz-9S-p41">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="search" landscapeImage="search" id="YYz-9S-p41"/>
                     <connections>
                         <outlet property="fldSearch" destination="pSp-hu-FgH" id="DUb-W7-nSm"/>
                         <outlet property="imgSearch" destination="afR-RC-1wg" id="ESR-D4-sHw"/>
@@ -782,9 +779,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rGM-bD-4L6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="account" id="bjB-Er-HPr">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" image="account" id="bjB-Er-HPr"/>
                     <connections>
                         <outlet property="imgAvatar" destination="UJa-pL-2on" id="lNf-gU-9Vk"/>
                         <outlet property="lblName" destination="MeM-Mb-Ex7" id="HuE-UW-k5a"/>
@@ -868,6 +863,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.96175950769999996" green="0.4408362508" blue="0.1146864668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Oio-JM-9Zm" kind="relationship" relationship="viewControllers" id="plx-b9-rg1"/>
@@ -972,7 +968,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xLh-7s-iVz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="اطلاعات صنف" id="Si5-zp-UrF">
+                    <tabBarItem key="tabBarItem" title="اطلاعات صنف" image="details" id="Si5-zp-UrF">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <size key="freeformSize" width="375" height="1000"/>
@@ -987,7 +983,7 @@
             </objects>
             <point key="canvasLocation" x="1621.5999999999999" y="2016.7916041979013"/>
         </scene>
-        <!--اطلاعات صنف-->
+        <!--اطلاعات تماس-->
         <scene sceneID="9a3-Ut-TjI">
             <objects>
                 <viewController storyboardIdentifier="BuissinessTabExtra" id="yoz-jT-ZmK" customClass="BuissinessTabExtra" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
@@ -1034,7 +1030,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RWF-jk-dbZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="اطلاعات صنف" id="D8G-Fn-EaK">
+                    <tabBarItem key="tabBarItem" title="اطلاعات تماس" image="contact" selectedImage="contact" id="D8G-Fn-EaK">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -1045,7 +1041,7 @@
             </objects>
             <point key="canvasLocation" x="1624" y="3463"/>
         </scene>
-        <!--اطلاعات صنف-->
+        <!--چند رسانه ای-->
         <scene sceneID="kC6-dR-2pm">
             <objects>
                 <viewController storyboardIdentifier="BuissinessTabMedia" id="ka4-EF-R31" customClass="BuissinessTabMedia" customModule="Shahre_Man" customModuleProvider="target" sceneMemberID="viewController">
@@ -1149,7 +1145,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Oj-5y-mq0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="اطلاعات صنف" id="DnA-hs-1hA">
+                    <tabBarItem key="tabBarItem" title="چند رسانه ای" image="media" selectedImage="media" id="DnA-hs-1hA">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -1274,9 +1270,12 @@
     <resources>
         <image name="account" width="30" height="30"/>
         <image name="avatarholder1x1" width="400" height="400"/>
+        <image name="contact" width="30" height="30"/>
+        <image name="details" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="logo-1" width="512" height="512"/>
         <image name="logofooter" width="318" height="274"/>
+        <image name="media" width="30" height="30"/>
         <image name="search" width="30" height="30"/>
     </resources>
 </document>

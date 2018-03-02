@@ -88,9 +88,9 @@ class Request{
                 if  statusCode == 400 {
                     let json = JSON(response.data!);
                     print(json);
-                    let errorType:String = json["data"]["name"].string!;
-                    let code:Int = json["data"]["code"].int!;
-                    let status:Int = json["data"]["status"].int!;
+                    let errorType:String = json["data"]["name"].stringValue;
+                    let code:Int = json["data"]["code"].intValue;
+                    let status:Int = json["data"]["status"].intValue;
                     self._callback.didFailure(code ,status, errorType);
                     return;
                 }

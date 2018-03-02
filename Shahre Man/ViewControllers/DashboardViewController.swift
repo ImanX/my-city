@@ -24,6 +24,13 @@ class DashboardViewController: UITabBarController {
         titleView.addSubview(imageView)
         self.navigationItem.titleView = titleView
     
+        for tab in (self.tabBar.items)!{
+            tab.title = nil
+            tab.imageInsets = UIEdgeInsetsMake(6,0,-6,0)
+        }
+        
+
+
         
     
         print(DataResource.defualt.token);

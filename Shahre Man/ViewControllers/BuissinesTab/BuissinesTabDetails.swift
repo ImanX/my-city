@@ -58,10 +58,7 @@ class BuissinesTabDetails : BaseViewController  {
                 h = 40;
             }else{
                 h = 60
-                
             }
-
-            
             
             v.heightAnchor.constraint(equalToConstant: h).isActive = true;
             v.widthAnchor.constraint(equalToConstant: 100).isActive = true;
@@ -103,6 +100,11 @@ class BuissinesTabDetails : BaseViewController  {
         
             if item is Spinner {
                 value = (f?.value)!;
+                if value.isEmpty {
+                    getErrorSnackbar(message: "لطفا شهر خود را انتخاب نمایید").show();
+                    self.indicatorAlert?.dismiss();
+                    return;
+                }
             }else {
                 let v = (item as! UICaptionFieldText);
                 if (f?.isRequire)! && (v.fldText.text?.isEmpty)!{

@@ -15,8 +15,12 @@ class BuisinessTabViewController : UITabBarController {
     static var extraFields:[Field]?;
     static var medaFields:[Field]?;
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+
+    }
     override func viewDidLoad() {
-    
+        self.tabBar.unselectedItemTintColor = UIColor.white ;
+
     }
 }

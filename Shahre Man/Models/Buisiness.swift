@@ -62,7 +62,7 @@ class Buisiness: Model {
     
     var image:String{
         set{_image = newValue}
-        get{return baseURL(_image!)}
+        get{return _image!}
     }
     
     
