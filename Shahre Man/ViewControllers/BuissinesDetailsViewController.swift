@@ -11,21 +11,26 @@ import UIKit
 import FSPagerView
 import MapKit
 class BuissinesDetailsViewController: BaseViewController,FSPagerViewDataSource {
+    var buissines:Buisiness?;
+    
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var lblContent: PaddingLabel!
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblOwner: UILabel!
     
-
+    @IBOutlet weak var btnVideo: UIOvalButton!
+    @IBOutlet weak var btnImage: UIOvalButton!
+    @IBOutlet weak var btnMap: UIOvalButton!
+    
     @IBOutlet weak var pager: FSPagerView!{
         didSet{
             let nib = UINib(nibName: "Pager2BuissinesCell", bundle: nil);
             pager.register(nib, forCellWithReuseIdentifier: "cc");
             pager.dataSource = self;
             pager.isInfinite = true;
-
-            pager.automaticSlidingInterval = 3.0;
+            
+             pager.automaticSlidingInterval = 5.0;
         }
     }
     
@@ -48,13 +53,24 @@ class BuissinesDetailsViewController: BaseViewController,FSPagerViewDataSource {
         default:
             break;
         }
-    
+        
         return cell;
     }
     
-
-    var buissines:Buisiness?;
     
+    
+    @objc func changeIndexMap()  {
+        pager.scrollToItem(at: 1, animated: true);
+    }
+    
+    
+    @objc func changeIndexVideo()  {
+        pager.scrollToItem(at: 3, animated: true);
+    }
+    
+    @objc func changeIndexImage()  {
+        pager.scrollToItem(at: 2, animated: true);
+    }
     
     override func viewDidLoad() {
         lblTitle.text = buissines?.name;
@@ -62,7 +78,14 @@ class BuissinesDetailsViewController: BaseViewController,FSPagerViewDataSource {
         lblContent.text = buissines?.description;
         lblAddress.text = buissines?.address;
         navigationItem.title = "جزییات صنف"
-    
+ 
+        btnMap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeIndexMap)))
+        btnVideo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeIndexVideo)))
+        btnImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeIndexImage)))
+
+
+        
+        
         
         if (buissines?.hasField)! {
             for meta in (buissines?.fields)!{
@@ -74,7 +97,7 @@ class BuissinesDetailsViewController: BaseViewController,FSPagerViewDataSource {
                 
                 let viewd = UIDetailsView();
                 viewd.put(f: meta);
-            
+                
                 viewd.heightAnchor.constraint(equalToConstant: 60).isActive = true;
                 viewd.widthAnchor.constraint(equalToConstant: 100).isActive = true;
                 stack.addArrangedSubview(viewd);

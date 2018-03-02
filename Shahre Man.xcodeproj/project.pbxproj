@@ -48,6 +48,8 @@
 		7E4DAC872049BFE3005C09DA /* Pager2BuissinesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4DAC862049BFE3005C09DA /* Pager2BuissinesCell.xib */; };
 		7E4DAC892049C80B005C09DA /* UIDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4DAC882049C80B005C09DA /* UIDetailsView.swift */; };
 		7E4DAC8B2049C857005C09DA /* UIDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4DAC8A2049C857005C09DA /* UIDetailsView.xib */; };
+		7E4DAC8F2049F9F1005C09DA /* UIOvalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4DAC8E2049F9F1005C09DA /* UIOvalButton.swift */; };
+		7E4DAC912049FA02005C09DA /* UIOvalButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4DAC902049FA02005C09DA /* UIOvalButton.xib */; };
 		7E615684202DFCCD00E60611 /* Modal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E615683202DFCCD00E60611 /* Modal.storyboard */; };
 		7E615686202E03BB00E60611 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615685202E03BB00E60611 /* DashboardViewController.swift */; };
 		7E615689202E2A9700E60611 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E615688202E2A9700E60611 /* SearchTabViewController.swift */; };
@@ -163,6 +165,8 @@
 		7E4DAC862049BFE3005C09DA /* Pager2BuissinesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pager2BuissinesCell.xib; sourceTree = "<group>"; };
 		7E4DAC882049C80B005C09DA /* UIDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDetailsView.swift; sourceTree = "<group>"; };
 		7E4DAC8A2049C857005C09DA /* UIDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIDetailsView.xib; sourceTree = "<group>"; };
+		7E4DAC8E2049F9F1005C09DA /* UIOvalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIOvalButton.swift; sourceTree = "<group>"; };
+		7E4DAC902049FA02005C09DA /* UIOvalButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIOvalButton.xib; sourceTree = "<group>"; };
 		7E615683202DFCCD00E60611 /* Modal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Modal.storyboard; sourceTree = "<group>"; };
 		7E615685202E03BB00E60611 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7E615688202E2A9700E60611 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
@@ -513,6 +517,8 @@
 				7EBED831202DD88D009A1FB3 /* Cells */,
 				7E615697202E533600E60611 /* UICircleImageView.swift */,
 				7E133A7F204899EC004FD581 /* PaddingLabel.swift */,
+				7E4DAC8E2049F9F1005C09DA /* UIOvalButton.swift */,
+				7E4DAC902049FA02005C09DA /* UIOvalButton.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -664,6 +670,7 @@
 				7EAD1D6D204767AB0015A3DF /* UICaptionFieldText.xib in Resources */,
 				7E077602202EE4D900427607 /* PagerCell.xib in Resources */,
 				7E171E10203DC3C300A4F2D0 /* UIPrettyButton.xib in Resources */,
+				7E4DAC912049FA02005C09DA /* UIOvalButton.xib in Resources */,
 				7E2FD18E2049740200323CFC /* Spinner.xib in Resources */,
 				7E810BBE203F4B6100358E69 /* PlanCell.xib in Resources */,
 			);
@@ -866,6 +873,7 @@
 				7E7B4E62202DAA0200FA280D /* Controller.swift in Sources */,
 				7E07760D202F994F00427607 /* AuthCallback.swift in Sources */,
 				7EBED833202DD8A1009A1FB3 /* CityCell.swift in Sources */,
+				7E4DAC8F2049F9F1005C09DA /* UIOvalButton.swift in Sources */,
 				7E133A80204899EC004FD581 /* PaddingLabel.swift in Sources */,
 				7E428CC820349438007CED56 /* BuisinessCallback.swift in Sources */,
 				7E7B4E66202DAB6500FA280D /* InitializeController.swift in Sources */,
